@@ -37,10 +37,13 @@ func main() {
 
 		fmt.Println("-----PARSED-----")
 
-		var c Card
-		if err := yaml.Unmarshal(rawCard, &c); err != nil {
+		c, err := NewCardFromMap(m)
+		if err != nil {
 			panic(err)
 		}
+		// if err := yaml.Unmarshal(rawCard, &c); err != nil {
+		// 	panic(err)
+		// }
 
 		fmt.Println(c)
 

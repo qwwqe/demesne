@@ -65,7 +65,7 @@ const (
 	versionCardFieldName string = "demesne"
 	nameCardFieldName           = "name"
 	costCardFieldName           = "cost"
-	kindsCardFieldName          = "types"
+	kindsCardFieldName          = "kinds"
 	setCardFieldName            = "set"
 	effectsCardFieldName        = "effects"
 )
@@ -126,6 +126,15 @@ func NewCardFromMap(m map[any]any) (*Card, error) {
 			}
 			c.Kinds = append(c.Kinds, CardKind(cardKind))
 		}
+	}
+
+	if effects, ok := m[effectsCardFieldName]; ok {
+		es, ok := effects.([]interface{})
+		if !ok {
+			return nil, cardFieldKindError(effectsCardFieldName, "[]string")
+		}
+
+		fmt.Println(es)
 	}
 
 	return &c, nil
