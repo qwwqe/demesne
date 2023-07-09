@@ -1,7 +1,7 @@
 demesne: 0.0.1
 name: cellar
 cost: 2
-types:
+kinds:
   - action
 set: dominion
 effects:

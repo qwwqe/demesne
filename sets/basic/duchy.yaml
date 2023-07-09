@@ -1,7 +1,7 @@
 demesne: 0.0.1
 name: duchy
 cost: 5
-types:
+kinds:
   - victory
 expansion: basic
 victoryPoints:

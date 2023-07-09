@@ -5,7 +5,7 @@ cost:
       amount: 7
   indicators:
     - asterisk
-types:
+kinds:
   - treasure
   - duration
   - loot
@@ -32,7 +32,7 @@ cost:
       amount: 7
   indicators:
     - asterisk
-types:
+kinds:
   - treasure
   - loot
 designation: card

@@ -1,7 +1,7 @@
 demesne: 0.0.1
 name: copper
 cost: 0
-types:
+kinds:
   - treasure
 expansion: basic
 effects:

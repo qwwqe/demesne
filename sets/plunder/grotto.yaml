@@ -1,7 +1,7 @@
 demesne: 0.0.1
 name: grotto
 cost: 2
-types:
+kinds:
   - action
   - duration
 designation: card
