@@ -1,0 +1,14 @@
+demesne: 0.0.1
+name: moat
+cost: 2
+types:
+  - action
+  - reaction
+set: dominion
+effects:
+  - draw:
+      amount: 2
+  - reaction:
+      play:
+        type: attack
+      # effect ?????

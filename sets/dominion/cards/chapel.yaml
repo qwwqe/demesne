@@ -1,0 +1,10 @@
+demesne: 0.0.1
+name: chapel
+cost: 2
+types:
+  - action
+set: dominion
+effects:
+  - trash:
+      from: hand
+      maxAmount: 4

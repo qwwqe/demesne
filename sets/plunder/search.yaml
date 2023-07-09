@@ -1,0 +1,18 @@
+demesne: 0.0.1
+name: search
+cost: 2
+types:
+  - action
+  - duration
+designation: card
+expansion: plunder
+effects:
+  - treasure:
+      amount: 2
+  - duration:
+      effects:
+        - gain:
+            type: loot
+      when:
+        empty:
+          target: supply

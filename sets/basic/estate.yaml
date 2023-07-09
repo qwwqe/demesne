@@ -1,0 +1,8 @@
+demesne: 0.0.1
+name: estate
+cost: 2
+types:
+  - victory
+expansion: basic
+victoryPoints:
+  amount: 1

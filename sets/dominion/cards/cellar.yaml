@@ -1,0 +1,15 @@
+demesne: 0.0.1
+name: cellar
+cost: 2
+types:
+  - action
+set: dominion
+effects:
+  - action:
+      amount: 1
+  - discard:
+      from: hand
+      amount: -1
+      storeAmountAs: $discardedCards
+  - draw:
+      storedAmount: $discardedCards

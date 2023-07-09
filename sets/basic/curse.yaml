@@ -1,0 +1,8 @@
+demesne: 0.0.1
+name: curse
+cost: 0
+types:
+  - curse
+expansion: basic
+victoryPoints:
+  amount: -1

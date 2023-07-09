@@ -1,0 +1,9 @@
+demesne: 0.0.1
+name: silver
+cost: 3
+types:
+  - treasure
+expansion: basic
+effects:
+  - treasure:
+      amount: 2

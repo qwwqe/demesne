@@ -1,0 +1,17 @@
+demesne: 0.0.1
+name: jewelled egg
+cost: 2
+types:
+  - treasure
+designation: card
+expansion: plunder
+effects:
+  - treasure:
+      amount: 1
+  - buy:
+      amount: 1
+  - gain:
+      type: loot
+    when:
+      trash:
+        target: this

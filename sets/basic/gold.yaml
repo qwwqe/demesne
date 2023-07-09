@@ -1,0 +1,9 @@
+demesne: 0.0.1
+name: gold
+cost: 6
+types:
+  - treasure
+expansion: basic
+effects:
+  - treasure:
+      amount: 3

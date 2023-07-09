@@ -1,0 +1,24 @@
+demesne: 0.0.1
+name: cage
+cost: 2
+types:
+  - treasure
+  - duration
+designation: card
+expansion: plunder
+effects:
+  - setAside:
+      from: hand
+      to: this
+      maxAmount: 4
+  - duration:
+      effects:
+        - draw:
+            from: this
+          when:
+            endOf: turn
+        - trash:
+            target: this
+      when:
+        gain:
+          type: victory

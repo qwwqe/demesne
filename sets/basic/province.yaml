@@ -1,0 +1,8 @@
+demesne: 0.0.1
+name: province
+cost: 8
+types:
+  - victory
+expansion: basic
+victoryPoints:
+  amount: 6
