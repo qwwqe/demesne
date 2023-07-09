@@ -1,0 +1,10 @@
+$id: demesne.qwwqe.xyz/schemas/v1/components/type
+$schema: https://json-schema.org/draft/2020-12/schema
+description: Basic component types of a Demesne game
+type: string
+enum:
+  - $ref: "#/$defs/card"
+$defs:
+  card:
+    description: A playable Demesne card
+    const: card

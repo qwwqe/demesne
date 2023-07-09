@@ -1,0 +1,11 @@
+$id: demesne.qwwqe.xyz/schemas/v1/components/component
+$schema: https://json-schema.org/draft/2020-12/schema
+description: A Demesne component
+type: object
+properties:
+  demense:
+    const: 0.0.1
+  component:
+    $ref: demesne.qwwqe.xyz/schemas/v1/components/type
+  name:
+    type: string
