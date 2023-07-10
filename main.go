@@ -6,9 +6,18 @@ import (
 	"path/filepath"
 
 	yaml "gopkg.in/yaml.v3"
+	"github.com/santhosh-tekuri/jsonschema/v5"
 )
 
 func main() {
+	compiler := jsonschema.NewCompiler()
+	componentTypeSchemaData, err := os.ReadFile("./schemas/components/type.yaml")
+	if err != nil {
+		panic(err)
+	}
+
+	if err =
+
 	filenames, err := filepath.Glob("./sets/dominion/cards/*.yaml")
 	if err != nil {
 		panic(err)
