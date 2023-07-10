@@ -1,4 +1,4 @@
-$id: demesne.qwwqe.xyz/schemas/v1/components/cards/card
+$id: https://demesne.qwwqe.xyz/schemas/v1/components/cards/card
 $schema: https://json-schema.org/draft/2020-12/schema
 description: A playable Demesne card
 type: object
@@ -9,3 +9,7 @@ properties:
     const: card
   name:
     type: string
+required:
+  - demense
+  - component
+  - name

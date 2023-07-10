@@ -74,7 +74,7 @@ func cardFieldKindError(field, expectedKind string) error {
 	return errors.New(fmt.Sprintf(`"%s" should be %s`, field, expectedKind))
 }
 
-func NewCardFromMap(m map[any]any) (*Card, error) {
+func NewCardFromMap(m map[string]any) (*Card, error) {
 	var c Card
 
 	if version, ok := m[versionCardFieldName]; ok {

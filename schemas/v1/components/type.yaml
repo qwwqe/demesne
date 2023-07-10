@@ -1,4 +1,4 @@
-$id: demesne.qwwqe.xyz/schemas/v1/components/type
+$id: https://demesne.qwwqe.xyz/schemas/v1/components/type
 $schema: https://json-schema.org/draft/2020-12/schema
 description: Basic component types of a Demesne game
 type: string

@@ -1,22 +1,66 @@
 package main
 
 import (
+	"bytes"
+	"encoding/json"
 	"fmt"
+	"io"
+	"net/url"
 	"os"
 	"path/filepath"
 
-	yaml "gopkg.in/yaml.v3"
 	"github.com/santhosh-tekuri/jsonschema/v5"
+	yaml "gopkg.in/yaml.v3"
 )
 
+// A good, old-fashioned hack to allow for automatic resolution of YAML files
+// by the JSON Schema validator.
+// TODO: Fork jsonschema and allow Loader instances to return things other than
+// io.ReadCloser, since internally all the library does is unmarshal the ReadCloser
+// anyway.
+func localHttpsSchemaLoader(s string) (io.ReadCloser, error) {
+	u, err := url.Parse(s)
+	if err != nil {
+		return nil, err
+	}
+
+	f := "./" + u.Path + ".yaml"
+
+	data, err := os.ReadFile(f)
+	if err != nil {
+		return nil, err
+	}
+
+	m := map[string]any{}
+	if err := yaml.Unmarshal(data, m); err != nil {
+		return nil, err
+	}
+
+	d, err := json.Marshal(m)
+	if err != nil {
+		return nil, err
+	}
+
+	return io.NopCloser(bytes.NewReader(d)), nil
+}
+
 func main() {
+	jsonschema.Loaders["https"] = localHttpsSchemaLoader
+
 	compiler := jsonschema.NewCompiler()
-	componentTypeSchemaData, err := os.ReadFile("./schemas/components/type.yaml")
+	schema, err := compiler.Compile("https://demesne.qwwqe.xyz/schemas/v1/components/cards/card")
 	if err != nil {
 		panic(err)
 	}
 
-	if err =
+	// fmt.Println(schema)
+
+	// componentTypeSchemaData, err := os.ReadFile("./schemas/components/type.yaml")
+	// if err != nil {
+	// 	panic(err)
+	// }
+
+	// if err =
 
 	filenames, err := filepath.Glob("./sets/dominion/cards/*.yaml")
 	if err != nil {
@@ -33,8 +77,12 @@ func main() {
 	}
 
 	for _, rawCard := range rawCards {
-		m := map[any]any{}
+		m := map[string]any{}
 		if err := yaml.Unmarshal(rawCard, m); err != nil {
+			panic(err)
+		}
+
+		if err := schema.Validate(m); err != nil {
 			panic(err)
 		}
 
