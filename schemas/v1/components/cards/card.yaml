@@ -3,13 +3,13 @@ $schema: https://json-schema.org/draft/2020-12/schema
 description: A playable Demesne card
 type: object
 properties:
-  demense:
+  demesne:
     const: 0.0.1
   component:
-    const: card
+    $ref: https://demesne.qwwqe.xyz/schemas/v1/components/type#/$defs/card
   name:
     type: string
 required:
-  - demense
+  - demesne
   - component
   - name
