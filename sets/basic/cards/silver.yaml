@@ -1,9 +1,10 @@
 demesne: 0.0.1
-name: copper
-cost: 0
+component: card
+name: silver
+cost: 3
 kinds:
   - treasure
 expansion: basic
 effects:
   - treasure:
-      amount: 1
+      amount: 2

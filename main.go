@@ -62,7 +62,7 @@ func main() {
 
 	// if err =
 
-	filenames, err := filepath.Glob("./sets/dominion/cards/*.yaml")
+	filenames, err := filepath.Glob("./sets/**/cards/*.yaml")
 	if err != nil {
 		panic(err)
 	}
@@ -82,28 +82,32 @@ func main() {
 			panic(err)
 		}
 
+		fmt.Printf("%s:\n", m["name"])
+
 		if err := schema.Validate(m); err != nil {
-			panic(err)
+			fmt.Printf("\tinvalid (%s)\n", err)
+		} else {
+			fmt.Println("\tvalid")
 		}
 
-		fmt.Println("-----RAW-----")
+		// 	fmt.Println("-----RAW-----")
 
-		for k, v := range m {
-			fmt.Printf("%v: %v\n", k, v)
-		}
+		// 	for k, v := range m {
+		// 		fmt.Printf("%v: %v\n", k, v)
+		// 	}
 
-		fmt.Println("-----PARSED-----")
+		// 	fmt.Println("-----PARSED-----")
 
-		c, err := NewCardFromMap(m)
-		if err != nil {
-			panic(err)
-		}
-		// if err := yaml.Unmarshal(rawCard, &c); err != nil {
-		// 	panic(err)
-		// }
+		// 	c, err := NewCardFromMap(m)
+		// 	if err != nil {
+		// 		panic(err)
+		// 	}
+		// 	// if err := yaml.Unmarshal(rawCard, &c); err != nil {
+		// 	// 	panic(err)
+		// 	// }
 
-		fmt.Println(c)
+		// 	fmt.Println(c)
 
-		fmt.Println("---")
+		// 	fmt.Println("---")
 	}
 }

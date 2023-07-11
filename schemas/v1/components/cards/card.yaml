@@ -1,6 +1,10 @@
 $id: https://demesne.qwwqe.xyz/schemas/v1/components/cards/card
 $schema: https://json-schema.org/draft/2020-12/schema
-description: A playable Demesne card
+description: >-
+  A playable Demesne card.
+
+  This describes all card-like components that can enter one's deck,
+  and does not include Card-Shaped Things.
 type: object
 properties:
   demesne:
@@ -9,7 +13,10 @@ properties:
     $ref: https://demesne.qwwqe.xyz/schemas/v1/components/type#/$defs/card
   name:
     type: string
+  cost:
+    $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/cost
 required:
   - demesne
   - component
   - name
+  - cost

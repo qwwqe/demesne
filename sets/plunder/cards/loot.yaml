@@ -1,4 +1,5 @@
 demesne: 0.0.1
+component: card
 name: amphora
 cost:
   treasure:

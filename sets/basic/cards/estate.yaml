@@ -1,8 +1,9 @@
 demesne: 0.0.1
-name: duchy
-cost: 5
+component: card
+name: estate
+cost: 2
 kinds:
   - victory
 expansion: basic
 victoryPoints:
-  amount: 3
+  amount: 1

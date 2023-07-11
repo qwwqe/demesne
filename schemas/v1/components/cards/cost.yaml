@@ -1,0 +1,51 @@
+$id: https://demesne.qwwqe.xyz/schemas/v1/components/cards/cost
+$schema: https://json-schema.org/draft/2020-12/schema
+description: >-
+  A Demesne cost.
+
+  This may be the cost of purchasing a playable card, or the requirements
+  for activating another component or Card Shaped Thing (such as an Event).
+oneOf:
+  - description: >-
+      Cost in treasure.
+
+      This is a shorthand for describing costs which simply consist of treasure.
+    type: integer
+    minimum: 0
+  - description: >-
+      Complex cost.
+
+      This is a means of describing costs which consist of multiple resources or
+      have certain conditions attached to them.
+    type: object
+    properties:
+      treasure:
+        $ref: "#/$defs/treasure"
+      debt:
+        $ref: "#/$defs/debt"
+      indicators:
+        $ref: "#/$defs/indicators"
+$defs:
+  treasure:
+    description: A cost in treasure.
+    type: object
+    properties:
+      amount:
+        type: integer
+        minimum: 0
+    required:
+      - amount
+  debt:
+    description: A cost in debt.
+    type: object
+    properties:
+      amount:
+        type: integer
+        minimum: 0
+    required:
+      - amount
+  indicators:
+    description: Card indicators that introduce cost-related constraints.
+    type: string
+    enum:
+      - asterisk
