@@ -24,7 +24,9 @@ oneOf:
       debt:
         $ref: "#/$defs/debt"
       indicators:
-        $ref: "#/$defs/indicators"
+        type: array
+        items:
+          $ref: "#/$defs/indicator"
 $defs:
   treasure:
     description: A cost in treasure.
@@ -44,8 +46,8 @@ $defs:
         minimum: 0
     required:
       - amount
-  indicators:
-    description: Card indicators that introduce cost-related constraints.
+  indicator:
+    description: A card indicator that introduces cost-related constraints.
     type: string
     enum:
       - asterisk
