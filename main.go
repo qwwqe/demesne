@@ -48,7 +48,7 @@ func main() {
 	jsonschema.Loaders["https"] = localHttpsSchemaLoader
 
 	compiler := jsonschema.NewCompiler()
-	schema, err := compiler.Compile("https://demesne.qwwqe.xyz/schemas/v1/components/cards/card")
+	kingdomSchema, err := compiler.Compile("https://demesne.qwwqe.xyz/schemas/v1/components/kingdom")
 	if err != nil {
 		panic(err)
 	}
@@ -62,7 +62,7 @@ func main() {
 
 	// if err =
 
-	filenames, err := filepath.Glob("./sets/**/cards/*.yaml")
+	filenames, err := filepath.Glob("./sets/**/kingdom/*.yaml")
 	if err != nil {
 		panic(err)
 	}
@@ -84,7 +84,7 @@ func main() {
 
 		fmt.Printf("%s:\n", m["name"])
 
-		if err := schema.Validate(m); err != nil {
+		if err := kingdomSchema.Validate(m); err != nil {
 			fmt.Printf("\tinvalid (%s)\n", err)
 		} else {
 			fmt.Println("\tvalid")

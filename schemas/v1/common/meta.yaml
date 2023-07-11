@@ -1,0 +1,21 @@
+$id: https://demesne.qwwqe.xyz/schemas/v1/common/entity
+$schema: https://json-schema.org/draft/2020-12/schema
+description: >-
+  The basic structure of all Demesne entity definitions.
+type: object
+properties:
+  demesne:
+    const: 0.0.1
+  kind:
+    $ref: https://demesne.qwwqe.xyz/schemas/v1/common/kind
+  name:
+    type: string
+    minLength: 1
+  definition:
+    type: object
+required:
+  - demesne
+  - kind
+  - name
+  - definition
+additionalProperties: false

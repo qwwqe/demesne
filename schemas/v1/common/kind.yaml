@@ -1,0 +1,14 @@
+$id: https://demesne.qwwqe.xyz/schemas/v1/common/kind
+$schema: https://json-schema.org/draft/2020-12/schema
+description: >-
+  Kinds of Demesne entities.
+oneOf:
+  - $ref: "#/$defs/kingdom"
+  - $ref: "#/$defs/supply"
+$defs:
+  kingdom:
+    description: A kingdom card.
+    const: kingdom
+  supply:
+    description: A supply card.
+    const: supply

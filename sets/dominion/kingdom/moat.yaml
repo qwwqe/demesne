@@ -1,0 +1,16 @@
+demesne: 0.0.1
+kind: kingdom
+name: moat
+definition:
+  cost: 2
+  kinds:
+    - action
+    - reaction
+  set: dominion
+  effects:
+    - draw:
+        amount: 2
+    - reaction:
+        play:
+          type: attack
+        # effect ?????

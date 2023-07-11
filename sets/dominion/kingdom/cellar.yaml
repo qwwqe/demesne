@@ -1,0 +1,17 @@
+demesne: 0.0.1
+kind: kingdom
+name: cellar
+definition:
+  cost: 2
+  kinds:
+    - action
+  set: dominion
+  effects:
+    - action:
+        amount: 1
+    - discard:
+        from: hand
+        amount: -1
+        storeAmountAs: $discardedCards
+    - draw:
+        storedAmount: $discardedCards
