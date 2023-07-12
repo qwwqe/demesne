@@ -1,0 +1,12 @@
+$id: https://demesne.qwwqe.xyz/schemas/v1/components/supply
+$schema: https://json-schema.org/draft/2020-12/schema
+description: A Demesne Base card.
+type: object
+allOf:
+  - $ref: https://demesne.qwwqe.xyz/schemas/v1/common/meta
+  - type: object
+    properties:
+      kind:
+        $ref: "https://demesne.qwwqe.xyz/schemas/v1/common/kind#/$defs/cards/base"
+      definition:
+        $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/playable

@@ -1,5 +1,5 @@
 demesne: 0.0.1
-kind: kingdom
+kind: card/kingdom
 name: cellar
 definition:
   cost: 2

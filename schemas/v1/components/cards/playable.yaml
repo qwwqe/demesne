@@ -1,0 +1,12 @@
+$id: https://demesne.qwwqe.xyz/schemas/v1/components/cards/card
+$schema: https://json-schema.org/draft/2020-12/schema
+description: >-
+  The definition for a playable Demesne card.
+
+  This describes the possible behaviour of all card-like components
+  that can enter one's deck, and does not include Card-Shaped Things.
+type: object
+properties:
+  cost:
+    $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/cost
+additionalProperties: false

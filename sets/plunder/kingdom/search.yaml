@@ -1,19 +1,20 @@
 demesne: 0.0.1
-component: card
+kind: card/kingdom
 name: search
-cost: 2
-kinds:
-  - action
-  - duration
-designation: card
-expansion: plunder
-effects:
-  - treasure:
-      amount: 2
-  - duration:
-      effects:
-        - gain:
-            type: loot
-      when:
-        empty:
-          target: supply
+definition:
+  cost: 2
+  kinds:
+    - action
+    - duration
+  designation: card
+  expansion: plunder
+  effects:
+    - treasure:
+        amount: 2
+    - duration:
+        effects:
+          - gain:
+              type: loot
+        when:
+          empty:
+            target: supply

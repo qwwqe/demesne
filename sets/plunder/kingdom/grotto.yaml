@@ -1,26 +1,27 @@
 demesne: 0.0.1
-component: card
+kind: card/kingdom
 name: grotto
-cost: 2
-kinds:
-  - action
-  - duration
-designation: card
-expansion: plunder
-effects:
-  - action:
-      amount: 1
-  - setAside:
-      from: hand
-      to: this
-      maxAmount: 4
-  - duration:
-      effects:
-        - discard:
-            from: this
-            amount: -1
-            storeAmountAs: #discardedCards
-        - draw:
-            storedAmount: #discardedCards
-      when:
-        startOf: turn
+definition:
+  cost: 2
+  kinds:
+    - action
+    - duration
+  designation: card
+  expansion: plunder
+  effects:
+    - action:
+        amount: 1
+    - setAside:
+        from: hand
+        to: this
+        maxAmount: 4
+    - duration:
+        effects:
+          - discard:
+              from: this
+              amount: -1
+              storeAmountAs: #discardedCards
+          - draw:
+              storedAmount: #discardedCards
+        when:
+          startOf: turn

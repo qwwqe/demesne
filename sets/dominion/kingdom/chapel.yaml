@@ -1,9 +1,9 @@
 demesne: 0.0.1
-kind: kingdom
+kind: card/kingdom
 name: chapel
 definition:
   cost: 2
-  types:
+  kinds:
     - action
   effects:
     - trash:

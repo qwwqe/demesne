@@ -1,16 +1,11 @@
 $id: https://demesne.qwwqe.xyz/schemas/v1/components/kingdom
 $schema: https://json-schema.org/draft/2020-12/schema
-description: A Demesne kingdom card.
+description: A Demesne Kingdom card.
 allOf:
   - $ref: https://demesne.qwwqe.xyz/schemas/v1/common/meta
   - type: object
     properties:
-      demesne:
-        const: 0.0.1
       kind:
-        const: kingdom
-      name:
-        type: string
+        $ref: "https://demesne.qwwqe.xyz/schemas/v1/common/kind#/$defs/cards/kingdom"
       definition:
-        cost:
-          $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/cost
+        $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/playable

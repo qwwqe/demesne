@@ -3,12 +3,24 @@ $schema: https://json-schema.org/draft/2020-12/schema
 description: >-
   Kinds of Demesne entities.
 oneOf:
-  - $ref: "#/$defs/kingdom"
-  - $ref: "#/$defs/supply"
+  - $ref: "#/$defs/cards/kingdom"
+  - $ref: "#/$defs/cards/base"
+  - $ref: "#/$defs/cards/loot"
 $defs:
-  kingdom:
-    description: A kingdom card.
-    const: kingdom
-  supply:
-    description: A supply card.
-    const: supply
+  cards:
+    kingdom:
+      description: >-
+        A Kingdom card.
+
+        Kingdom cards are all cards in the Supply that are not Base cards.
+      const: card/kingdom
+    base:
+      description: >-
+        A Base card.
+
+        Base cards are all cards in the Supply that are not Kingdom cards.
+      const: card/base
+    loot:
+      description: >-
+        A Loot card.
+      const: card/loot

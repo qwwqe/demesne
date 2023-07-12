@@ -48,7 +48,7 @@ func main() {
 	jsonschema.Loaders["https"] = localHttpsSchemaLoader
 
 	compiler := jsonschema.NewCompiler()
-	kingdomSchema, err := compiler.Compile("https://demesne.qwwqe.xyz/schemas/v1/components/kingdom")
+	kingdomSchema, err := compiler.Compile("https://demesne.qwwqe.xyz/schemas/v1/components/cards/kingdom")
 	if err != nil {
 		panic(err)
 	}

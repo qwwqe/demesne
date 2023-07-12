@@ -1,25 +1,26 @@
 demesne: 0.0.1
-component: card
+kind: card/kingdom
 name: cage
-cost: 2
-kinds:
-  - treasure
-  - duration
-designation: card
-expansion: plunder
-effects:
-  - setAside:
-      from: hand
-      to: this
-      maxAmount: 4
-  - duration:
-      effects:
-        - draw:
-            from: this
-          when:
-            endOf: turn
-        - trash:
-            target: this
-      when:
-        gain:
-          type: victory
+definition:
+  cost: 2
+  kinds:
+    - treasure
+    - duration
+  designation: card
+  expansion: plunder
+  effects:
+    - setAside:
+        from: hand
+        to: this
+        maxAmount: 4
+    - duration:
+        effects:
+          - draw:
+              from: this
+            when:
+              endOf: turn
+          - trash:
+              target: this
+        when:
+          gain:
+            type: victory
