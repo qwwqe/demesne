@@ -1,0 +1,15 @@
+$id: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/discard
+$schema: https://json-schema.org/draft/2020-12/schema
+description: Discard the specified cards.
+type: object
+properties:
+  from:
+    type: string
+    enum:
+      - hand
+    default: hand
+  amount:
+    type: number
+    minimum: -1
+    default: -1
+additionalProperties: false

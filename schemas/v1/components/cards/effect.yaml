@@ -1,0 +1,50 @@
+$id: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effect
+$schema: https://json-schema.org/draft/2020-12/schema
+description: >-
+  A Demesne card effect.
+anyOf:
+  - $ref: "#/$defs/action"
+  - $ref: "#/$defs/discard"
+  - $ref: "#/$defs/trash"
+  # - $ref: "#/$defs/reaction"
+  # - $ref: "#/$defs/treasure"
+$defs:
+  action:
+    type: object
+    properties:
+      action:
+        $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/action
+    required:
+      - action
+    additionalProperties: false
+  discard:
+    type: object
+    properties:
+      discard:
+        $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/discard
+    required:
+      - discard
+    additionalProperties: false
+  trash:
+    description: Trash the specified cards.
+    type: object
+    properties:
+      trash:
+        type: object
+        properties:
+          from:
+            type: string
+            enum:
+              - hand
+            default: hand
+          amount:
+            type: number
+            minimum: -1
+            default: -1
+          maxAmount:
+            type: number
+            minimum: 1
+        additionalProperties: false
+    required:
+      - trash
+    additionalProperties: false

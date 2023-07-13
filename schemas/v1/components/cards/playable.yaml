@@ -9,4 +9,12 @@ type: object
 properties:
   cost:
     $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/cost
+  types:
+    type: array
+    items:
+      $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/type
+  effects:
+    type: array
+    items:
+      $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effect
 additionalProperties: false

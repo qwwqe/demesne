@@ -1,0 +1,11 @@
+$id: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/action
+$schema: https://json-schema.org/draft/2020-12/schema
+description: Gain the given number of actions.
+type: object
+properties:
+  amount:
+    type: number
+    minimum: 1
+required:
+  - amount
+additionalProperties: false

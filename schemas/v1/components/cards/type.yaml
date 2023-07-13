@@ -1,0 +1,18 @@
+$id: https://demesne.qwwqe.xyz/schemas/v1/components/cards/type
+$schema: https://json-schema.org/draft/2020-12/schema
+description: >-
+  A type of Demesne card.
+oneOf:
+  - $ref: "#/$defs/action"
+  - $ref: "#/$defs/reaction"
+  - $ref: "#/$defs/treasure"
+$defs:
+  action:
+    description: An Action card type.
+    const: action
+  reaction:
+    description: A Reaction card type.
+    const: reaction
+  treasure:
+    description: A Treasure card type.
+    const: treasure
