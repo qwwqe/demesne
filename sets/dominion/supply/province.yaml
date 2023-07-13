@@ -2,7 +2,7 @@ demesne: 0.0.1
 component: card
 name: province
 cost: 8
-kinds:
+types:
   - victory
 expansion: basic
 victoryPoints:

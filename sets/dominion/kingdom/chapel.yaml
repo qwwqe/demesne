@@ -3,7 +3,7 @@ kind: card/kingdom
 name: chapel
 definition:
   cost: 2
-  kinds:
+  types:
     - action
   effects:
     - trash:

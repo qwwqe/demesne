@@ -2,7 +2,7 @@ demesne: 0.0.1
 component: card
 name: estate
 cost: 2
-kinds:
+types:
   - victory
 expansion: basic
 victoryPoints:

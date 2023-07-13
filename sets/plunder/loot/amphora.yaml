@@ -6,7 +6,7 @@ cost:
       amount: 7
   indicators:
     - asterisk
-kinds:
+types:
   - treasure
   - duration
   - loot
@@ -23,26 +23,3 @@ effects:
         oneOf:
           - startOf: turn
           - now
-
----
-
-demesne: 0.0.1
-name: doubloons
-cost:
-  treasure:
-      amount: 7
-  indicators:
-    - asterisk
-kinds:
-  - treasure
-  - loot
-designation: card
-expansion: plunder
-effects:
-  - treasure:
-      amount: 3
-  - gain:
-      name: gold
-      when:
-        gain:
-          target: this

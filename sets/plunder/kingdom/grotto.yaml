@@ -3,7 +3,7 @@ kind: card/kingdom
 name: grotto
 definition:
   cost: 2
-  kinds:
+  types:
     - action
     - duration
   designation: card

@@ -3,7 +3,7 @@ kind: card/kingdom
 name: cage
 definition:
   cost: 2
-  kinds:
+  types:
     - treasure
     - duration
   designation: card

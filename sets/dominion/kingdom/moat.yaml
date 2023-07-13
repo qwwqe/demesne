@@ -3,7 +3,7 @@ kind: card/kingdom
 name: moat
 definition:
   cost: 2
-  kinds:
+  types:
     - action
     - reaction
   set: dominion

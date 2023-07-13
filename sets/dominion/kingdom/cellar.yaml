@@ -3,9 +3,9 @@ kind: card/kingdom
 name: cellar
 definition:
   cost: 2
-  kinds:
+  types:
     - action
-  set: dominion
+  # set: dominion
   effects:
     - action:
         amount: 1

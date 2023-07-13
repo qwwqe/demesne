@@ -2,7 +2,7 @@ demesne: 0.0.1
 component: card
 name: jewelled egg
 cost: 2
-kinds:
+types:
   - treasure
 designation: card
 expansion: plunder

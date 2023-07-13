@@ -1,0 +1,20 @@
+demesne: 0.0.1
+name: doubloons
+cost:
+  treasure:
+      amount: 7
+  indicators:
+    - asterisk
+types:
+  - treasure
+  - loot
+designation: card
+expansion: plunder
+effects:
+  - treasure:
+      amount: 3
+  - gain:
+      name: gold
+      when:
+        gain:
+          target: this

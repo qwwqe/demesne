@@ -2,7 +2,7 @@ demesne: 0.0.1
 component: card
 name: curse
 cost: 0
-kinds:
+types:
   - curse
 expansion: basic
 victoryPoints:
