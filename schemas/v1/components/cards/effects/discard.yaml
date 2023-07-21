@@ -9,7 +9,5 @@ properties:
       - hand
     default: hand
   amount:
-    type: number
-    minimum: -1
-    default: -1
+    $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/amount
 additionalProperties: false

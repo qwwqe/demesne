@@ -4,8 +4,7 @@ description: Gain the given number of actions.
 type: object
 properties:
   amount:
-    type: number
-    minimum: 1
+    $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/amount
 required:
   - amount
 additionalProperties: false
