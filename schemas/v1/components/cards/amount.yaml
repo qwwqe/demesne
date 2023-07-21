@@ -1,0 +1,39 @@
+$id: https://demesne.qwwqe.xyz/schemas/v1/components/cards/amount
+$schema: https://json-schema.org/draft/2020-12/schema
+description: >-
+  A Demesne amount.
+
+  This represents a general amount. It may be a specific number,
+  a specific range, an unbounded range, or a value relative to
+  something else.
+oneOf:
+  - $ref: "#/$defs/fixed"
+  - $ref: "#/$defs/range"
+  - $ref: "#/$defs/any"
+  - $ref: "#/$defs/relative"
+$defs:
+  fixed:
+    description: A fixed amount.
+    type: number
+    minimum: 1
+  range:
+    description: A range of amounts.
+    type: object
+    properties:
+      minimum:
+        type: number
+        minimum: 0
+      maximum:
+        type: number
+        minimum: 0
+    minProperties: 1
+    additionalProperties: false
+  any:
+    description: Any amount.
+    const: any
+  relative:
+    description: A relative amount.
+    type: string
+    enum:
+      - $discard
+      - $action
