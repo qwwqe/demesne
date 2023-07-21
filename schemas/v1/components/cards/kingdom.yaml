@@ -6,6 +6,6 @@ allOf:
   - type: object
     properties:
       kind:
-        $ref: "https://demesne.qwwqe.xyz/schemas/v1/common/kind#/$defs/cards/kingdom"
+        $ref: https://demesne.qwwqe.xyz/schemas/v1/common/kind#/$defs/cards/kingdom
       definition:
         $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/playable
