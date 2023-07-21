@@ -34,6 +34,7 @@ $defs:
   relative:
     description: A relative amount.
     type: string
+    # TODO: pull these from a schema
     enum:
       - $discard
       - $action

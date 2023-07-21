@@ -5,13 +5,21 @@ definition:
   cost: 2
   types:
     - action
-  # set: dominion
   effects:
-    - action:
-        amount: 1
-    - discard:
-        from: hand
-        amount: -1
-        storeAmountAs: $discardedCards
-    - draw:
-        storedAmount: $discardedCards
+    # the effects under 'action' are those which take effect if the card is played
+    # as an action. some cards with multiple types have different effects if played
+    # in difference stages (for example, Crown double-plays the effect of an action
+    # card if played as an action, and double-plays the effect of a treasure card
+    # if played as an action. in such a case, there would be two distinct definitions
+    # of the card's effects)
+    action:
+      # +1 action
+      - action:
+          amount: 1
+      # discard any number of cards from your hand
+      - discard:
+          from: hand
+          amount: any
+      # draw the number of cards you discarded in the 'discard' step
+      - draw:
+          amount: $discard # this reads from the result of the 'discard' effect
