@@ -1,0 +1,13 @@
+$id: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/draw
+$schema: https://json-schema.org/draft/2020-12/schema
+description: Draw the specified cards.
+type: object
+properties:
+  from:
+    type: string
+    enum:
+      - deck
+    default: deck
+  amount:
+    $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/amount
+additionalProperties: false
