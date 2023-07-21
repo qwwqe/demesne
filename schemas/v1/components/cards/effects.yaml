@@ -1,0 +1,42 @@
+$id: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects
+$schema: https://json-schema.org/draft/2020-12/schema
+description: >-
+  Demesne card effects.
+type: object
+properties:
+  # TODO: Generalize this field name so that the same effects can be used
+  # with other card types.
+  action:
+    type: array
+    items:
+      oneOf:
+        - $ref: "#/$defs/action"
+        - $ref: "#/$defs/discard"
+        - $ref: "#/$defs/draw"
+additionalProperties: false
+minProperties: 1
+$defs:
+  action:
+    type: object
+    properties:
+      action:
+        $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/action
+    required:
+      - action
+    additionalProperties: false
+  discard:
+    type: object
+    properties:
+      discard:
+        $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/discard
+    required:
+      - discard
+    additionalProperties: false
+  draw:
+    type: object
+    properties:
+      draw:
+        $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/draw
+    required:
+      - draw
+    additionalProperties: false
