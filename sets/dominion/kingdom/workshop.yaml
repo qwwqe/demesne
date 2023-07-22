@@ -1,0 +1,15 @@
+demesne: 0.0.1
+kind: card/kingdom
+name: workshop
+definition:
+  cost: 3
+  types:
+    - action
+  effects:
+    action:
+      - gain:
+          amount: 1
+          cost:
+            treasure:
+              amount:
+                maximum: 4
