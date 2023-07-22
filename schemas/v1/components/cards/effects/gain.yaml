@@ -1,0 +1,24 @@
+$id: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/gain
+$schema: https://json-schema.org/draft/2020-12/schema
+description: Gain the specified cards.
+type: object
+properties:
+  from:
+    type: string
+    enum:
+      - supply
+    default: supply
+  to:
+    type: string
+    enum:
+      - discard
+      - deck
+      - hand
+    default: discard
+  cost:
+    $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/cost
+  amount:
+    $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/amount
+  name:
+    type: string
+additionalProperties: false

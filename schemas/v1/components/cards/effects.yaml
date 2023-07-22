@@ -24,6 +24,8 @@ $defs:
         $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/draw
       trash:
         $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/trash
+      gain:
+        $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/gain
       ignore:
         $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/ignore
       play:
