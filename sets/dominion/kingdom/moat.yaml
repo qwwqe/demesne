@@ -12,10 +12,10 @@ definition:
           amount: 2
     reaction:
       trigger:
-        - play:
-            who: other
-            types:
-              - attack
+        play:
+          who: other
+          types:
+            - attack
       effects:
         - ignore:
             card: $trigger
