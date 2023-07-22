@@ -17,4 +17,5 @@ definition:
             types:
               - attack
       effects:
-        - block:
+        - ignore:
+            card: $trigger

@@ -1,0 +1,11 @@
+$id: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/ignore
+$schema: https://json-schema.org/draft/2020-12/schema
+description: Ignore the specified cards.
+type: object
+properties:
+  # TODO: make this definition more rigorous
+  card:
+    type: string
+    enum:
+      - $trigger
+additionalProperties: false

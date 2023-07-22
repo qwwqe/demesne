@@ -22,6 +22,8 @@ $defs:
         $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/draw
       trash:
         $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/trash
+      ignore:
+        $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/ignore
     maxProperties: 1
     minProperties: 1
     additionalProperties: false
