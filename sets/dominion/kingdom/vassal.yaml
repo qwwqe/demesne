@@ -1,0 +1,22 @@
+demesne: 0.0.1
+kind: card/kingdom
+name: vassal
+definition:
+  cost: 3
+  types:
+    - action
+  effects:
+    action:
+      - treasure:
+          amount: 2
+      - discard:
+          from: deck
+      - reaction:
+          trigger:
+            discard:
+              types:
+                - action
+          effects:
+            play:
+              card: $discard
+          limit: 1
