@@ -6,6 +6,8 @@ definition:
   types:
     - action
   effects:
-    - trash:
-        from: hand
-        maxAmount: 4
+    action:
+      - trash:
+          from: hand
+          amount:
+            maximum: 4
