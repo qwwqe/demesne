@@ -1,0 +1,22 @@
+demesne: 0.0.1
+kind: card/kingdom
+name: merchant
+definition:
+  cost: 3
+  types:
+    - action
+  effects:
+    action:
+      - action:
+          amount: 1
+      - draw:
+          amount: 1
+      - reaction:
+          trigger:
+            play:
+              names:
+                - silver
+          effects:
+            - treasure:
+                amount: 1
+          limit: 1
