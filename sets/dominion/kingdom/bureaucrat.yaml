@@ -1,0 +1,16 @@
+demesne: 0.0.1
+kind: card/kingdom
+name: bureaucrat
+definition:
+  cost: 4
+  types:
+    - action
+    - attack
+  effects:
+    action:
+      - gain:
+          name: silver
+          amount: 1
+          to: deck
+      - attack:
+          target: other
