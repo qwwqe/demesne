@@ -1,0 +1,13 @@
+demesne: 0.0.1
+kind: card/kingdom
+name: village
+definition:
+  cost: 3
+  types:
+    - action
+  effects:
+    action:
+      - draw:
+          amount: 1
+      - action:
+          amount: 2
