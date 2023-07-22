@@ -20,10 +20,14 @@ $defs:
         $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/discard
       draw:
         $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/draw
+      trash:
+        $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/trash
     maxProperties: 1
     minProperties: 1
+    additionalProperties: false
   trigger:
     type: object
+    additionalProperties: false
   conditionalEffect:
     type: object
     properties:
@@ -38,4 +42,4 @@ $defs:
   effects:
     type: array
     items:
-      $ref: "#/$defs/trigger"
+      $ref: "#/$defs/effect"

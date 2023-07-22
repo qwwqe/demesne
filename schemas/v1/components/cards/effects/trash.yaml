@@ -1,0 +1,13 @@
+$id: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/trash
+$schema: https://json-schema.org/draft/2020-12/schema
+description: Trash the specified cards.
+type: object
+properties:
+  from:
+    type: string
+    enum:
+      - hand
+    default: hand
+  amount:
+    $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/amount
+additionalProperties: false
