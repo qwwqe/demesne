@@ -1,0 +1,17 @@
+demesne: 0.0.1
+kind: card/kingdom
+name: harginger
+definition:
+  cost: 3
+  types:
+    - action
+  effects:
+    action:
+      - action:
+          amount: 1
+      - draw:
+          amount: 1
+      - draw:
+          from: discard
+          to: deck
+          amount: 1
