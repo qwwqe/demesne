@@ -6,11 +6,15 @@ definition:
   types:
     - action
     - reaction
-  set: dominion
   effects:
-    - draw:
-        amount: 2
-    - reaction:
-        play:
-          type: attack
-        # effect ?????
+    action:
+      - draw:
+          amount: 2
+    reaction:
+      trigger:
+        - play:
+            who: other
+            types:
+              - attack
+      effects:
+        - block:
