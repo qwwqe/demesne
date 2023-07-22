@@ -16,6 +16,8 @@ $defs:
     properties:
       action:
         $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/action
+      treasure:
+        $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/treasure
       discard:
         $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/discard
       draw:
@@ -24,19 +26,23 @@ $defs:
         $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/trash
       ignore:
         $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/ignore
+      play:
+        $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/play
+      reaction:
+        $ref: "#/$defs/conditionalEffect"
     maxProperties: 1
     minProperties: 1
-    additionalProperties: false
-  trigger:
-    type: object
     additionalProperties: false
   conditionalEffect:
     type: object
     properties:
       trigger:
-        $ref: "#/$defs/effects"
+        $ref: "#/$defs/effect"
       effects:
         $ref: "#/$defs/effects"
+      limit:
+        type: number
+        minimum: 0
     required:
       - trigger
       - effects

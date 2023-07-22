@@ -1,0 +1,10 @@
+$id: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/treasure
+$schema: https://json-schema.org/draft/2020-12/schema
+description: Gain the given amount of treasure.
+type: object
+properties:
+  amount:
+    $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/amount
+required:
+  - amount
+additionalProperties: false

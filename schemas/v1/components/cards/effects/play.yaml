@@ -1,0 +1,22 @@
+$id: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/play
+$schema: https://json-schema.org/draft/2020-12/schema
+description: Play the specified cards.
+type: object
+properties:
+  who:
+    type: string
+    enum:
+      - self
+      - other
+  names:
+    type: array
+    items:
+      type: string
+  types:
+    type: array
+    # TODO: pull this from a list of card types
+    items:
+      type: string
+      enum:
+        - attack
+additionalProperties: false
