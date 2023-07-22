@@ -14,4 +14,5 @@ definition:
       - draw:
           from: discard
           to: deck
-          amount: 1
+          amount:
+            maximum: 1
