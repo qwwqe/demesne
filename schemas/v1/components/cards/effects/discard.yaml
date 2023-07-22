@@ -7,6 +7,7 @@ properties:
     type: string
     enum:
       - hand
+      - deck
     default: hand
   amount:
     $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/amount
