@@ -3,12 +3,13 @@ $schema: https://json-schema.org/draft/2020-12/schema
 description: Discard the specified cards.
 type: object
 properties:
+  card:
+    $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/reference
   from:
-    type: string
-    enum:
-      - hand
-      - deck
-    default: hand
+    $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/location
+  to:
+    $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/location
   amount:
     $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/amount
+minProperties: 1
 additionalProperties: false
