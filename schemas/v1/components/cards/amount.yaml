@@ -11,6 +11,7 @@ oneOf:
   - $ref: "#/$defs/range"
   - $ref: "#/$defs/any"
   - $ref: "#/$defs/relative"
+  - $ref: "#/$defs/all"
 $defs:
   fixed:
     description: A fixed amount.
@@ -38,3 +39,6 @@ $defs:
     enum:
       - $discard
       - $action
+  all:
+    description: The maximum amount possible in a given situation.
+    const: all
