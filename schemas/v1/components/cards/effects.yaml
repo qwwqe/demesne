@@ -30,11 +30,42 @@ $defs:
         $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/ignore
       play:
         $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/play
+      attack:
+        $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/attack
+      reveal:
+        $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/reveal
       reaction:
         $ref: "#/$defs/conditionalEffect"
-    maxProperties: 1
+      conditional:
+        $ref: "#/$defs/conditional"
+    maxProperties: 2
     minProperties: 1
     additionalProperties: false
+  conditional:
+    type: object
+    properties:
+      if:
+        $ref: "#/$defs/condition"
+      then:
+        $ref: "#/$defs/effects"
+      else:
+        $ref: "#/$defs/effects"
+    minProperties: 2
+    maxProperties: 3
+    additionalProperties: false
+    required:
+      - if
+  condition:
+    type: object
+    properties:
+      amount:
+        $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/amount
+      types:
+        type: array
+        items:
+          $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/type
+    additionalProperties: false
+    minProperties: 1
   conditionalEffect:
     type: object
     properties:
