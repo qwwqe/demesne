@@ -1,0 +1,53 @@
+$id: https://demesne.qwwqe.xyz/schemas/v1/components/cards/reference
+$schema: https://json-schema.org/draft/2020-12/schema
+description: >-
+  A reference to one or more specific cards.
+
+  TODO: Make this more flexible and expressive (so as to allow the
+  reference to effects other than the last of a given kind).
+oneOf:
+  - $ref: "#/$defs/effect"
+$defs:
+  effects:
+    $action:
+      description: The card or cards affected by the last action effect performed.
+      const: $action
+    $treasure:
+      description: The card or cards affected by the last treasure effect performed.
+      const: $treasure
+    $discard:
+      description: The card or cards affected by the last discard effect performed.
+      const: $discard
+    $draw:
+      description: The card or cards affected by the last draw effect performed.
+      const: $draw
+    $trash:
+      description: The card or cards affected by the last trash effect performed.
+      const: $trash
+    $gain:
+      description: The card or cards affected by the last gain effect performed.
+      const: $gain
+    $ignore:
+      description: The card or cards affected by the last ignore effect performed.
+      const: $ignore
+    $play:
+      description: The card or cards affected by the last play effect performed.
+      const: $play
+    $attack:
+      description: The card or cards affected by the last attack effect performed.
+      const: $attack
+    $reveal:
+      description: The card or cards revealed during the last reveal effect performed.
+      const: $reveal
+  effect:
+    oneOf:
+      - $ref: "#/$defs/effects/$action"
+      - $ref: "#/$defs/effects/$treasure"
+      - $ref: "#/$defs/effects/$discard"
+      - $ref: "#/$defs/effects/$draw"
+      - $ref: "#/$defs/effects/$trash"
+      - $ref: "#/$defs/effects/$gain"
+      - $ref: "#/$defs/effects/$ignore"
+      - $ref: "#/$defs/effects/$play"
+      - $ref: "#/$defs/effects/$attack"
+      - $ref: "#/$defs/effects/$reveal"
