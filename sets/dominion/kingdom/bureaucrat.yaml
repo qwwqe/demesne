@@ -14,3 +14,19 @@ definition:
           to: deck
       - attack:
           target: other
+          effects:
+            - reveal:
+                types:
+                  - victory
+                amount: 1
+              conditional:
+                if:
+                  amount: 1
+                then:
+                  - discard:
+                      card: $reveal
+                      to: deck
+                else:
+                  - reveal:
+                      from: hand
+                      amount: all
