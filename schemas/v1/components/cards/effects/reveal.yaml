@@ -1,0 +1,15 @@
+$id: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/reveal
+$schema: https://json-schema.org/draft/2020-12/schema
+description: Reveal.
+type: object
+properties:
+  types:
+    type: array
+    items:
+      $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/type
+  amount:
+    $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/amount
+  from:
+    $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/location
+minProperties: 1
+additionalProperties: false
