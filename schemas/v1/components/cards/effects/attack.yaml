@@ -1,0 +1,16 @@
+$id: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/attack
+$schema: https://json-schema.org/draft/2020-12/schema
+description: Force players to carry out a sequence of (usually undesirable) actions.
+type: object
+properties:
+  target:
+    type: string
+    enum:
+      - other
+      - all
+  effects:
+    $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects#/$defs/effects
+required:
+  - target
+  - effects
+additionalProperties: false
