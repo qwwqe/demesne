@@ -1,0 +1,29 @@
+$id: https://demesne.qwwqe.xyz/schemas/v1/components/cards/location
+$schema: https://json-schema.org/draft/2020-12/schema
+description: >-
+  A place where cards may be sourced from or deposited into.
+oneOf:
+  - $ref: "#/$defs/deck"
+  - $ref: "#/$defs/hand"
+  - $ref: "#/$defs/discard"
+  - $ref: "#/$defs/supply"
+  - $ref: "#/$defs/trash"
+  - $ref: "#/$defs/card"
+$defs:
+  deck:
+    description: The player's deck.
+    const: deck
+  hand:
+    description: The player's hand.
+    const: hand
+  discard:
+    description: The player's discard pile.
+    const: discard
+  supply:
+    description: The supply.
+    const: supply
+  trash:
+    description: The trash.
+    const: trash
+  card:
+    $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/reference
