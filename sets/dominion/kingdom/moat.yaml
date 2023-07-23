@@ -13,7 +13,8 @@ definition:
     reaction:
       trigger:
         play:
-          who: other
+          # TODO: express target in another way
+          target: other
           types:
             - attack
       effects:
