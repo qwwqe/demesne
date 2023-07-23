@@ -11,12 +11,11 @@ definition:
           amount: 2
       - discard:
           from: deck
-      - reaction:
-          trigger:
-            discard:
-              types:
-                - action
-          effects:
-            play:
-              card: $discard
-          limit: 1
+          amount: 1
+        conditional:
+          if:
+            types:
+              - action
+          then:
+            - play:
+                card: $discard
