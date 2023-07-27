@@ -8,6 +8,8 @@ properties:
     $ref: "#/$defs/effects"
   reaction:
     $ref: "#/$defs/conditionalEffect"
+  victory:
+    $ref: "#/$defs/effects"
 additionalProperties: false
 minProperties: 1
 $defs:
@@ -34,6 +36,8 @@ $defs:
         $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/attack
       reveal:
         $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/reveal
+      victory:
+        $ref: https://demesne.qwwqe.xyz/schemas/v1/components/cards/effects/victory
       reaction:
         $ref: "#/$defs/conditionalEffect"
       conditional:
