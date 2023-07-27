@@ -1,0 +1,15 @@
+demesne: 0.0.1
+kind: card/kingdom
+name: gardens
+definition:
+  cost: 4
+  types:
+    - victory
+  effects:
+    victory:
+      - victory:
+          amount:
+            per: 10
+            target:
+              cards:
+                owner: self
