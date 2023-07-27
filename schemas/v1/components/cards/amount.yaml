@@ -13,6 +13,7 @@ oneOf:
   - $ref: "#/$defs/relative"
   - $ref: "#/$defs/all"
   - $ref: "#/$defs/cards"
+  - $ref: "#/$defs/per"
 $defs:
   fixed:
     description: A fixed amount.
@@ -60,4 +61,16 @@ $defs:
     required:
       - cards
     minProperties: 1
+    additionalProperties: false
+  per:
+    description: An amount per another amount (division).
+    type: object
+    properties:
+      per:
+        type: number
+        minimum: 1
+      target:
+        $ref: "#"
+    required:
+      - per
     additionalProperties: false
