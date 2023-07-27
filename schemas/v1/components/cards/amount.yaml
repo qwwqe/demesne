@@ -12,6 +12,7 @@ oneOf:
   - $ref: "#/$defs/any"
   - $ref: "#/$defs/relative"
   - $ref: "#/$defs/all"
+  - $ref: "#/$defs/cards"
 $defs:
   fixed:
     description: A fixed amount.
@@ -42,3 +43,21 @@ $defs:
   all:
     description: The maximum amount possible in a given situation.
     const: all
+  cards:
+    # TODO: flesh this out
+    description: The amount of cards matching certain criteria.
+    type: object
+    properties:
+      cards:
+        type: object
+        properties:
+          owner:
+            type: string
+            enum:
+              - self
+        minProperties: 1
+        additionalProperties: false
+    required:
+      - cards
+    minProperties: 1
+    additionalProperties: false
