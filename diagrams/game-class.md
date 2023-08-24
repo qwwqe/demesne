@@ -1,3 +1,4 @@
+```mermaid
 ---
 Basic Game
 ---
@@ -39,3 +40,4 @@ Supply *-- "1.." Pile : Base
 NonSupply *-- "1.." Pile
 %% Ruleset *-- "1" Trash
 Pile *-- "*" Card
+```
