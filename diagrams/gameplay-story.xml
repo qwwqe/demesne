@@ -1,0 +1,97 @@
+<mxfile host="app.diagrams.net" modified="2023-08-29T15:07:27.067Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="jqagnlIeUQaFnu6qkcx7" version="21.6.9" type="device">
+  <diagram name="第 1 页" id="vodJU79Spu7LHqL3tC0K">
+    <mxGraphModel dx="1834" dy="798" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HDWSI1Llv29dwuZbGiz6-1" target="HDWSI1Llv29dwuZbGiz6-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-1" value="Players assemble to choose &lt;b&gt;Kingdom&lt;/b&gt; cards and other &lt;b&gt;landscapes&lt;/b&gt;&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-69" y="221" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HDWSI1Llv29dwuZbGiz6-2" target="HDWSI1Llv29dwuZbGiz6-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=diamondThin;startFill=0;endArrow=none;endFill=0;endSize=14;startSize=14;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="HDWSI1Llv29dwuZbGiz6-2" target="HDWSI1Llv29dwuZbGiz6-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-2" value="Everyone carries out table&amp;nbsp;&lt;b&gt;Setup&lt;/b&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="131" y="221" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HDWSI1Llv29dwuZbGiz6-4" target="HDWSI1Llv29dwuZbGiz6-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-4" value="Each player&#39;s &lt;b&gt;Deck&lt;/b&gt; is dealt" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="331" y="221" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HDWSI1Llv29dwuZbGiz6-6" target="HDWSI1Llv29dwuZbGiz6-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=none;endFill=0;dashed=1;" edge="1" parent="1" source="HDWSI1Llv29dwuZbGiz6-6" target="HDWSI1Llv29dwuZbGiz6-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-6" value="Players successively take their &lt;b&gt;Turns&lt;/b&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="531" y="221" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-8" value="When end game condition is met, player with the most points wins" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="731" y="221" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-10" value="Set up &lt;b&gt;Supply&lt;/b&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="51" y="359" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;endArrow=diamondThin;endFill=0;startSize=14;endSize=14;" edge="1" parent="1" source="HDWSI1Llv29dwuZbGiz6-12" target="HDWSI1Llv29dwuZbGiz6-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-12" value="Set up &lt;b&gt;Non-Supply&lt;/b&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="211" y="359" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-14" value="How is a game of Demesne played?" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=19;" vertex="1" parent="1">
+          <mxGeometry x="155.5" y="120" width="471" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="HDWSI1Llv29dwuZbGiz6-15" target="HDWSI1Llv29dwuZbGiz6-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-24" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;dashed=1;endArrow=none;endFill=0;" edge="1" parent="1" source="HDWSI1Llv29dwuZbGiz6-15" target="HDWSI1Llv29dwuZbGiz6-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-15" value="&lt;b&gt;Base&lt;/b&gt; cards" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-34" y="465" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="HDWSI1Llv29dwuZbGiz6-18" target="HDWSI1Llv29dwuZbGiz6-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-27" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.708;entryY=0.012;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;endArrow=none;endFill=0;" edge="1" parent="1" source="HDWSI1Llv29dwuZbGiz6-18" target="HDWSI1Llv29dwuZbGiz6-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-18" value="&lt;b&gt;Landscapes&lt;/b&gt; + &lt;b&gt;Tokens&lt;br&gt;&lt;/b&gt;(Loot, Events, Debt, etc)" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="300" y="467" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="HDWSI1Llv29dwuZbGiz6-21" target="HDWSI1Llv29dwuZbGiz6-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=none;endFill=0;dashed=1;" edge="1" parent="1" source="HDWSI1Llv29dwuZbGiz6-21" target="HDWSI1Llv29dwuZbGiz6-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-21" value="&lt;b&gt;Kingdom&lt;/b&gt; cards" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="133" y="465" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=369.5;exitDy=56.5;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;dashed=1;" edge="1" parent="1" source="HDWSI1Llv29dwuZbGiz6-23" target="HDWSI1Llv29dwuZbGiz6-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="437" y="626" />
+              <mxPoint x="437" y="425" />
+              <mxPoint x="391" y="425" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-23" value="Depends on player decisions made during&amp;nbsp;&lt;b&gt;Setup&lt;/b&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="1">
+          <mxGeometry x="8" y="569" width="369.5" height="83" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-29" value="What is &quot;taking a &lt;b&gt;Turn&lt;/b&gt;&quot;?" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="1">
+          <mxGeometry x="482" y="343" width="218" height="55" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
