@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-09-02T16:25:53.499Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="o6MZHc9Ci9LuUq5YbCHs" version="21.6.9" type="device">
+<mxfile host="app.diagrams.net" modified="2023-09-02T16:28:58.522Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="TgTTpaD_FxIVHtlKgGw4" version="21.6.9" type="device">
   <diagram name="第 1 页" id="eLhVK9uvp9Z6V3pS1Jxe">
-    <mxGraphModel dx="2087" dy="939" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2487" dy="939" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -159,6 +159,9 @@
         </mxCell>
         <mxCell id="lLB0NK1X7VDJrRfnNjI3-78" value="Start turn." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-379" y="185" width="154.53" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lLB0NK1X7VDJrRfnNjI3-81" value="Illustrate a more general story for a &lt;b&gt;Turn&lt;/b&gt;&amp;nbsp;in addition to the flow chart." style="shape=note;size=20;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fillColor=#f8cecc;strokeColor=#b85450;spacingRight=17;" vertex="1" parent="1">
+          <mxGeometry x="-520" y="301" width="246" height="48" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
