@@ -4,6 +4,8 @@ skinparam linetype ortho
 
 note "Where is the concept of <b>Turn</b> here?" as TurnNote
 
+note "Reevaluate whether these should actually be classes" as ClassNote
+
 class Game {
   id: string
   stage: Stage
@@ -58,6 +60,10 @@ Player -- Discard
 
 Deck --* "1" Pile
 Discard --* "1" Pile
+
+Trash .left. ClassNote
+Supply .left. ClassNote
+"Non-Supply" .left. ClassNote
 
 Supply -- Base
 Supply -- Kingdom
