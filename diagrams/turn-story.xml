@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-02T16:28:58.522Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="TgTTpaD_FxIVHtlKgGw4" version="21.6.9" type="device">
+<mxfile host="app.diagrams.net" modified="2023-09-03T07:22:04.463Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="BQWzHhNF3llcfaTw2yuv" version="21.6.9" type="device">
   <diagram name="第 1 页" id="eLhVK9uvp9Z6V3pS1Jxe">
     <mxGraphModel dx="2487" dy="939" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -14,6 +14,9 @@
           <mxGeometry x="-169.03000000000003" y="185" width="291" height="60" as="geometry" />
         </mxCell>
         <mxCell id="lLB0NK1X7VDJrRfnNjI3-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="lLB0NK1X7VDJrRfnNjI3-33" target="lLB0NK1X7VDJrRfnNjI3-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lLB0NK1X7VDJrRfnNjI3-84" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;dashed=1;endArrow=none;endFill=0;" edge="1" parent="1" source="lLB0NK1X7VDJrRfnNjI3-33" target="lLB0NK1X7VDJrRfnNjI3-83">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="lLB0NK1X7VDJrRfnNjI3-33" value="&lt;b&gt;Play&lt;/b&gt;&amp;nbsp;an&amp;nbsp;&lt;b&gt;Action Card.&amp;nbsp;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -162,6 +165,15 @@
         </mxCell>
         <mxCell id="lLB0NK1X7VDJrRfnNjI3-81" value="Illustrate a more general story for a &lt;b&gt;Turn&lt;/b&gt;&amp;nbsp;in addition to the flow chart." style="shape=note;size=20;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fillColor=#f8cecc;strokeColor=#b85450;spacingRight=17;" vertex="1" parent="1">
           <mxGeometry x="-520" y="301" width="246" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="lLB0NK1X7VDJrRfnNjI3-83" value="Playing an Action Card can effect a complex chain of additional actions and decisions involving both the current player and the other players." style="shape=note;size=20;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-294" y="716" width="246" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="lLB0NK1X7VDJrRfnNjI3-88" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;dashed=1;" edge="1" parent="1" source="lLB0NK1X7VDJrRfnNjI3-85" target="lLB0NK1X7VDJrRfnNjI3-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lLB0NK1X7VDJrRfnNjI3-85" value="Buying a Card can have a number of side effects." style="shape=note;size=20;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="376" y="813" width="246" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
