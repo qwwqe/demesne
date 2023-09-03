@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-08-29T15:07:27.067Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="jqagnlIeUQaFnu6qkcx7" version="21.6.9" type="device">
+<mxfile host="app.diagrams.net" modified="2023-09-03T07:00:40.059Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="9-t6CyyQijYnRvNq6mkI" version="21.6.9" type="device">
   <diagram name="第 1 页" id="vodJU79Spu7LHqL3tC0K">
     <mxGraphModel dx="1834" dy="798" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -31,9 +31,11 @@
         <mxCell id="HDWSI1Llv29dwuZbGiz6-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=none;endFill=0;dashed=1;" edge="1" parent="1" source="HDWSI1Llv29dwuZbGiz6-6" target="HDWSI1Llv29dwuZbGiz6-29">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="HDWSI1Llv29dwuZbGiz6-6" value="Players successively take their &lt;b&gt;Turns&lt;/b&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="531" y="221" width="120" height="60" as="geometry" />
-        </mxCell>
+        <UserObject label="Players successively take their &lt;b&gt;Turns&lt;/b&gt;" id="HDWSI1Llv29dwuZbGiz6-6">
+          <mxCell style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+            <mxGeometry x="531" y="221" width="120" height="60" as="geometry" />
+          </mxCell>
+        </UserObject>
         <mxCell id="HDWSI1Llv29dwuZbGiz6-8" value="When end game condition is met, player with the most points wins" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="731" y="221" width="120" height="60" as="geometry" />
         </mxCell>
@@ -64,7 +66,7 @@
         <mxCell id="HDWSI1Llv29dwuZbGiz6-27" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.708;entryY=0.012;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;endArrow=none;endFill=0;" edge="1" parent="1" source="HDWSI1Llv29dwuZbGiz6-18" target="HDWSI1Llv29dwuZbGiz6-23">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="HDWSI1Llv29dwuZbGiz6-18" value="&lt;b&gt;Landscapes&lt;/b&gt; + &lt;b&gt;Tokens&lt;br&gt;&lt;/b&gt;(Loot, Events, Debt, etc)" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-18" value="&lt;b&gt;Landscapes&lt;/b&gt; + &lt;b&gt;Tokens&lt;br&gt;&lt;/b&gt;(Loot, Events, Debt, etc)" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;opacity=50;" vertex="1" parent="1">
           <mxGeometry x="300" y="467" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="HDWSI1Llv29dwuZbGiz6-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="HDWSI1Llv29dwuZbGiz6-21" target="HDWSI1Llv29dwuZbGiz6-10">
@@ -90,6 +92,12 @@
         </mxCell>
         <mxCell id="HDWSI1Llv29dwuZbGiz6-29" value="What is &quot;taking a &lt;b&gt;Turn&lt;/b&gt;&quot;?" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="1">
           <mxGeometry x="482" y="343" width="218" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;endArrow=none;endFill=0;dashed=1;" edge="1" parent="1" source="HDWSI1Llv29dwuZbGiz6-35" target="HDWSI1Llv29dwuZbGiz6-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWSI1Llv29dwuZbGiz6-35" value="Mostly later expansion content." style="shape=note;size=20;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="1">
+          <mxGeometry x="496" y="469.5" width="179" height="55" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
