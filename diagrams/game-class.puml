@@ -12,10 +12,7 @@ class Game {
   turn: int
 }
 
-class Player {
-  id: string
-  name: string
-}
+class Player {}
 
 class Pile {
   faceup: bool
