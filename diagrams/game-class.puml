@@ -48,18 +48,18 @@ note left of Game::stage
   Flesh out a more comprehensive notion of the current state
 end note
 
-Game --* Supply
-Game --* "Non-Supply"
-Game --* Trash
-Game --* "2..6\n{ordered}" Player
+Game *-- Supply
+Game *-- "Non-Supply"
+Game *-- Trash
+Game *-- "2..6\n{ordered}" Player
 
 Player -- "Play Area"
 Player -- Hand
 Player -- Deck
 Player -- Discard
 
-Deck --* "1" Pile
-Discard --* "1" Pile
+Deck *-- "1" Pile
+Discard *-- "1" Pile
 
 Trash .left. ClassNote
 Supply .left. ClassNote
@@ -68,14 +68,14 @@ Supply .left. ClassNote
 Supply -- Base
 Supply -- Kingdom
 
-Base --* "1.." Pile
-Kingdom --* "10.." Pile
-"Non-Supply" --* "1.." Pile
+Base *-- "1.." Pile
+Kingdom *-- "10.." Pile
+"Non-Supply" *-- "1.." Pile
 
-Trash --* "1" Pile
+Trash *-- "1" Pile
 
-Pile --* "\r*\n{ordered}" Card
+Pile *-- "\r*\n{ordered}" Card
 
-"Play Area" --* "*" Card
-Hand --* "*" Card
+"Play Area" *-- "*" Card
+Hand *-- "*" Card
 @enduml
