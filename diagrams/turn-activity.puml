@@ -27,13 +27,15 @@ partition Buy Phase {
   :End Buy Phase;
 }
 
-:Begin Clean Up Phase;
+partition Clean Up Phase {
+  :Begin Clean Up Phase;
 
-:Discard all Cards in hand or in play;
+  :Discard all Cards in hand or in play;
 
-:Draw five Cards to hand;
+  :Draw five Cards to hand;
 
-:End Clean Up Phase;
+  :End Clean Up Phase;
+}
 
 stop
 
