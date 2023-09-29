@@ -13,17 +13,19 @@ partition Action Phase {
   :End Action Phase;
 }
 
-:Begin Buy Phase;
+partition Buy Phase {
+  :Begin Buy Phase;
 
-repeat
+  repeat
     :Play Treasure Card;
-repeat while () is ([Willing and able])
+  repeat while () is ([Willing and able])
 
-repeat
+  repeat
     :Buy Card;
-repeat while () is ([Willing and able])
+  repeat while () is ([Willing and able])
 
-:End Buy Phase;
+  :End Buy Phase;
+}
 
 :Begin Clean Up Phase;
 
