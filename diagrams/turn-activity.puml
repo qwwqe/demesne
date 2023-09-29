@@ -1,0 +1,36 @@
+@startuml
+title How is a turn of Demesne played?
+
+start
+
+:Begin Action Phase;
+
+repeat
+    :Play Action Card;
+repeat while () is ([Willing and able])
+
+:End Action Phase;
+
+:Begin Buy Phase;
+
+repeat
+    :Play Treasure Card;
+repeat while () is ([Willing and able])
+
+repeat
+    :Buy Card;
+repeat while () is ([Willing and able])
+
+:End Buy Phase;
+
+:Begin Clean Up Phase;
+
+:Discard all Cards in hand or in play;
+
+:Draw five Cards to hand;
+
+:End Clean Up Phase;
+
+stop
+
+@enduml
