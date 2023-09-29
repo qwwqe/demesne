@@ -3,13 +3,15 @@ title How is a turn of Demesne played?
 
 start
 
-:Begin Action Phase;
+partition Action Phase {
+  :Begin Action Phase;
 
-repeat
+  repeat
     :Play Action Card;
-repeat while () is ([Willing and able])
+  repeat while () is ([Willing and able])
 
-:End Action Phase;
+  :End Action Phase;
+}
 
 :Begin Buy Phase;
 
