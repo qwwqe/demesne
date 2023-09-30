@@ -1,0 +1,10 @@
+@startuml
+
+sprite $subactivity_rake <svg width="16" height="16" viewBox="0 0 16 16">
+<path
+    style="fill:#000000"
+    d="M 7,1 H 9 V 7 H 15 V 15 H 13 V 9 H 9 V 15 H 7 V 9 H 3 V 15 H 1 V 7 H 7 Z"
+/>
+</svg>
+
+@enduml
