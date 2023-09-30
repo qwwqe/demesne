@@ -1,5 +1,7 @@
 @startuml
 title How is a turn of Demesne played?
+skinparam hyperlinkColor black
+skinparam hyperlinkUnderline false
 
 start
 
@@ -7,7 +9,7 @@ partition Action Phase {
   :Begin Action Phase;
 
   repeat
-    :Play Action Card;
+    :[[action-card-activity.puml {How is an Action Card played?} Play Action Card]];
   repeat while () is ([Willing and able])
 
   :End Action Phase;
@@ -17,7 +19,7 @@ partition Buy Phase {
   :Begin Buy Phase;
 
   repeat
-    :Play Treasure Card;
+    :[[treasure-card-activity.puml {How is a Treasure Card played?} Play Treasure Card]];
   repeat while () is ([Willing and able])
 
   repeat
