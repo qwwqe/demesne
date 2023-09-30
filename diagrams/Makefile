@@ -14,4 +14,7 @@ all:
 %.svg: %.puml
 	plantuml -tsvg -p < $< | xsltproc enrichsvg.xsl - > $@
 
+.PHONY: all
+clean:
+	rm $(OBJ)
 # end
