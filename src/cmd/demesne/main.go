@@ -62,7 +62,8 @@ func main() {
 
 	// if err =
 
-	filenames, err := filepath.Glob("./sets/**/kingdom/*.yaml")
+	// filenames, err := filepath.Glob("./sets/**/kingdom/*.yaml")
+	filenames, err := filepath.Glob("./sets/dominion/kingdom/*.yaml")
 	if err != nil {
 		panic(err)
 	}
