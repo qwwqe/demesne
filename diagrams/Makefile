@@ -12,6 +12,6 @@ all:
 	$(MAKE) --no-print-directory $(OBJ)
 
 %.svg: %.puml
-	plantuml -tsvg $?
+	plantuml -tsvg -p < $< | xsltproc enrichsvg.xsl - > $@
 
 # end
