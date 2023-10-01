@@ -1,0 +1,32 @@
+@startuml
+title How is a game of Demesne played?
+skinparam hyperlinkColor black
+skinparam hyperlinkUnderline false
+
+!include sprites/uml.puml
+
+<style>
+partition {
+  LineColor #33333333
+}
+</style>
+
+start
+
+:Assemble players;
+
+:[[setup-activity.puml {How is the game set up?} Setup game <$subactivity_rake>]];
+
+:Deal decks;
+
+repeat
+    :[[turn-activity.puml {How is a turn played?} Players take their turns <$subactivity_rake>]];
+repeat while () not ([End condition satisfied])
+
+:Tally scores;
+
+:Decide victor;
+
+stop
+
+@enduml
