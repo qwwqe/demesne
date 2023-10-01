@@ -3,11 +3,17 @@ title How is a turn of Demesne played?
 skinparam hyperlinkColor black
 skinparam hyperlinkUnderline false
 
+<style>
+partition {
+  LineColor #33333333
+}
+</style>
+
 !include sprites/uml.puml
 
 start
 
-group "Action Phase" {
+partition "Action Phase" {
   :Begin Action Phase;
 
   repeat

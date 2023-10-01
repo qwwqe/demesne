@@ -3,8 +3,8 @@
   <g>
     <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="230" x="20" y="36.2399">How is a turn of Demesne played?</text>
     <ellipse cx="126.5" cy="61.2719" fill="#222222" rx="10" ry="10" style="stroke:#222222;stroke-width:1.0;"/>
-    <rect fill="none" height="292.4003" style="stroke:#000000;stroke-width:1.5;" width="181.5" x="51" y="81.2719"/>
-    <path d="M147,81.2719 L147,94.5438 L137,104.5438 L51,104.5438 " fill="none" style="stroke:#000000;stroke-width:1.5;"/>
+    <rect fill="none" height="292.4003" style="stroke:#33333333;stroke-width:1.5;" width="181.5" x="51" y="81.2719"/>
+    <path d="M147,81.2719 L147,94.5438 L137,104.5438 L51,104.5438 " fill="none" style="stroke:#33333333;stroke-width:1.5;"/>
     <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="54" y="98.5118">Action Phase</text>
     <rect fill="#F1F1F1" height="37.3761" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="128" x="62.5" y="121.5438"/>
     <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="108" x="72.5" y="145.4639">Begin Action Phase</text>
@@ -20,8 +20,8 @@
     <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="89" x="138.5" y="289.1281">[Willing and able]</text>
     <rect fill="#F1F1F1" height="37.3761" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="117" x="68" y="324.2961"/>
     <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="97" x="78" y="348.2162">End Action Phase</text>
-    <rect fill="none" height="437.7764" style="stroke:#000000;stroke-width:1.5;" width="191" x="43" y="383.6722"/>
-    <path d="M122,383.6722 L122,396.9441 L112,406.9441 L43,406.9441 " fill="none" style="stroke:#000000;stroke-width:1.5;"/>
+    <rect fill="none" height="437.7764" style="stroke:#33333333;stroke-width:1.5;" width="191" x="43" y="383.6722"/>
+    <path d="M122,383.6722 L122,396.9441 L112,406.9441 L43,406.9441 " fill="none" style="stroke:#33333333;stroke-width:1.5;"/>
     <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69" x="46" y="400.9121">Buy Phase</text>
     <rect fill="#F1F1F1" height="37.3761" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="114" x="69.5" y="423.9441"/>
     <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="94" x="79.5" y="447.8642">Begin Buy Phase</text>
@@ -42,8 +42,8 @@
     <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="89" x="138.5" y="736.9045">[Willing and able]</text>
     <rect fill="#F1F1F1" height="37.3761" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="103" x="75" y="772.0725"/>
     <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="83" x="85" y="795.9926">End Buy Phase</text>
-    <rect fill="none" height="261.7764" style="stroke:#000000;stroke-width:1.5;" width="175" x="39" y="831.4486"/>
-    <path d="M153,831.4486 L153,844.7205 L143,854.7205 L39,854.7205 " fill="none" style="stroke:#000000;stroke-width:1.5;"/>
+    <rect fill="none" height="261.7764" style="stroke:#33333333;stroke-width:1.5;" width="175" x="39" y="831.4486"/>
+    <path d="M153,831.4486 L153,844.7205 L143,854.7205 L39,854.7205 " fill="none" style="stroke:#33333333;stroke-width:1.5;"/>
     <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104" x="42" y="848.6885">Clean Up Phase</text>
     <rect fill="#F1F1F1" height="37.3761" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="144" x="54.5" y="871.7205"/>
     <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="124" x="64.5" y="895.6406">Begin Clean Up Phase</text>
@@ -106,6 +106,6 @@
     <polygon fill="#181818" points="122.5,861.7205,126.5,871.7205,130.5,861.7205,126.5,865.7205" style="stroke:#181818;stroke-width:1.0;"/>
     <line style="stroke:#181818;stroke-width:1.0;" x1="126.5" x2="126.5" y1="1081.225" y2="1113.225"/>
     <polygon fill="#181818" points="122.5,1103.225,126.5,1113.225,130.5,1103.225,126.5,1107.225" style="stroke:#181818;stroke-width:1.0;"/>
-    <!--SRC=[hL9DQm8n4BtdLqob1ptOthMqL2tqwA7IWqWPTqTts9Y4V2YB-D-RR7Lno-AXz18cyuOtxxt4ivS4x_e0x0311wj0Rs16EtAAm4YiA7yHhcHbqE8EYigGbQpAgPRQmbfYLdR12vNN1S46fICXxbXbCkG4pbZsv1x3JZwOU0ZXF5elnDRgOA3tcddM2kO5Ekh1KG2C9hHb1TV0MCI-9KFeOn57bakiuM66DX-cUi- -gXV0yUAluPZ6eOkv4ynZqKAUxbrONpY-B9Rql5gDcurmA3YcrXyaqlxoasKqketqEU1QqcgGn8tUuhKj-IH4JCbptUjDGjLXikbsEFIMq0LBDpt2ntcgosGR-m-RrmgJzaJybwIkVBTZcagAxxOm7LcreJgmqOnTIWTGobgBExSj7c33-n_d3ho68geOD_j_SvtIjzH6V0C0]-->
+    <!--SRC=[hLB1Re905BplLxpQ7lHWFVIcngPganvwy53JWp7D4vwoOLqskuk66Fwz3qG23UcXAGTux4pcpGnuwHN1Mt86wG31frP3ieSb7Sbf0gCme_1Pk5XgWnQF46M6h98wNYGgiR1J6CHTy5g7vK2mH-L8YAdpcQAPO9wNNYOQBWBWdHbNfVkdwXAvc8ugihYJEb1fIE2CbPxSA3sgHyCt8Pnd9T7Gwxq4vNCLeQDUAJ-Uqq5gQ08JmUUM3A7dWIcR3PRmC40R3elv97rMBe7BhPbQOy6aMoqvh7Xe8TC7b-vk6byMOvfjjvDw8vmZoNtt1uLeV_Cf5LTqOFaGSATeEoZCZL_vjMqvR-MSfrb7oFgq8w6tX2wrz6j6-AXONI7Rs7_4R3eil1V2VscgaRjTqq8HVxUrwUYg3PM5ZPVI5Uq0AbLwSTMnnJFivUcQt85F868Nath_Jwsy-3KJ8xu1]-->
   </g>
 </svg>
