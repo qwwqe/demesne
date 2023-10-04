@@ -5,12 +5,6 @@ skinparam hyperlinkUnderline false
 
 !include sprites/uml.puml
 
-<style>
-partition {
-  LineColor #33333333
-}
-</style>
-
 start
 
 :Assemble players;
