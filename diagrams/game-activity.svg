@@ -1,58 +1,104 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="570px" preserveAspectRatio="none" style="width:281px;height:570px;background:#FFFFFF;" version="1.1" viewBox="0 0 281 570" width="281px" zoomAndPan="magnify">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="760px" preserveAspectRatio="none" style="width:864px;height:760px;background:#FFFFFF;" version="1.1" viewBox="0 0 864 760" width="864px" zoomAndPan="magnify">
   <defs/>
   <g>
-    <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="238" x="20" y="36.2399">How is a game of Demesne played?</text>
-    <ellipse cx="118.25" cy="61.2719" fill="#222222" rx="10" ry="10" style="stroke:#222222;stroke-width:1.0;"/>
-    <rect fill="#F1F1F1" height="37.3761" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="118" x="59.25" y="91.2719"/>
-    <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="98" x="69.25" y="115.192">Assemble players</text>
-    <rect fill="#F1F1F1" height="37.3761" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="107" x="64.75" y="148.648"/>
-    <a href="setup-activity.svg" target="_top" title="How is the game set up?" xlink:actuate="onRequest" xlink:href="setup-activity.svg" xlink:show="new" xlink:title="How is the game set up?" xlink:type="simple">
-      <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="68" x="74.75" y="172.5681">Setup game</text>
+    <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="238" x="311.5" y="36.2399">How is a game of Demesne played?</text>
+    <ellipse cx="426.5" cy="61.2719" fill="#222222" rx="10" ry="10" style="stroke:#222222;stroke-width:1.0;"/>
+    <rect fill="#F1F1F1" height="37.3761" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="118" x="367.5" y="91.2719"/>
+    <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="98" x="377.5" y="115.192">Assemble players</text>
+    <rect fill="none" height="237.04" rx="12.5" ry="12.5" style="stroke:#33333333;stroke-width:1.5;" width="842" x="11" y="138.648"/>
+    <path d="M100,138.648 L100,151.9199 L90,161.9199 L11,161.9199 " fill="none" style="stroke:#33333333;stroke-width:1.5;"/>
+    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79" x="14" y="155.888">Setup game</text>
+    <path d="M31,181.9199 L31,267.216 L197,267.216 L197,191.9199 L187,181.9199 L31,181.9199 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
+    <path d="M187,181.9199 L187,191.9199 L197,191.9199 L187,181.9199 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="114" x="37" y="202">The specific size of</text>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="29" x="37" y="220.824">each</text>
+    <a href="base-card-class.svg" target="_top" title="Base Cards" xlink:actuate="onRequest" xlink:href="base-card-class.svg" xlink:show="new" xlink:title="Base Cards" xlink:type="simple">
+      <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="60" x="69" y="220.824">Base Card</text>
     </a>
-    <a href="setup-activity.svg" target="_top" title="How is the game set up?" xlink:actuate="onRequest" xlink:href="setup-activity.svg" xlink:show="new" xlink:title="How is the game set up?" xlink:type="simple">
-      <path d="M152.75,159.648 L154.75,159.648 L154.75,165.648 L160.75,165.648 L160.75,173.648 L158.75,173.648 L158.75,167.648 L154.75,167.648 L154.75,173.648 L152.75,173.648 L152.75,167.648 L148.75,167.648 L148.75,173.648 L146.75,173.648 L146.75,165.648 L152.75,165.648 " fill="#181818" style="stroke:;stroke-width:0.0;stroke-dasharray:;"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="132" y="220.824">Pile</text>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="145" x="37" y="239.648">depends on the number</text>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="133" x="37" y="258.472">of players in the game</text>
+    <path d="M42,287.216 L42,353.6881 L186,353.6881 L186,297.216 L176,287.216 L42,287.216 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
+    <path d="M176,287.216 L176,297.216 L186,297.216 L176,287.216 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="118" x="48" y="307.296">Players collectively</text>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="59" x="48" y="326.12">select ten</text>
+    <a href="kingdom-card-class.svg" target="_top" title="Kingdom Cards" xlink:actuate="onRequest" xlink:href="kingdom-card-class.svg" xlink:show="new" xlink:title="Kingdom Cards" xlink:type="simple">
+      <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="61" x="110" y="326.12">Kingdoms</text>
     </a>
-    <rect fill="#F1F1F1" height="37.3761" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="81" x="77.75" y="206.0242"/>
-    <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="61" x="87.75" y="229.9443">Deal decks</text>
-    <rect fill="#F1F1F1" height="37.3761" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="173" x="31.75" y="307.4003"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="72" x="48" y="344.9441">to play with</text>
+    <path d="M656,215.744 L656,319.864 L833,319.864 L833,225.744 L823,215.744 L656,215.744 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
+    <path d="M823,215.744 L823,225.744 L833,225.744 L823,215.744 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="129" x="662" y="235.824">In the base game, the</text>
+    <a href="non-supply-class.svg" target="_top" title="Non-Supply" xlink:actuate="onRequest" xlink:href="non-supply-class.svg" xlink:show="new" xlink:title="Non-Supply" xlink:type="simple">
+      <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="73" x="662" y="254.648">Non-Supply</text>
+    </a>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="69" x="738" y="254.648">(everything</text>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="121" x="662" y="273.472">except the Base and</text>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="122" x="662" y="292.296">Kingdom Cards) just</text>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="93" x="662" y="311.12">amounts to the</text>
+    <a href="trash-pile-class.svg" target="_top" title="Trash" xlink:actuate="onRequest" xlink:href="trash-pile-class.svg" xlink:show="new" xlink:title="Trash" xlink:type="simple">
+      <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="34" x="758" y="311.12">Trash</text>
+    </a>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="795" y="311.12">pile</text>
+    <rect fill="#555555" height="6" rx="2.5" ry="2.5" style="stroke:#555555;stroke-width:1.0;" width="439" x="207" y="223.1159"/>
+    <rect fill="#F1F1F1" height="37.3761" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="120" x="219" y="249.1159"/>
+    <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="100" x="229" y="273.036">Setup Base Cards</text>
+    <rect fill="#F1F1F1" height="37.3761" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="151" x="367" y="249.1159"/>
+    <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="131" x="377" y="273.036">Choose Kingdom Cards</text>
+    <rect fill="#F1F1F1" height="37.3761" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="88" x="546" y="249.1159"/>
+    <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="68" x="556" y="273.036">Setup Trash</text>
+    <rect fill="#555555" height="6" rx="2.5" ry="2.5" style="stroke:#555555;stroke-width:1.0;" width="439" x="207" y="306.4921"/>
+    <rect fill="#F1F1F1" height="37.3761" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="81" x="386" y="395.6881"/>
+    <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="61" x="396" y="419.6082">Deal decks</text>
+    <rect fill="#F1F1F1" height="37.3761" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="173" x="340" y="497.0642"/>
+    <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="134" x="350" y="520.9843">Players take their turns</text>
     <a href="turn-activity.svg" target="_top" title="How is a turn played?" xlink:actuate="onRequest" xlink:href="turn-activity.svg" xlink:show="new" xlink:title="How is a turn played?" xlink:type="simple">
-      <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="134" x="41.75" y="331.3204">Players take their turns</text>
+      <path d="M494,509.4403 L496,509.4403 L496,515.4403 L502,515.4403 L502,523.4403 L500,523.4403 L500,517.4403 L496,517.4403 L496,523.4403 L494,523.4403 L494,517.4403 L490,517.4403 L490,523.4403 L488,523.4403 L488,515.4403 L494,515.4403 " fill="#181818" style="stroke:;stroke-width:0.0;stroke-dasharray:;"/>
     </a>
-    <a href="turn-activity.svg" target="_top" title="How is a turn played?" xlink:actuate="onRequest" xlink:href="turn-activity.svg" xlink:show="new" xlink:title="How is a turn played?" xlink:type="simple">
-      <path d="M185.75,318.4003 L187.75,318.4003 L187.75,324.4003 L193.75,324.4003 L193.75,332.4003 L191.75,332.4003 L191.75,326.4003 L187.75,326.4003 L187.75,332.4003 L185.75,332.4003 L185.75,326.4003 L181.75,326.4003 L181.75,332.4003 L179.75,332.4003 L179.75,324.4003 L185.75,324.4003 " fill="#181818" style="stroke:;stroke-width:0.0;stroke-dasharray:;"/>
-    </a>
-    <polygon fill="#F1F1F1" points="118.25,263.4003,130.25,275.4003,118.25,287.4003,106.25,275.4003,118.25,263.4003" style="stroke:#181818;stroke-width:0.5;"/>
-    <polygon fill="#F1F1F1" points="118.25,364.7764,118.25,364.7764,130.25,376.7764,118.25,388.7764,118.25,388.7764,106.25,376.7764,118.25,364.7764" style="stroke:#181818;stroke-width:0.5;"/>
-    <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="126" x="122.25" y="401.5363">[End condition satisfied]</text>
-    <rect fill="#F1F1F1" height="37.3761" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="86" x="75.25" y="423.0363"/>
-    <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="66" x="85.25" y="446.9564">Tally scores</text>
-    <rect fill="#F1F1F1" height="37.3761" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="93" x="71.75" y="480.4124"/>
-    <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="73" x="81.75" y="504.3325">Decide victor</text>
-    <ellipse cx="118.25" cy="548.7885" fill="none" rx="11" ry="11" style="stroke:#222222;stroke-width:1.0;"/>
-    <ellipse cx="118.25" cy="548.7885" fill="#222222" rx="6" ry="6" style="stroke:#111111;stroke-width:1.0;"/>
-    <line style="stroke:#181818;stroke-width:1.0;" x1="118.25" x2="118.25" y1="71.2719" y2="91.2719"/>
-    <polygon fill="#181818" points="114.25,81.2719,118.25,91.2719,122.25,81.2719,118.25,85.2719" style="stroke:#181818;stroke-width:1.0;"/>
-    <line style="stroke:#181818;stroke-width:1.0;" x1="118.25" x2="118.25" y1="128.648" y2="148.648"/>
-    <polygon fill="#181818" points="114.25,138.648,118.25,148.648,122.25,138.648,118.25,142.648" style="stroke:#181818;stroke-width:1.0;"/>
-    <line style="stroke:#181818;stroke-width:1.0;" x1="118.25" x2="118.25" y1="186.0242" y2="206.0242"/>
-    <polygon fill="#181818" points="114.25,196.0242,118.25,206.0242,122.25,196.0242,118.25,200.0242" style="stroke:#181818;stroke-width:1.0;"/>
-    <line style="stroke:#181818;stroke-width:1.0;" x1="118.25" x2="118.25" y1="287.4003" y2="307.4003"/>
-    <polygon fill="#181818" points="114.25,297.4003,118.25,307.4003,122.25,297.4003,118.25,301.4003" style="stroke:#181818;stroke-width:1.0;"/>
-    <line style="stroke:#181818;stroke-width:1.0;" x1="130.25" x2="216.75" y1="376.7764" y2="376.7764"/>
-    <polygon fill="#181818" points="212.75,336.0883,216.75,326.0883,220.75,336.0883,216.75,332.0883" style="stroke:#181818;stroke-width:1.0;"/>
-    <line style="stroke:#181818;stroke-width:1.0;" x1="216.75" x2="216.75" y1="275.4003" y2="376.7764"/>
-    <line style="stroke:#181818;stroke-width:1.0;" x1="216.75" x2="130.25" y1="275.4003" y2="275.4003"/>
-    <polygon fill="#181818" points="140.25,271.4003,130.25,275.4003,140.25,279.4003,136.25,275.4003" style="stroke:#181818;stroke-width:1.0;"/>
-    <line style="stroke:#181818;stroke-width:1.0;" x1="118.25" x2="118.25" y1="344.7764" y2="364.7764"/>
-    <polygon fill="#181818" points="114.25,354.7764,118.25,364.7764,122.25,354.7764,118.25,358.7764" style="stroke:#181818;stroke-width:1.0;"/>
-    <line style="stroke:#181818;stroke-width:1.0;" x1="118.25" x2="118.25" y1="243.4003" y2="263.4003"/>
-    <polygon fill="#181818" points="114.25,253.4003,118.25,263.4003,122.25,253.4003,118.25,257.4003" style="stroke:#181818;stroke-width:1.0;"/>
-    <line style="stroke:#181818;stroke-width:1.0;" x1="118.25" x2="118.25" y1="388.7764" y2="423.0363"/>
-    <polygon fill="#181818" points="114.25,413.0363,118.25,423.0363,122.25,413.0363,118.25,417.0363" style="stroke:#181818;stroke-width:1.0;"/>
-    <line style="stroke:#181818;stroke-width:1.0;" x1="118.25" x2="118.25" y1="460.4124" y2="480.4124"/>
-    <polygon fill="#181818" points="114.25,470.4124,118.25,480.4124,122.25,470.4124,118.25,474.4124" style="stroke:#181818;stroke-width:1.0;"/>
-    <line style="stroke:#181818;stroke-width:1.0;" x1="118.25" x2="118.25" y1="517.7885" y2="537.7885"/>
-    <polygon fill="#181818" points="114.25,527.7885,118.25,537.7885,122.25,527.7885,118.25,531.7885" style="stroke:#181818;stroke-width:1.0;"/>
-    <!--SRC=[TP11ImCn48Nl-HKZU6WFwjsAHQpWKL1FIv5fCcs7pIOXCsbPfF_Tx6vxipc4CFDctfUdh9xWFHw11H1ss174BQoe8ma4oMDFRccavP0mOmVxFb7s7DhNw6E6ZKVR_jV-3cvy46pH2nbpmy7wuWWaPLQIXzBv-rGlOqGngp6FBoBKRVpPDikYrff6I4kwGwjyOEt74VWz4-kU9kOgWfAM9_WSr5FjwLRAvZBtax6bv_LwsBaYzE38jeD3faIe1kgfPbfokEA5C3GlaPpWOu84hOi74CwZGAxvJaPmt7FzuMmE8IhCchVWmCRWM3a645IMBPDRpold5thVWzYOIIPkopN00rkDUJ7a5fFv0m00]-->
+    <polygon fill="#F1F1F1" points="426.5,453.0642,438.5,465.0642,426.5,477.0642,414.5,465.0642,426.5,453.0642" style="stroke:#181818;stroke-width:0.5;"/>
+    <polygon fill="#F1F1F1" points="426.5,554.4403,426.5,554.4403,438.5,566.4403,426.5,578.4403,426.5,578.4403,414.5,566.4403,426.5,554.4403" style="stroke:#181818;stroke-width:0.5;"/>
+    <text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="126" x="430.5" y="591.2002">[End condition satisfied]</text>
+    <rect fill="#F1F1F1" height="37.3761" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="86" x="383.5" y="612.7002"/>
+    <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="66" x="393.5" y="636.6203">Tally scores</text>
+    <rect fill="#F1F1F1" height="37.3761" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="93" x="380" y="670.0763"/>
+    <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="73" x="390" y="693.9964">Decide victor</text>
+    <ellipse cx="426.5" cy="738.4525" fill="none" rx="11" ry="11" style="stroke:#222222;stroke-width:1.0;"/>
+    <ellipse cx="426.5" cy="738.4525" fill="#222222" rx="6" ry="6" style="stroke:#111111;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="426.5" x2="426.5" y1="71.2719" y2="91.2719"/>
+    <polygon fill="#181818" points="422.5,81.2719,426.5,91.2719,430.5,81.2719,426.5,85.2719" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="279" x2="279" y1="229.1159" y2="249.1159"/>
+    <polygon fill="#181818" points="275,239.1159,279,249.1159,283,239.1159,279,243.1159" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="442.5" x2="442.5" y1="229.1159" y2="249.1159"/>
+    <polygon fill="#181818" points="438.5,239.1159,442.5,249.1159,446.5,239.1159,442.5,243.1159" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="590" x2="590" y1="229.1159" y2="249.1159"/>
+    <polygon fill="#181818" points="586,239.1159,590,249.1159,594,239.1159,590,243.1159" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="279" x2="279" y1="286.4921" y2="306.4921"/>
+    <polygon fill="#181818" points="275,296.4921,279,306.4921,283,296.4921,279,300.4921" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="442.5" x2="442.5" y1="286.4921" y2="306.4921"/>
+    <polygon fill="#181818" points="438.5,296.4921,442.5,306.4921,446.5,296.4921,442.5,300.4921" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="590" x2="590" y1="286.4921" y2="306.4921"/>
+    <polygon fill="#181818" points="586,296.4921,590,306.4921,594,296.4921,590,300.4921" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="426.5" x2="426.5" y1="128.648" y2="223.1159"/>
+    <polygon fill="#181818" points="422.5,213.1159,426.5,223.1159,430.5,213.1159,426.5,217.1159" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="426.5" x2="426.5" y1="312.4921" y2="395.6881"/>
+    <polygon fill="#181818" points="422.5,385.6881,426.5,395.6881,430.5,385.6881,426.5,389.6881" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="426.5" x2="426.5" y1="477.0642" y2="497.0642"/>
+    <polygon fill="#181818" points="422.5,487.0642,426.5,497.0642,430.5,487.0642,426.5,491.0642" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="438.5" x2="525" y1="566.4403" y2="566.4403"/>
+    <polygon fill="#181818" points="521,525.7522,525,515.7522,529,525.7522,525,521.7522" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="525" x2="525" y1="465.0642" y2="566.4403"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="525" x2="438.5" y1="465.0642" y2="465.0642"/>
+    <polygon fill="#181818" points="448.5,461.0642,438.5,465.0642,448.5,469.0642,444.5,465.0642" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="426.5" x2="426.5" y1="534.4403" y2="554.4403"/>
+    <polygon fill="#181818" points="422.5,544.4403,426.5,554.4403,430.5,544.4403,426.5,548.4403" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="426.5" x2="426.5" y1="433.0642" y2="453.0642"/>
+    <polygon fill="#181818" points="422.5,443.0642,426.5,453.0642,430.5,443.0642,426.5,447.0642" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="426.5" x2="426.5" y1="578.4403" y2="612.7002"/>
+    <polygon fill="#181818" points="422.5,602.7002,426.5,612.7002,430.5,602.7002,426.5,606.7002" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="426.5" x2="426.5" y1="650.0763" y2="670.0763"/>
+    <polygon fill="#181818" points="422.5,660.0763,426.5,670.0763,430.5,660.0763,426.5,664.0763" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="426.5" x2="426.5" y1="707.4525" y2="727.4525"/>
+    <polygon fill="#181818" points="422.5,717.4525,426.5,727.4525,430.5,717.4525,426.5,721.4525" style="stroke:#181818;stroke-width:1.0;"/>
+    <!--SRC=[TLDDRzGm4BtxLmm5gLk9fHA8oxPg1Lia40XLj9oI27cToSR4iIsFqnAg_7V6ILRBGfj3udW-tfitCr57W_3HtOCcaB2LBOAhu0fR98lWZUonl1JKQEjba2tKlSTWj6tMphW06oDL8uxX4OVljXmF29KqX48yqrQPhaGW7tH4EkrQyyhpIuXpYht12y4feexQMNWG05yuU89v_cP- -FQRwsovTi5YWDTlnI3EJ-Te8IXo0Y5MxuYmtPYvW41dug_KHpSOEp_MUiGubGiDXqoNxoKXh6KeKqYoWDnARTc-hfrZssTjjwLh7_UPSjm6IJMRq9Om9Q-Cav43mRg8OB2AAxYjan2eTAKLaFwTTCyjIbL3bcsOnb8nn58PIJIg10zxSiEUQ570jJQOizgU4GcumiYvRTTkCEIMkpcB07gofC8VvtGzEofd3Agexz3qkILCFn3HChDcglz_SWV233kTg2Xo6zr80UvrhCM_o45lQuR-D75BXOy4NwRVt6QPTNP9dVUcFu3xojStu_K0-pEBiS0x37si6O3b_ANGnp7pA9YqPMuFc9x0puvYRcNBOnK9c6lophAOkhZqBEq1xjZSOUeneoMxu1da5JXUPHcb0LZA99sE_HmoRzTEUc0dwFpb0FivXFCNr6rsSJ-2RF2YA7Y6LbSe3PIecZHiWLii8-y0m6hNgyY-ARSE4BjWAL7dxnCavEYqs-lXATm92EvhBWyM9wbJiCW-y40hPyjfZOYRI9N6iZXXdhVIc1v8kO0qyLQQL_rEg-Z2MTfCvyKV]-->
   </g>
 </svg>

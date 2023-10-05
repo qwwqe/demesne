@@ -1,20 +1,52 @@
 @startuml
 title How is a game of Demesne played?
 skinparam hyperlinkColor black
-skinparam hyperlinkUnderline false
+' skinparam hyperlinkUnderline false
 
 !include sprites/uml.puml
+
+<style>
+partition {
+  LineColor #33333333
+  RoundCorner 25
+}
+</style>
+
 
 start
 
 :Assemble players;
 
-:[[setup-activity.puml {How is the game set up?} Setup game <$subactivity_rake>]];
+partition "Setup game" {
+fork
+
+:Setup Base Cards;
+
+fork again
+
+:Choose Kingdom Cards;
+
+fork again
+
+:Setup Trash;
+
+end fork
+
+floating note left: The specific size of\neach [[base-card-class.puml {Base Cards} Base Card]] Pile\ndepends on the number\nof players in the game
+
+floating note left: Players collectively\nselect ten [[kingdom-card-class.puml {Kingdom Cards} Kingdoms]]\nto play with
+
+
+floating note right: In the base game, the\n[[non-supply-class.puml {Non-Supply} Non-Supply]] (everything\nexcept the Base and\nKingdom Cards) just\namounts to the [[trash-pile-class.puml {Trash} Trash]] pile
+
+}
+
+' ':[[setup-activity.puml {How is the game set up?} Setup game <$subactivity_rake>]];
 
 :Deal decks;
 
 repeat
-    :[[turn-activity.puml {How is a turn played?} Players take their turns <$subactivity_rake>]];
+    :Players take their turns [[turn-activity.puml {How is a turn played?} <$subactivity_rake>]];
 repeat while () not ([End condition satisfied])
 
 :Tally scores;
