@@ -1,66 +1,66 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="418px" preserveAspectRatio="none" style="width:694px;height:418px;background:#FFFFFF;" version="1.1" viewBox="0 0 694 418" width="694px" zoomAndPan="magnify">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="366px" preserveAspectRatio="none" style="width:744px;height:366px;background:#FFFFFF;" version="1.1" viewBox="0 0 744 366" width="744px" zoomAndPan="magnify">
   <defs/>
   <g>
-    <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="234" x="228.625" y="36.2399">How is a game of Demesne set up?</text>
-    <ellipse cx="355.25" cy="61.2719" fill="#222222" rx="10" ry="10" style="stroke:#222222;stroke-width:1.0;"/>
-    <rect fill="#555555" height="6" rx="2.5" ry="2.5" style="stroke:#555555;stroke-width:1.0;" width="672.25" x="11" y="91.2719"/>
-    <rect fill="none" height="232.04" rx="12.5" ry="12.5" style="stroke:#33333333;stroke-width:1.5;" width="341.5" x="23" y="107.2719"/>
-    <path d="M121,107.2719 L121,120.5438 L111,130.5438 L23,130.5438 " fill="none" style="stroke:#33333333;stroke-width:1.5;"/>
-    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88" x="26" y="124.5118">Setup Supply</text>
-    <path d="M33,140.5438 L33,225.8399 A0,0 0 0 0 33,225.8399 L199,225.8399 A0,0 0 0 0 199,225.8399 L199,187.1919 L219,183.1919 L199,179.1919 L199,150.5438 L189,140.5438 L33,140.5438 A0,0 0 0 0 33,140.5438 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
-    <path d="M189,140.5438 L189,150.5438 L199,150.5438 L189,140.5438 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
-    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="114" x="39" y="160.6238">The specific size of</text>
-    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="29" x="39" y="179.4479">each</text>
+    <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="234" x="253.75" y="36.2399">How is a game of Demesne set up?</text>
+    <ellipse cx="377.5" cy="61.2719" fill="#222222" rx="10" ry="10" style="stroke:#222222;stroke-width:1.0;"/>
+    <path d="M20,116.3999 L20,201.696 L186,201.696 L186,126.3999 L176,116.3999 L20,116.3999 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
+    <path d="M176,116.3999 L176,126.3999 L186,126.3999 L176,116.3999 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="114" x="26" y="136.4799">The specific size of</text>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="29" x="26" y="155.304">each</text>
     <a href="base-card-class.svg" target="_top" title="Base Cards" xlink:actuate="onRequest" xlink:href="base-card-class.svg" xlink:show="new" xlink:title="Base Cards" xlink:type="simple">
-      <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="60" x="71" y="179.4479">Base Card</text>
+      <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="60" x="58" y="155.304">Base Card</text>
     </a>
-    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="134" y="179.4479">Pile</text>
-    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="145" x="39" y="198.2719">depends on the number</text>
-    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="133" x="39" y="217.0959">of players in the game</text>
-    <rect fill="#F1F1F1" height="37.3761" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="120" x="219" y="164.5038"/>
-    <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="100" x="229" y="188.4239">Setup Base Cards</text>
-    <path d="M39.5,260.8399 L39.5,327.3119 A0,0 0 0 0 39.5,327.3119 L183.5,327.3119 A0,0 0 0 0 183.5,327.3119 L183.5,298.0759 L203.5,294.0759 L183.5,290.0759 L183.5,270.8399 L173.5,260.8399 L39.5,260.8399 A0,0 0 0 0 39.5,260.8399 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
-    <path d="M173.5,260.8399 L173.5,270.8399 L183.5,270.8399 L173.5,260.8399 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
-    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="118" x="45.5" y="280.9199">Players collectively</text>
-    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="59" x="45.5" y="299.7439">select ten</text>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="121" y="155.304">Pile</text>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="145" x="26" y="174.128">depends on the number</text>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="133" x="26" y="192.952">of players in the game</text>
+    <path d="M31,221.696 L31,288.168 L175,288.168 L175,231.696 L165,221.696 L31,221.696 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
+    <path d="M165,221.696 L165,231.696 L175,231.696 L165,221.696 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="118" x="37" y="241.776">Players collectively</text>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="59" x="37" y="260.6">select ten</text>
     <a href="kingdom-card-class.svg" target="_top" title="Kingdom Cards" xlink:actuate="onRequest" xlink:href="kingdom-card-class.svg" xlink:show="new" xlink:title="Kingdom Cards" xlink:type="simple">
-      <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="61" x="107.5" y="299.7439">Kingdoms</text>
+      <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="61" x="99" y="260.6">Kingdoms</text>
     </a>
-    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="72" x="45.5" y="318.5679">to play with</text>
-    <rect fill="#F1F1F1" height="37.3761" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="151" x="203.5" y="275.3879"/>
-    <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="131" x="213.5" y="299.308">Choose Kingdom Cards</text>
-    <rect fill="none" height="164.392" rx="12.5" ry="12.5" style="stroke:#33333333;stroke-width:1.5;" width="295" x="376.25" y="141.5959"/>
-    <path d="M506.25,141.5959 L506.25,154.8678 L496.25,164.8678 L376.25,164.8678 " fill="none" style="stroke:#33333333;stroke-width:1.5;"/>
-    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="120" x="379.25" y="158.8359">Setup Non-Supply</text>
-    <path d="M494.25,181.8678 L494.25,229.9279 L474.25,233.9279 L494.25,237.9279 L494.25,285.9879 A0,0 0 0 0 494.25,285.9879 L661.25,285.9879 A0,0 0 0 0 661.25,285.9879 L661.25,191.8678 L651.25,181.8678 L494.25,181.8678 A0,0 0 0 0 494.25,181.8678 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
-    <path d="M651.25,181.8678 L651.25,191.8678 L661.25,191.8678 L651.25,181.8678 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
-    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="129" x="500.25" y="201.9479">In the base game, the</text>
-    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="130" x="500.25" y="220.7719">Non-Supply basically</text>
-    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="119" x="500.25" y="239.5959">just amounts to the</text>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="72" x="37" y="279.424">to play with</text>
+    <path d="M555.5,150.2239 L555.5,254.344 L722.5,254.344 L722.5,160.2239 L712.5,150.2239 L555.5,150.2239 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
+    <path d="M712.5,150.2239 L712.5,160.2239 L722.5,160.2239 L712.5,150.2239 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="129" x="561.5" y="170.304">In the base game, the</text>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="130" x="561.5" y="189.128">Non-Supply basically</text>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="119" x="561.5" y="207.952">just amounts to the</text>
     <a href="trash-pile-class.svg" target="_top" title="Trash" xlink:actuate="onRequest" xlink:href="trash-pile-class.svg" xlink:show="new" xlink:title="Trash" xlink:type="simple">
-      <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="34" x="500.25" y="258.4199">Trash</text>
+      <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="34" x="561.5" y="226.776">Trash</text>
     </a>
-    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="109" x="537.25" y="258.4199">pile. This changes</text>
-    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="118" x="500.25" y="277.2439">in later expansions.</text>
-    <rect fill="#F1F1F1" height="37.3761" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="88" x="386.25" y="215.2398"/>
-    <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="68" x="396.25" y="239.1599">Setup Trash</text>
-    <rect fill="#555555" height="6" rx="2.5" ry="2.5" style="stroke:#555555;stroke-width:1.0;" width="672.25" x="11" y="359.3119"/>
-    <ellipse cx="355.25" cy="396.3119" fill="none" rx="11" ry="11" style="stroke:#222222;stroke-width:1.0;"/>
-    <ellipse cx="355.25" cy="396.3119" fill="#222222" rx="6" ry="6" style="stroke:#111111;stroke-width:1.0;"/>
-    <line style="stroke:#181818;stroke-width:1.0;" x1="279" x2="279" y1="201.8799" y2="275.3879"/>
-    <polygon fill="#181818" points="275,265.3879,279,275.3879,283,265.3879,279,269.3879" style="stroke:#181818;stroke-width:1.0;"/>
-    <line style="stroke:#181818;stroke-width:1.0;" x1="279" x2="279" y1="97.2719" y2="164.5038"/>
-    <polygon fill="#181818" points="275,154.5038,279,164.5038,283,154.5038,279,158.5038" style="stroke:#181818;stroke-width:1.0;"/>
-    <line style="stroke:#181818;stroke-width:1.0;" x1="430.25" x2="430.25" y1="97.2719" y2="215.2398"/>
-    <polygon fill="#181818" points="426.25,205.2398,430.25,215.2398,434.25,205.2398,430.25,209.2398" style="stroke:#181818;stroke-width:1.0;"/>
-    <line style="stroke:#181818;stroke-width:1.0;" x1="279" x2="279" y1="312.764" y2="359.3119"/>
-    <polygon fill="#181818" points="275,349.3119,279,359.3119,283,349.3119,279,353.3119" style="stroke:#181818;stroke-width:1.0;"/>
-    <line style="stroke:#181818;stroke-width:1.0;" x1="430.25" x2="430.25" y1="252.6159" y2="359.3119"/>
-    <polygon fill="#181818" points="426.25,349.3119,430.25,359.3119,434.25,349.3119,430.25,353.3119" style="stroke:#181818;stroke-width:1.0;"/>
-    <line style="stroke:#181818;stroke-width:1.0;" x1="355.25" x2="355.25" y1="71.2719" y2="91.2719"/>
-    <polygon fill="#181818" points="351.25,81.2719,355.25,91.2719,359.25,81.2719,355.25,85.2719" style="stroke:#181818;stroke-width:1.0;"/>
-    <line style="stroke:#181818;stroke-width:1.0;" x1="355.25" x2="355.25" y1="365.3119" y2="385.3119"/>
-    <polygon fill="#181818" points="351.25,375.3119,355.25,385.3119,359.25,375.3119,355.25,379.3119" style="stroke:#181818;stroke-width:1.0;"/>
-    <!--SRC=[TLB1RXGn3BtdAwnouC8k4eWBL21rEO10gABbjDf3DkEP2PD9ejX36QhvTvnassrXcrEIPp-_PvijEuHFuGOiWOPEZmYXXOyu8da4GeOfVb0qM1zrqYFqSyJah1ysmOK4UwVDe9x3YO0VlYaNX5OxGgNEYMU7xvN4iMKRFDmgWAyIKRcUlJuS-VqU9jziGlAOuDKRjQZpbuTiHIpvIhKX3Ue1rzaLyXJXQehHpMU5-ctzkj24iD6feNVowGCZE6nPxW3NlPYCQ6nh3P3zazqN0BNfORlTI-xAIExAE4sqZjFeuFR8k1pPTpkuj0vBTeCHVKCWkbWg-6dSOog8D3SwFMCYi1NCFHT8ueisbOLl-X24zelrNHF6fyHV7eXCS0uDsr_evW8GvZSmUh4mL9B_NJnYN-wAqMvNE3WKeN1ZkNyeRwcj1zrfwqyCu5lmgnD3k4wQ-diBoNPzzV2vDY7tkNJYHNuMv4YKKMkqExZxEH637cL3cBBCkuJjbdEHLPGfF39QQYzLWamfuskPl6oywRNla4gwZCDfbdt3tr5x4akq_iTuljUz8mvH_GK0]-->
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="109" x="598.5" y="226.776">pile. This changes</text>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="118" x="561.5" y="245.6">in later expansions.</text>
+    <rect fill="#555555" height="6" rx="2.5" ry="2.5" style="stroke:#555555;stroke-width:1.0;" width="349.5" x="196" y="91.2719"/>
+    <rect fill="none" height="170.0242" rx="12.5" ry="12.5" style="stroke:#33333333;stroke-width:1.5;" width="171" x="208" y="117.2719"/>
+    <path d="M306,117.2719 L306,130.5438 L296,140.5438 L208,140.5438 " fill="none" style="stroke:#33333333;stroke-width:1.5;"/>
+    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88" x="211" y="134.5118">Setup Supply</text>
+    <rect fill="#F1F1F1" height="37.3761" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="120" x="233.5" y="157.5438"/>
+    <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="100" x="243.5" y="181.4639">Setup Base Cards</text>
+    <rect fill="#F1F1F1" height="37.3761" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="151" x="218" y="229.9199"/>
+    <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="131" x="228" y="253.84">Choose Kingdom Cards</text>
+    <rect fill="none" height="97.648" rx="12.5" ry="12.5" style="stroke:#33333333;stroke-width:1.5;" width="135" x="398.5" y="153.46"/>
+    <path d="M528.5,153.46 L528.5,166.7319 L518.5,176.7319 L398.5,176.7319 " fill="none" style="stroke:#33333333;stroke-width:1.5;"/>
+    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="120" x="401.5" y="170.6999">Setup Non-Supply</text>
+    <rect fill="#F1F1F1" height="37.3761" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="88" x="424.5" y="193.7319"/>
+    <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="68" x="434.5" y="217.652">Setup Trash</text>
+    <rect fill="#555555" height="6" rx="2.5" ry="2.5" style="stroke:#555555;stroke-width:1.0;" width="349.5" x="196" y="307.2961"/>
+    <ellipse cx="377.5" cy="344.2961" fill="none" rx="11" ry="11" style="stroke:#222222;stroke-width:1.0;"/>
+    <ellipse cx="377.5" cy="344.2961" fill="#222222" rx="6" ry="6" style="stroke:#111111;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="293.5" x2="293.5" y1="194.9199" y2="229.9199"/>
+    <polygon fill="#181818" points="289.5,219.9199,293.5,229.9199,297.5,219.9199,293.5,223.9199" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="293.5" x2="293.5" y1="97.2719" y2="157.5438"/>
+    <polygon fill="#181818" points="289.5,147.5438,293.5,157.5438,297.5,147.5438,293.5,151.5438" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="468.5" x2="468.5" y1="97.2719" y2="193.7319"/>
+    <polygon fill="#181818" points="464.5,183.7319,468.5,193.7319,472.5,183.7319,468.5,187.7319" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="293.5" x2="293.5" y1="267.2961" y2="307.2961"/>
+    <polygon fill="#181818" points="289.5,297.2961,293.5,307.2961,297.5,297.2961,293.5,301.2961" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="468.5" x2="468.5" y1="231.108" y2="307.2961"/>
+    <polygon fill="#181818" points="464.5,297.2961,468.5,307.2961,472.5,297.2961,468.5,301.2961" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="377.5" x2="377.5" y1="71.2719" y2="91.2719"/>
+    <polygon fill="#181818" points="373.5,81.2719,377.5,91.2719,381.5,81.2719,377.5,85.2719" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="377.5" x2="377.5" y1="313.2961" y2="333.2961"/>
+    <polygon fill="#181818" points="373.5,323.2961,377.5,333.2961,381.5,323.2961,377.5,327.2961" style="stroke:#181818;stroke-width:1.0;"/>
+    <!--SRC=[RPB1ZjGm38RlUGfhEN1X1Wd4PLaj4iC1148hTZbDv-19tJOqTQ8uPIchUNUSTbR3mlJKsCxlBx-TNVO47yCzE0645WU2qC076aYOG2Z36DyPwHr7J3X0DqLAtd6_2Juas7kqlNaEPmg-Spt_43JeXOovaZnvkZPQbrrsWU7107pHYaNhsUlZfz5lOUHw4n9JWbTlpC5SlJpUDfBrlZ5DIBtvI-lYbl8OuNQCqKyNi_Jb4dgFGh31LCjRKwARBWIDV7RSrc5up1mMIS0M7PyH_XfuTKRyBg5qystY6XQenWVCgWuSCe6d9b_2NQTkHhAkSHR4_IusLqneEzXkzqguiigniXv5rd4SF3oSk0-dD-nsSECyLMfkr8u2IfXLcyTXJwbY7LxqE54IS4kcpFGyqysnq0RloMRta_nKiL0vG2PMidunwN-u9-uT7isKtQxY76O4k7UvC-RVricrdVR-jC2Lby-4BygnufFB9UKi-eBqOvGCEEXEP06LdqktsroyNqMrumdQF9B3CXcrg-JNwhykkEsGMvAArHgFMNUBVaLaqJ7BkcnMYEOF]-->
   </g>
 </svg>

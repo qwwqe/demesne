@@ -16,35 +16,25 @@ fork
 
 partition "Setup Supply" {
   :Setup Base Cards;
-  note left
-    The specific size of
-    each [[base-card-class.puml {Base Cards} Base Card]] Pile
-    depends on the number
-    of players in the game
-  end note
 
   :Choose Kingdom Cards;
-  note left
-    Players collectively
-    select ten [[kingdom-card-class.puml {Kingdom Cards} Kingdoms]]
-    to play with
-  end note
 }
 
 fork again
 
 partition "Setup Non-Supply" {
   :Setup Trash;
-  note right
-    In the base game, the
-    Non-Supply basically
-    just amounts to the
-    [[trash-pile-class.puml {Trash} Trash]] pile. This changes
-    in later expansions.
-  end note
 }
 
 end fork
+
+floating note left: The specific size of\neach [[base-card-class.puml {Base Cards} Base Card]] Pile\ndepends on the number\nof players in the game
+
+floating note left: Players collectively\nselect ten [[kingdom-card-class.puml {Kingdom Cards} Kingdoms]]\nto play with
+
+
+
+floating note right: In the base game, the\nNon-Supply basically\njust amounts to the\n[[trash-pile-class.puml {Trash} Trash]] pile. This changes\nin later expansions.
 
 stop
 
