@@ -5,4 +5,26 @@ skinparam linetype ortho
 
 abstract "Base Card" as BaseCard {}
 
+BaseCard <|--- Copper
+BaseCard <|--- Silver
+BaseCard <|--- Gold
+
+together {
+  class Copper
+  class Silver
+  class Gold
+}
+
+BaseCard <|--- Estate
+BaseCard <|--- Duchy
+BaseCard <|--- Province
+
+together {
+  class Estate
+  class Duchy
+  class Province
+}
+
+BaseCard <|--- Curse
+
 @enduml

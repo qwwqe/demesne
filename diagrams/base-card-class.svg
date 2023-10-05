@@ -1,14 +1,98 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="94px" preserveAspectRatio="none" style="width:119px;height:94px;background:#FFFFFF;" version="1.1" viewBox="0 0 119 94" width="119px" zoomAndPan="magnify">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="240px" preserveAspectRatio="none" style="width:741px;height:240px;background:#FFFFFF;" version="1.1" viewBox="0 0 741 240" width="741px" zoomAndPan="magnify">
   <defs/>
   <g>
-    <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="75" x="18" y="26.2399">Base Cards</text>
+    <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="75" x="326" y="26.2399">Base Cards</text>
     <!--class BaseCard-->
     <g id="elem_BaseCard">
-      <rect codeLine="5" fill="#F1F1F1" height="32" id="BaseCard" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="98" x="7" y="48.2719"/>
-      <ellipse cx="22" cy="64.2719" fill="#A9DCDF" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
-      <path d="M18.125,70.2719 L20.5156,70.2719 L21.0313,67.0375 L23.4375,67.0375 L23.9531,70.2719 L26.375,70.2719 L23.9844,57.6469 L20.5156,57.6469 L18.125,70.2719 Z M21.3281,65.0688 L21.5469,63.6938 C21.7813,62.3813 22.0156,60.9438 22.1875,59.5688 L22.25,59.5688 C22.4688,60.9438 22.6563,62.3813 22.8906,63.6938 L23.1094,65.0688 L21.3281,65.0688 Z " fill="#000000"/>
-      <text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="66" x="36" y="70.3759">Base Card</text>
+      <rect codeLine="5" fill="#F1F1F1" height="32" id="BaseCard" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="98" x="310" y="48.2719"/>
+      <ellipse cx="325" cy="64.2719" fill="#A9DCDF" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M321.125,70.2719 L323.5156,70.2719 L324.0313,67.0375 L326.4375,67.0375 L326.9531,70.2719 L329.375,70.2719 L326.9844,57.6469 L323.5156,57.6469 L321.125,70.2719 Z M324.3281,65.0688 L324.5469,63.6938 C324.7813,62.3813 325.0156,60.9438 325.1875,59.5688 L325.25,59.5688 C325.4688,60.9438 325.6563,62.3813 325.8906,63.6938 L326.1094,65.0688 L324.3281,65.0688 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="66" x="339" y="70.3759">Base Card</text>
     </g>
-    <!--SRC=[FSox3O0m30N0tbCyPHIOn26M4f6VR3SHOdS41UKrvyMhO6CJxAp9A9Saa3PzeKcBeaPsbZvPkQ6MBhwcOAZdGSJHNFbmX7y8OFk-5xXkUW00]-->
+    <!--class Copper-->
+    <g id="elem_Copper">
+      <rect codeLine="12" fill="#F1F1F1" height="32" id="Copper" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="80" x="7" y="201.2719"/>
+      <ellipse cx="22" cy="217.2719" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M22.2344,223.975 C23.3906,223.975 24.4844,223.4907 25.3125,222.4594 L23.8906,220.9438 C23.5,221.4907 23.0313,221.8032 22.4688,221.8032 C21.2813,221.8032 20.2656,220.6625 20.2656,217.4282 C20.2656,214.2719 21.3281,213.1 22.3594,213.1 C22.9531,213.1 23.3281,213.3969 23.75,213.8969 L25.1719,212.3344 C24.5,211.5844 23.5313,210.9438 22.25,210.9438 C19.8281,210.9438 17.6875,212.9125 17.6875,217.5375 C17.6875,222.1782 19.8281,223.975 22.2344,223.975 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="36" y="223.3759">Copper</text>
+    </g>
+    <!--class Silver-->
+    <g id="elem_Silver">
+      <rect codeLine="13" fill="#F1F1F1" height="32" id="Silver" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="68" x="122" y="201.2719"/>
+      <ellipse cx="137" cy="217.2719" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M137.2344,223.975 C138.3906,223.975 139.4844,223.4907 140.3125,222.4594 L138.8906,220.9438 C138.5,221.4907 138.0313,221.8032 137.4688,221.8032 C136.2813,221.8032 135.2656,220.6625 135.2656,217.4282 C135.2656,214.2719 136.3281,213.1 137.3594,213.1 C137.9531,213.1 138.3281,213.3969 138.75,213.8969 L140.1719,212.3344 C139.5,211.5844 138.5313,210.9438 137.25,210.9438 C134.8281,210.9438 132.6875,212.9125 132.6875,217.5375 C132.6875,222.1782 134.8281,223.975 137.2344,223.975 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="36" x="151" y="223.3759">Silver</text>
+    </g>
+    <!--class Gold-->
+    <g id="elem_Gold">
+      <rect codeLine="14" fill="#F1F1F1" height="32" id="Gold" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="63" x="224.5" y="201.2719"/>
+      <ellipse cx="239.5" cy="217.2719" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M239.7344,223.975 C240.8906,223.975 241.9844,223.4907 242.8125,222.4594 L241.3906,220.9438 C241,221.4907 240.5313,221.8032 239.9688,221.8032 C238.7813,221.8032 237.7656,220.6625 237.7656,217.4282 C237.7656,214.2719 238.8281,213.1 239.8594,213.1 C240.4531,213.1 240.8281,213.3969 241.25,213.8969 L242.6719,212.3344 C242,211.5844 241.0313,210.9438 239.75,210.9438 C237.3281,210.9438 235.1875,212.9125 235.1875,217.5375 C235.1875,222.1782 237.3281,223.975 239.7344,223.975 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31" x="253.5" y="223.3759">Gold</text>
+    </g>
+    <!--class Estate-->
+    <g id="elem_Estate">
+      <rect codeLine="22" fill="#F1F1F1" height="32" id="Estate" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="73" x="322.5" y="201.2719"/>
+      <ellipse cx="337.5" cy="217.2719" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M337.7344,223.975 C338.8906,223.975 339.9844,223.4907 340.8125,222.4594 L339.3906,220.9438 C339,221.4907 338.5313,221.8032 337.9688,221.8032 C336.7813,221.8032 335.7656,220.6625 335.7656,217.4282 C335.7656,214.2719 336.8281,213.1 337.8594,213.1 C338.4531,213.1 338.8281,213.3969 339.25,213.8969 L340.6719,212.3344 C340,211.5844 339.0313,210.9438 337.75,210.9438 C335.3281,210.9438 333.1875,212.9125 333.1875,217.5375 C333.1875,222.1782 335.3281,223.975 337.7344,223.975 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="351.5" y="223.3759">Estate</text>
+    </g>
+    <!--class Duchy-->
+    <g id="elem_Duchy">
+      <rect codeLine="23" fill="#F1F1F1" height="32" id="Duchy" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="74" x="431" y="201.2719"/>
+      <ellipse cx="446" cy="217.2719" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M446.2344,223.975 C447.3906,223.975 448.4844,223.4907 449.3125,222.4594 L447.8906,220.9438 C447.5,221.4907 447.0313,221.8032 446.4688,221.8032 C445.2813,221.8032 444.2656,220.6625 444.2656,217.4282 C444.2656,214.2719 445.3281,213.1 446.3594,213.1 C446.9531,213.1 447.3281,213.3969 447.75,213.8969 L449.1719,212.3344 C448.5,211.5844 447.5313,210.9438 446.25,210.9438 C443.8281,210.9438 441.6875,212.9125 441.6875,217.5375 C441.6875,222.1782 443.8281,223.975 446.2344,223.975 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="460" y="223.3759">Duchy</text>
+    </g>
+    <!--class Province-->
+    <g id="elem_Province">
+      <rect codeLine="24" fill="#F1F1F1" height="32" id="Province" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="89" x="540.5" y="201.2719"/>
+      <ellipse cx="555.5" cy="217.2719" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M555.7344,223.975 C556.8906,223.975 557.9844,223.4907 558.8125,222.4594 L557.3906,220.9438 C557,221.4907 556.5313,221.8032 555.9688,221.8032 C554.7813,221.8032 553.7656,220.6625 553.7656,217.4282 C553.7656,214.2719 554.8281,213.1 555.8594,213.1 C556.4531,213.1 556.8281,213.3969 557.25,213.8969 L558.6719,212.3344 C558,211.5844 557.0313,210.9438 555.75,210.9438 C553.3281,210.9438 551.1875,212.9125 551.1875,217.5375 C551.1875,222.1782 553.3281,223.975 555.7344,223.975 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="569.5" y="223.3759">Province</text>
+    </g>
+    <!--class Curse-->
+    <g id="elem_Curse">
+      <rect fill="#F1F1F1" height="32" id="Curse" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="70" x="664" y="201.2719"/>
+      <ellipse cx="679" cy="217.2719" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
+      <path d="M679.2344,223.975 C680.3906,223.975 681.4844,223.4907 682.3125,222.4594 L680.8906,220.9438 C680.5,221.4907 680.0313,221.8032 679.4688,221.8032 C678.2813,221.8032 677.2656,220.6625 677.2656,217.4282 C677.2656,214.2719 678.3281,213.1 679.3594,213.1 C679.9531,213.1 680.3281,213.3969 680.75,213.8969 L682.1719,212.3344 C681.5,211.5844 680.5313,210.9438 679.25,210.9438 C676.8281,210.9438 674.6875,212.9125 674.6875,217.5375 C674.6875,222.1782 676.8281,223.975 679.2344,223.975 Z " fill="#000000"/>
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38" x="693" y="223.3759">Curse</text>
+    </g>
+    <!--reverse link BaseCard to Copper-->
+    <g id="link_BaseCard_Copper">
+      <path codeLine="7" d="M288.05,59.2719 C288.05,59.2719 47,59.2719 47,59.2719 C47,59.2719 47,160.5919 47,200.9619 " fill="none" id="BaseCard-backto-Copper" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="288.05,52.2719,308.05,59.2719,288.05,66.2719,288.05,52.2719" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--reverse link BaseCard to Silver-->
+    <g id="link_BaseCard_Silver">
+      <path codeLine="8" d="M288.09,70.2719 C288.09,70.2719 156,70.2719 156,70.2719 C156,70.2719 156,162.7019 156,200.9819 " fill="none" id="BaseCard-backto-Silver" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="288.09,63.2719,308.09,70.2719,288.09,77.2719,288.09,63.2719" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--reverse link BaseCard to Gold-->
+    <g id="link_BaseCard_Gold">
+      <path codeLine="9" d="M316.25,102.2619 C316.25,102.2619 316.25,218.2719 316.25,218.2719 C316.25,218.2719 302.34,218.2719 287.89,218.2719 " fill="none" id="BaseCard-backto-Gold" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="309.25,102.2619,316.25,82.2619,323.25,102.2619,309.25,102.2619" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--reverse link BaseCard to Estate-->
+    <g id="link_BaseCard_Estate">
+      <path codeLine="17" d="M359,102.1619 C359,102.1619 359,201.0119 359,201.0119 " fill="none" id="BaseCard-backto-Estate" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="352,102.1619,359,82.1619,366,102.1619,352,102.1619" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--reverse link BaseCard to Duchy-->
+    <g id="link_BaseCard_Duchy">
+      <path codeLine="18" d="M401.75,102.2619 C401.75,102.2619 401.75,218.2719 401.75,218.2719 C401.75,218.2719 415.59,218.2719 430.62,218.2719 " fill="none" id="BaseCard-backto-Duchy" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="394.75,102.2619,401.75,82.2619,408.75,102.2619,394.75,102.2619" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--reverse link BaseCard to Province-->
+    <g id="link_BaseCard_Province">
+      <path codeLine="19" d="M429.83,70.2719 C429.83,70.2719 585,70.2719 585,70.2719 C585,70.2719 585,162.7019 585,200.9819 " fill="none" id="BaseCard-backto-Province" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="429.83,77.2719,409.83,70.2719,429.83,63.2719,429.83,77.2719" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--reverse link BaseCard to Curse-->
+    <g id="link_BaseCard_Curse">
+      <path codeLine="27" d="M429.95,59.2719 C429.95,59.2719 699,59.2719 699,59.2719 C699,59.2719 699,160.5919 699,200.9619 " fill="none" id="BaseCard-backto-Curse" style="stroke:#181818;stroke-width:1.0;"/>
+      <polygon fill="none" points="429.95,66.2719,409.95,59.2719,429.95,52.2719,429.95,66.2719" style="stroke:#181818;stroke-width:1.0;"/>
+    </g>
+    <!--SRC=[ROz13e9034NtFKN3dXku4erR4qzGe9690pDf2mb1xsv4XWMmV2_vhwavyundKiQ2f5PeNCt8RRGHMsvB5WLzkIwIK8lUTMnZP0nYJG2WKaseCipMGeQaS-y7E7q0LZYzypp78iJ8ihKFvuUzlGLV0rXuiZKiE05YvKarHH8kwuJpR7_vgaR6MtlfgsRSohk4mNKL7nvVEWd_WKJhyk3pNfJX2m00]-->
   </g>
 </svg>
