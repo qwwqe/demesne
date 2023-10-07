@@ -34,7 +34,7 @@
     </g>
     <!--class Pile-->
     <g id="elem_Pile">
-      <rect codeLine="42" fill="#F1F1F1" height="100.8157" id="Pile" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="125" x="564.5" y="393.0819"/>
+      <rect codeLine="40" fill="#F1F1F1" height="100.8157" id="Pile" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="125" x="564.5" y="393.0819"/>
       <ellipse cx="610.25" cy="409.0819" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
       <path d="M610.4844,415.785 C611.6406,415.785 612.7344,415.3007 613.5625,414.2694 L612.1406,412.7538 C611.75,413.3007 611.2813,413.6132 610.7188,413.6132 C609.5313,413.6132 608.5156,412.4725 608.5156,409.2382 C608.5156,406.0819 609.5781,404.91 610.6094,404.91 C611.2031,404.91 611.5781,405.2069 612,405.7069 L613.4219,404.1444 C612.75,403.3944 611.7813,402.7538 610.5,402.7538 C608.0781,402.7538 605.9375,404.7225 605.9375,409.3475 C605.9375,413.9882 608.0781,415.785 610.4844,415.785 Z " fill="#000000"/>
       <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="25" x="630.75" y="415.1859">Pile</text>
@@ -80,21 +80,21 @@
     </g>
     <!--class Base-->
     <g id="elem_Base">
-      <rect codeLine="37" fill="#F1F1F1" height="32" id="Base" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="64" x="541" y="301.0819"/>
+      <rect codeLine="35" fill="#F1F1F1" height="32" id="Base" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="64" x="541" y="301.0819"/>
       <ellipse cx="556" cy="317.0819" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
       <path d="M556.2344,323.785 C557.3906,323.785 558.4844,323.3007 559.3125,322.2694 L557.8906,320.7538 C557.5,321.3007 557.0313,321.6132 556.4688,321.6132 C555.2813,321.6132 554.2656,320.4725 554.2656,317.2382 C554.2656,314.0819 555.3281,312.91 556.3594,312.91 C556.9531,312.91 557.3281,313.2069 557.75,313.7069 L559.1719,312.1444 C558.5,311.3944 557.5313,310.7538 556.25,310.7538 C553.8281,310.7538 551.6875,312.7225 551.6875,317.3475 C551.6875,321.9882 553.8281,323.785 556.2344,323.785 Z " fill="#000000"/>
       <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="32" x="570" y="323.1859">Base</text>
     </g>
     <!--class Kingdom-->
     <g id="elem_Kingdom">
-      <rect codeLine="38" fill="#F1F1F1" height="32" id="Kingdom" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="92" x="414" y="301.0819"/>
+      <rect codeLine="36" fill="#F1F1F1" height="32" id="Kingdom" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="92" x="414" y="301.0819"/>
       <ellipse cx="429" cy="317.0819" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
       <path d="M429.2344,323.785 C430.3906,323.785 431.4844,323.3007 432.3125,322.2694 L430.8906,320.7538 C430.5,321.3007 430.0313,321.6132 429.4688,321.6132 C428.2813,321.6132 427.2656,320.4725 427.2656,317.2382 C427.2656,314.0819 428.3281,312.91 429.3594,312.91 C429.9531,312.91 430.3281,313.2069 430.75,313.7069 L432.1719,312.1444 C431.5,311.3944 430.5313,310.7538 429.25,310.7538 C426.8281,310.7538 424.6875,312.7225 424.6875,317.3475 C424.6875,321.9882 426.8281,323.785 429.2344,323.785 Z " fill="#000000"/>
       <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60" x="443" y="323.1859">Kingdom</text>
     </g>
     <!--class Card-->
     <g id="elem_Card">
-      <rect codeLine="43" fill="#F1F1F1" height="32" id="Card" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="63" x="872.5" y="553.9019"/>
+      <rect codeLine="41" fill="#F1F1F1" height="32" id="Card" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="63" x="872.5" y="553.9019"/>
       <ellipse cx="887.5" cy="569.9019" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/>
       <path d="M887.7344,576.605 C888.8906,576.605 889.9844,576.1207 890.8125,575.0894 L889.3906,573.5738 C889,574.1207 888.5313,574.4332 887.9688,574.4332 C886.7813,574.4332 885.7656,573.2925 885.7656,570.0582 C885.7656,566.9019 886.8281,565.73 887.8594,565.73 C888.4531,565.73 888.8281,566.0269 889.25,566.5269 L890.6719,564.9644 C890,564.2144 889.0313,563.5738 887.75,563.5738 C885.3281,563.5738 883.1875,565.5425 883.1875,570.1675 C883.1875,574.8082 885.3281,576.605 887.7344,576.605 Z " fill="#000000"/>
       <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31" x="901.5" y="576.0059">Card</text>
@@ -111,86 +111,86 @@
     </g>
     <!--reverse link Game to Supply-->
     <g id="link_Game_Supply">
-      <path codeLine="50" d="M521,163.8819 C521,163.8819 521,208.6819 521,208.6819 " fill="none" id="Game-backto-Supply" style="stroke:#181818;stroke-width:1.0;"/>
+      <path codeLine="48" d="M521,163.8819 C521,163.8819 521,208.6819 521,208.6819 " fill="none" id="Game-backto-Supply" style="stroke:#181818;stroke-width:1.0;"/>
       <polygon fill="#181818" points="521,150.8819,517,156.8819,521,162.8819,525,156.8819,521,150.8819" style="stroke:#181818;stroke-width:1.0;"/>
     </g>
     <!--reverse link Game to Trash-->
     <g id="link_Game_Trash">
-      <path codeLine="51" d="M460.21,133.9019 C460.21,133.9019 443.75,133.9019 443.75,133.9019 C443.75,133.9019 443.75,182.5519 443.75,208.7819 " fill="none" id="Game-backto-Trash" style="stroke:#181818;stroke-width:1.0;"/>
+      <path codeLine="49" d="M460.21,133.9019 C460.21,133.9019 443.75,133.9019 443.75,133.9019 C443.75,133.9019 443.75,182.5519 443.75,208.7819 " fill="none" id="Game-backto-Trash" style="stroke:#181818;stroke-width:1.0;"/>
       <polygon fill="#181818" points="473.21,133.9019,467.21,129.9019,461.21,133.9019,467.21,137.9019,473.21,133.9019" style="stroke:#181818;stroke-width:1.0;"/>
     </g>
     <!--reverse link Game to Player-->
     <g id="link_Game_Player">
-      <path codeLine="53" d="M563.5,163.9019 C563.5,163.9019 563.5,219.9019 563.5,219.9019 C563.5,219.9019 688.92,219.9019 753.1,219.9019 " fill="none" id="Game-backto-Player" style="stroke:#181818;stroke-width:1.0;"/>
+      <path codeLine="50" d="M563.5,163.9019 C563.5,163.9019 563.5,219.9019 563.5,219.9019 C563.5,219.9019 688.92,219.9019 753.1,219.9019 " fill="none" id="Game-backto-Player" style="stroke:#181818;stroke-width:1.0;"/>
       <polygon fill="#181818" points="563.5,150.9019,559.5,156.9019,563.5,162.9019,567.5,156.9019,563.5,150.9019" style="stroke:#181818;stroke-width:1.0;"/>
       <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="706.5959" y="195.2814">2..6</text>
       <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="56" x="689.5959" y="214.1054">{ordered}</text>
     </g>
     <!--link Player to Play Area-->
     <g id="link_Player_Play Area">
-      <path codeLine="55" d="M826.7,230.9019 C860.02,230.9019 904,230.9019 904,230.9019 C904,230.9019 904,275.9119 904,300.8719 " fill="none" id="Player-Play Area" style="stroke:#181818;stroke-width:1.0;"/>
+      <path codeLine="52" d="M826.7,230.9019 C860.02,230.9019 904,230.9019 904,230.9019 C904,230.9019 904,275.9119 904,300.8719 " fill="none" id="Player-Play Area" style="stroke:#181818;stroke-width:1.0;"/>
     </g>
     <!--link Player to Hand-->
     <g id="link_Player_Hand">
-      <path codeLine="56" d="M826.79,219.9019 C891.53,219.9019 1019,219.9019 1019,219.9019 C1019,219.9019 1019,272.8719 1019,300.6019 " fill="none" id="Player-Hand" style="stroke:#181818;stroke-width:1.0;"/>
+      <path codeLine="53" d="M826.79,219.9019 C891.53,219.9019 1019,219.9019 1019,219.9019 C1019,219.9019 1019,272.8719 1019,300.6019 " fill="none" id="Player-Hand" style="stroke:#181818;stroke-width:1.0;"/>
     </g>
     <!--link Player to Deck-->
     <g id="link_Player_Deck">
-      <path codeLine="57" d="M790,241.5319 C790,258.2819 790,284.0819 790,300.7819 " fill="none" id="Player-Deck" style="stroke:#181818;stroke-width:1.0;"/>
+      <path codeLine="54" d="M790,241.5319 C790,258.2819 790,284.0819 790,300.7819 " fill="none" id="Player-Deck" style="stroke:#181818;stroke-width:1.0;"/>
     </g>
     <!--link Player to Discard-->
     <g id="link_Player_Discard">
-      <path codeLine="58" d="M753.1,230.9019 C721.48,230.9019 681,230.9019 681,230.9019 C681,230.9019 681,275.9119 681,300.8719 " fill="none" id="Player-Discard" style="stroke:#181818;stroke-width:1.0;"/>
+      <path codeLine="55" d="M753.1,230.9019 C721.48,230.9019 681,230.9019 681,230.9019 C681,230.9019 681,275.9119 681,300.8719 " fill="none" id="Player-Discard" style="stroke:#181818;stroke-width:1.0;"/>
     </g>
     <!--reverse link Deck to Pile-->
     <g id="link_Deck_Pile">
-      <path codeLine="60" d="M790,347.9219 C790,347.9219 790,443.9019 790,443.9019 C790,443.9019 735.52,443.9019 689.55,443.9019 " fill="none" id="Deck-backto-Pile" style="stroke:#181818;stroke-width:1.0;"/>
+      <path codeLine="57" d="M790,347.9219 C790,347.9219 790,443.9019 790,443.9019 C790,443.9019 735.52,443.9019 689.55,443.9019 " fill="none" id="Deck-backto-Pile" style="stroke:#181818;stroke-width:1.0;"/>
       <polygon fill="#181818" points="790,334.9219,786,340.9219,790,346.9219,794,340.9219,790,334.9219" style="stroke:#181818;stroke-width:1.0;"/>
       <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="697.5998" y="439.9855">1</text>
     </g>
     <!--reverse link Discard to Pile-->
     <g id="link_Discard_Pile">
-      <path codeLine="61" d="M664.75,347.8619 C664.75,347.8619 664.75,392.6119 664.75,392.6119 " fill="none" id="Discard-backto-Pile" style="stroke:#181818;stroke-width:1.0;"/>
+      <path codeLine="58" d="M664.75,347.8619 C664.75,347.8619 664.75,392.6119 664.75,392.6119 " fill="none" id="Discard-backto-Pile" style="stroke:#181818;stroke-width:1.0;"/>
       <polygon fill="#181818" points="664.75,334.8619,660.75,340.8619,664.75,346.8619,668.75,340.8619,664.75,334.8619" style="stroke:#181818;stroke-width:1.0;"/>
       <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="662.5664" y="381.3295">1</text>
     </g>
     <!--link ClassNote to Trash-->
     <g id="link_ClassNote_Trash">
-      <path codeLine="63" d="M344.48,225.9019 C356.85,225.9019 368.32,225.9019 378.21,225.9019 " fill="none" id="ClassNote-Trash" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+      <path codeLine="60" d="M344.48,225.9019 C356.85,225.9019 368.32,225.9019 378.21,225.9019 " fill="none" id="ClassNote-Trash" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
     </g>
     <!--link ClassNote to Supply-->
     <g id="link_ClassNote_Supply">
-      <path codeLine="64" d="M175,239.9019 C175,253.6119 175,271.9019 175,271.9019 C175,271.9019 490,271.9019 490,271.9019 C490,271.9019 490,254.9619 490,241.4619 " fill="none" id="ClassNote-Supply" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
+      <path codeLine="61" d="M175,239.9019 C175,253.6119 175,271.9019 175,271.9019 C175,271.9019 490,271.9019 490,271.9019 C490,271.9019 490,254.9619 490,241.4619 " fill="none" id="ClassNote-Supply" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/>
     </g>
     <!--link Supply to Base-->
     <g id="link_Supply_Base">
-      <path codeLine="67" d="M550.5,241.5319 C550.5,258.2819 550.5,284.0819 550.5,300.7819 " fill="none" id="Supply-Base" style="stroke:#181818;stroke-width:1.0;"/>
+      <path codeLine="63" d="M550.5,241.5319 C550.5,258.2819 550.5,284.0819 550.5,300.7819 " fill="none" id="Supply-Base" style="stroke:#181818;stroke-width:1.0;"/>
     </g>
     <!--link Supply to Kingdom-->
     <g id="link_Supply_Kingdom">
-      <path codeLine="68" d="M498,241.5319 C498,258.2819 498,284.0819 498,300.7819 " fill="none" id="Supply-Kingdom" style="stroke:#181818;stroke-width:1.0;"/>
+      <path codeLine="64" d="M498,241.5319 C498,258.2819 498,284.0819 498,300.7819 " fill="none" id="Supply-Kingdom" style="stroke:#181818;stroke-width:1.0;"/>
     </g>
     <!--reverse link Base to Pile-->
     <g id="link_Base_Pile">
-      <path codeLine="70" d="M584.75,347.8619 C584.75,347.8619 584.75,392.6119 584.75,392.6119 " fill="none" id="Base-backto-Pile" style="stroke:#181818;stroke-width:1.0;"/>
+      <path codeLine="66" d="M584.75,347.8619 C584.75,347.8619 584.75,392.6119 584.75,392.6119 " fill="none" id="Base-backto-Pile" style="stroke:#181818;stroke-width:1.0;"/>
       <polygon fill="#181818" points="584.75,334.8619,580.75,340.8619,584.75,346.8619,588.75,340.8619,584.75,334.8619" style="stroke:#181818;stroke-width:1.0;"/>
       <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="15" x="562.7539" y="381.3295">1..</text>
     </g>
     <!--reverse link Kingdom to Pile-->
     <g id="link_Kingdom_Pile">
-      <path codeLine="71" d="M460,347.8019 C460,347.8019 460,426.9019 460,426.9019 C460,426.9019 516.95,426.9019 564.34,426.9019 " fill="none" id="Kingdom-backto-Pile" style="stroke:#181818;stroke-width:1.0;"/>
+      <path codeLine="67" d="M460,347.8019 C460,347.8019 460,426.9019 460,426.9019 C460,426.9019 516.95,426.9019 564.34,426.9019 " fill="none" id="Kingdom-backto-Pile" style="stroke:#181818;stroke-width:1.0;"/>
       <polygon fill="#181818" points="460,334.8019,456,340.8019,460,346.8019,464,340.8019,460,334.8019" style="stroke:#181818;stroke-width:1.0;"/>
       <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="534.2834" y="421.2283">10..</text>
     </g>
     <!--reverse link Trash to Pile-->
     <g id="link_Trash_Pile">
-      <path codeLine="74" d="M396.25,255.8119 C396.25,255.8119 396.25,460.9019 396.25,460.9019 C396.25,460.9019 495.92,460.9019 564.25,460.9019 " fill="none" id="Trash-backto-Pile" style="stroke:#181818;stroke-width:1.0;"/>
+      <path codeLine="69" d="M396.25,255.8119 C396.25,255.8119 396.25,460.9019 396.25,460.9019 C396.25,460.9019 495.92,460.9019 564.25,460.9019 " fill="none" id="Trash-backto-Pile" style="stroke:#181818;stroke-width:1.0;"/>
       <polygon fill="#181818" points="396.25,242.8119,392.25,248.8119,396.25,254.8119,400.25,248.8119,396.25,242.8119" style="stroke:#181818;stroke-width:1.0;"/>
       <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="549.5898" y="459.0022">1</text>
     </g>
     <!--reverse link Pile to Card-->
     <g id="link_Pile_Card">
-      <path codeLine="76" d="M627,508.7319 C627,508.7319 627,570.9019 627,570.9019 C627,570.9019 799.47,570.9019 872.22,570.9019 " fill="none" id="Pile-backto-Card" style="stroke:#181818;stroke-width:1.0;"/>
+      <path codeLine="71" d="M627,508.7319 C627,508.7319 627,570.9019 627,570.9019 C627,570.9019 799.47,570.9019 872.22,570.9019 " fill="none" id="Pile-backto-Card" style="stroke:#181818;stroke-width:1.0;"/>
       <polygon fill="#181818" points="627,495.7319,623,501.7319,627,507.7319,631,501.7319,627,495.7319" style="stroke:#181818;stroke-width:1.0;"/>
       <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="3" x="861.5607" y="526.5528"> </text>
       <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="6" x="858.5607" y="545.3768">*</text>
@@ -198,16 +198,16 @@
     </g>
     <!--reverse link Play Area to Card-->
     <g id="link_Play Area_Card">
-      <path codeLine="78" d="M904,347.8019 C904,347.8019 904,553.5119 904,553.5119 " fill="none" id="Play Area-backto-Card" style="stroke:#181818;stroke-width:1.0;"/>
+      <path codeLine="73" d="M904,347.8019 C904,347.8019 904,553.5119 904,553.5119 " fill="none" id="Play Area-backto-Card" style="stroke:#181818;stroke-width:1.0;"/>
       <polygon fill="#181818" points="904,334.8019,900,340.8019,904,346.8019,908,340.8019,904,334.8019" style="stroke:#181818;stroke-width:1.0;"/>
       <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="6" x="896.9688" y="542.0057">*</text>
     </g>
     <!--reverse link Hand to Card-->
     <g id="link_Hand_Card">
-      <path codeLine="79" d="M1019,347.8619 C1019,347.8619 1019,570.9019 1019,570.9019 C1019,570.9019 969.77,570.9019 935.73,570.9019 " fill="none" id="Hand-backto-Card" style="stroke:#181818;stroke-width:1.0;"/>
+      <path codeLine="74" d="M1019,347.8619 C1019,347.8619 1019,570.9019 1019,570.9019 C1019,570.9019 969.77,570.9019 935.73,570.9019 " fill="none" id="Hand-backto-Card" style="stroke:#181818;stroke-width:1.0;"/>
       <polygon fill="#181818" points="1019,334.8619,1015,340.8619,1019,346.8619,1023,340.8619,1019,334.8619" style="stroke:#181818;stroke-width:1.0;"/>
       <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="6" x="943.3272" y="566.3221">*</text>
     </g>
-    <!--SRC=[TLDDQnin4BthLmpRWy7WhTj23qj8IHFQGY6K9j1BBjhTiLT4AosIDc4n_k_LIDgl1FjYlpUQDwFtP2USHBY1dxn5q0UumnQjGjQ86W7RpWtGObkYiSm-2zLnmrkGGg4REjzWNACPKzeXPFyQD0Z2WciGAgqgx1n9NfNNZxrHLn_BQw0ZtpBW5eYwztrZzr_45ovxxd-_DkWb3EbO1DleNjR0AzTpAGSelRZarg8DEhVqEme5Ejxan014NO1rHgYZ1zRn8nRmG5yUEZ-z0A4SEuzzVoGV_D3JJ0WPXGwymhuheDHQUbZfNZbUIfoOqkXNYmlAQpXzZBSWXIXuXzNp38IjkAaddD5yk378iudxnLLzGUkXxpeviCtKVg_LBf8PVFWIFllzN7yqt3ONjBvpYnFuxVsgTNlXA7aoWLlQ_vm2b7W8QPFzHM6JppyasWPqxu13gmszYxOpsA2ouWN1Tmgjg2sycTuOL8woyd6YggdkSms9RdUxyT8JZfVQm4GiNPYFPP_p_EkJEcbJ- -TNdxEKDMCfSpgpi7zcGm0p304kO8gG4HydVSgYHQcq9bdO5tAoAbyytBZmUtwpJlLTVMpqCqA4Cnn3PCId9V8yhP6AYTvF_9jnRxhIykiBXRz8e9xCTkLmU1jiuMeyjaqLCdR5_0S0]-->
+    <!--SRC=[TL9DQzmm4BthLmm-BiHjUkZ1X9Gq8IqKIca2lUGYsxDh4NqOZPnWbltlrSZonnBsPBytcZUZznHKq0Xty4CQ1BU71pH85aMdMWGqVHZ1eAdHaw1NPNlffG6jB8QnZmq-T4u8wm92yQz3Zw08GeVGEDjW7rZofhvz7hoz-LJV0X_vLe0aOEftx9kx_oA-IJt8-F_UOPJmh4C8rBb1jo2RC4YjHwYZk9P4I4dddlydeKHFDpaA0DLMGC4hUuY0WZnW1K_yYJ34wHKe6yHfxlkZvHY77bT2wKbeBniS-WfgvtI4ZHjiaBN6XQczUoVSK54ZkCDq2rQO11-mULs1eaRwTi45puSxZx9Ok9_IjXUqdeQ-r-E5udT9k81VqO3McGj7-P8BkEU5JZaHZViK7_jPLPIDUzH87RWXW0JZF0TjUeyTMb9l2B5JESjjwH4CtgCDR7xC1stBzHXKYcXtTJNVOi7FNbAtmk9BMNvziKVds_XksbEHGn8YXyLdDhwjR79kXSdv3SpU2-QdITV5P4KkdPCYxGKbMr9kNjoq_aT-BaID5CKAvp04ytb8MUOnkPZfpmkVnv-lb5vdebxyxioZbABO-38Ts-KAMtF6_0S0]-->
   </g>
 </svg>

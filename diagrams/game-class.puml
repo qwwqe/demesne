@@ -30,8 +30,6 @@ together {
 
 together {
   class Supply
-'  class "Non-Supply" #33333300
-'  class Trash
 }
 
 together {
@@ -50,7 +48,6 @@ end note
 
 Game *-- Supply
 Game *-- Trash
-' Game *-- "Non-Supply"
 Game *-- "2..6\n{ordered}" Player
 
 Player -- "Play Area"
@@ -63,14 +60,12 @@ Discard *-- "1" Pile
 
 Trash .left. ClassNote
 Supply .left. ClassNote
-' "Non-Supply" .left. ClassNote
 
 Supply -- Base
 Supply -- Kingdom
 
 Base *-- "1.." Pile
 Kingdom *-- "10.." Pile
-' "Non-Supply" *-- "1.." Pile
 
 Trash *-- "1" Pile
 
