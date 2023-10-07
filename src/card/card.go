@@ -24,6 +24,8 @@ type Card struct {
 }
 
 // A Pile is an ordered collection of Cards.
+//
+// NOTE: Does a Pile need an Id?
 type Pile struct {
 	// The cards that constitute this Pile.
 	Cards []Card
