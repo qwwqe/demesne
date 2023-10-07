@@ -18,6 +18,7 @@ start
 :Assemble players;
 
 partition "Setup game" {
+
 fork
 
 :Setup Base Cards;
@@ -31,6 +32,12 @@ fork again
 :Setup Trash;
 
 end fork
+
+note left
+     TODO: Clarify how setup and
+     choice-making will actually
+     be implemented
+end note
 
 note left
      The specific size of
