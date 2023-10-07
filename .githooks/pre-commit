@@ -1,0 +1,24 @@
+#!/bin/sh
+
+PRE_PUMLS=$(git diff --name-only --cached diagrams/*.puml)
+
+if [[ -z "${PRE_PUMLS// }" ]]; then
+ exit 0
+fi
+
+PRE_SVGS=$(echo $PRE_PUMLS | sed 's/\.puml\(\s\|$\)/.svg\n/g')
+
+COMMITTED_SVGS=$(git diff --name-only --cached diagrams/*.svg | sort)
+
+NON_COMMITTED_SVGS=$(diff --changed-group-format='%<' --unchanged-group-format='' <(echo "$PRE_SVGS") <(echo "$COMMITTED_SVGS"))
+
+if [[ -z "${NON_COMMITTED_SVGS// }" ]]; then
+ exit 0
+fi
+
+make diagrams $NON_COMMITTED_SVGS >/dev/null
+
+git add $NON_COMMITTED_SVGS
+
+echo "Generated and added the following SVG files:"
+echo "$NON_COMMITTED_SVGS"
