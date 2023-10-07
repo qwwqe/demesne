@@ -12,12 +12,11 @@ partition {
 }
 </style>
 
-
 start
 
 :Assemble players;
 
-partition "Setup game" {
+partition "Setup [[game-class.puml {Game} game]]" {
 
 fork
 

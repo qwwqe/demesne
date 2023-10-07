@@ -7,7 +7,10 @@
     <text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="98" x="407.5" y="115.192">Assemble players</text>
     <rect fill="none" height="284.6881" rx="12.5" ry="12.5" style="stroke:#33333333;stroke-width:1.5;" width="872" x="11" y="138.648"/>
     <path d="M100,138.648 L100,151.9199 L90,161.9199 L11,161.9199 " fill="none" style="stroke:#33333333;stroke-width:1.5;"/>
-    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79" x="14" y="155.888">Setup game</text>
+    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="14" y="155.888">Setup</text>
+    <a href="game-class.svg" target="_top" title="Game" xlink:actuate="onRequest" xlink:href="game-class.svg" xlink:show="new" xlink:title="Game" xlink:type="simple">
+      <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="56" y="155.888">game</text>
+    </a>
     <path d="M31,181.9199 L31,248.392 L227,248.392 L227,191.9199 L217,181.9199 L31,181.9199 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
     <path d="M217,181.9199 L217,191.9199 L227,191.9199 L217,181.9199 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/>
     <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="175" x="37" y="202">TODO: Clarify how setup and</text>
@@ -112,6 +115,6 @@
     <polygon fill="#181818" points="452.5,707.7244,456.5,717.7244,460.5,707.7244,456.5,711.7244" style="stroke:#181818;stroke-width:1.0;"/>
     <line style="stroke:#181818;stroke-width:1.0;" x1="456.5" x2="456.5" y1="755.1005" y2="775.1005"/>
     <polygon fill="#181818" points="452.5,765.1005,456.5,775.1005,460.5,765.1005,456.5,769.1005" style="stroke:#181818;stroke-width:1.0;"/>
-    <!--SRC=[VLJ1RXCn4BtxAuR2ePK8bK1Sqb84AGW4eXKjfof2ZdUI7UArLnvler1jlfsnlMbQMl0XsdWyRzvxCtQaQ14- -HKGWuQ5RX3y74wnGNO8hTLhhDugNf9hTT0DrEiMWoMtd7Zh0yoiDil7mZzSbJyGvjeoAlM4dB5TXS1je8Xys3NsHIi_IXrpN5iyKG8HAP9tSAC0lafoAVBqrR1azxllN3NnmM60bwzLhuuFXsobE0g0KkDtpDZCx40_y96w0xrtWR5hiz8zgQFcFYmbf-o-rummqQ5AEIa2Ug79INnIUo-nB-GMbMyUFrCmBeFcMaBeAYZWpaS4Y_Ce_6LTdfsUZM5YTQ3v6chnddEYTbKvO6fF1aUD5biNi29hGPlOQMlNvS0CWPhMIfDSn2fNIZKULggJtMXeJWQOVgVUbWXgKyDcStKr4yKZ8sf6nchct16usVdGxpoPJZSRE2UB1QB2LWepYATHwhYkcM4e8PcWmNgW4arsbzWRMNTz-4YBBWYnBihyhVIWC7gelEcIm9pVIjciWFzM6sXH3tBFXvh6MuicqZLk3MDC6n3HPT7BqiM7kk-rjzzscvFoMrv9cJGbrl_GOv7hB4SwEoJLwN8D7OILpCJ_L7mkZgN6PDkUfxybbBWxxqRSjQrTtsF-JROlydOFk-_SibyT3z2waTiJEQb89H9SJDCwIlRUWyj3t9TPpY3fn8vqBzD-YjhA49XbkWT1Xa6NAcC1xO8RwTG1Yki1yVQDIS7jmzBVzYpg9IPI5F81XkDdtCss63-3X4-cqwEX4ApgD13x1uaEx5zz46B6kwfSSTQHU4vOJG-4vsLsdOqFc9WARqFo35sJYJuSfLV3j-eF]-->
+    <!--SRC=[VLHDRnCn4BtxLmo50vK8bK1Ssb84ALy2qOgMKnGXnpl9cdZjbSVRA5IRtywClMbQMl0XsdWyRzwRDtQooI5y2Ykm11eMka48SpZ51iaZj4wliNgZQ6bzgwDke5wt69trot5m8SBCQRDyAFp3L_a3OQuTeLAFh3Ukgn2eZJOX7NIDUzxoZrB7bDOEJnH399jiy72j0BvoSYdo-EMmUFTxw7mr3j5ZX1UlLA-E3uPiHOdpbJfyIuJDp0ti8nsfMyXx5vYw5YOJaJeoJXDb5d3zaJVwt87fT8yPg7c8IuOh2Uyq8Onrh0HE8g0NsdgEZ-iGEFR5-aKLceVF58pBgAdc4FeA2hWF2S7XFB4oNfTdfsU7C7OwslaQQdQ5SgBsLJbWwc0DZXhD3L_0oZe7sgHEExSk1sO8jcaTs-SJLhcIrBXVgHOZqDYvDK3sjxXU8gXD3PlDP39ZnIF3QkvqQTU7VjUJwNIpWNFhi41Ks79X0cvtuZg-QsOOIuXdQt05R8bAmqliDQ_RVVXW5rraObtYoLpfGM4AK0NJYS2SttBPh83-LXljeXxadWyrJN0EJR9Nk6qOeMn0Gfz5BukBztNViRVVkasY_8QNA6DJKlqFFGwfpdBOsI6fbcitE0Whded_gVXSEYR6vBOzaxyb9Dnzy2FgsjQjxp3_njiNURk7tNUsx5T70xHk-5ub4XLIGk2IJEj8sdi7BWznNsOvWyY97UcUf_qKjUCXC4kv1v67GPSgXmpQHJ_Iue1Dwm7nvlMHuFR9wMyyItg9Gih6V83W-0briot6pyZXa-dqQ2W4gre6ukc-q86da_TCp0HVbTjFEbcQMwoc-yppCdUTJ8WeJ9ctiVn0NLcJGZoI1oMqwWy0]-->
   </g>
 </svg>
