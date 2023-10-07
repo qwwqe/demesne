@@ -17,6 +17,8 @@ class Player {}
 
 class Pile {
   faceup: bool
+  countable: bool
+  browseable: bool
 }
 
 together {
