@@ -14,65 +14,75 @@ partition {
 
 start
 
-:Assemble players;
-
-partition "Setup [[game-class.puml {Game} game]]" {
-
-fork
-
-:Setup Base Cards;
-
-fork again
-
-:Choose Kingdom Cards;
-
-fork again
-
-:Setup Trash;
-
-end fork
-
-note left
-     TODO: Clarify how setup and
-     choice-making will actually
-     be implemented
+floating note
+    It's not really clear that explicit stages are necessary here
 end note
 
-note left
-     The specific size of
-     each ~~[[base-card-class.puml {Base Cards} Base Card]]~~ Pile
-     depends on the number
-     of players in the game
-     ====
-     TODO: Figure out a way
-     to document the pile sizes
-end note
+partition "Stage: [[game-class.puml {Game} Game]] setup" {
+	fork
 
-note right
-     Players collectively
-     select ten ~~[[kingdom-card-class.puml {Kingdom Cards} Kingdoms]]~~
-     to play with
-     ====
-     TODO: Flesh out how
-     this actually works
-end note
+	:Determine player count;
 
-note right
-     In the base game, the
-     ~~[[non-supply-class.puml {Non-Supply} Non-Supply]]~~ just
-     amounts to the ~~[[trash-pile-class.puml {Trash} Trash]]~~ pile
-end note
+	:Setup Base Cards;
+
+	fork again
+
+	:Choose Kingdom Cards;
+
+	fork again
+
+	:Setup Trash;
+
+	end fork
+
+	note left
+	     TODO: Clarify how setup and
+	     choice-making will actually
+	     be implemented
+	end note
+
+	note left
+	     The specific size of
+	     each ~~[[base-card-class.puml {Base Cards} Base Card]]~~ Pile
+	     depends on the number
+	     of players in the game
+	     ====
+	     TODO: Figure out a way
+	     to document the pile sizes
+	end note
+
+	note right
+	     Players collectively
+	     select ten ~~[[kingdom-card-class.puml {Kingdom Cards} Kingdoms]]~~
+	     to play with
+	     ====
+	     TODO: Flesh out how
+	     this actually works
+	end note
+
+	note right
+	     In the base game, the
+	     ~~[[non-supply-class.puml {Non-Supply} Non-Supply]]~~ just
+	     amounts to the ~~[[trash-pile-class.puml {Trash} Trash]]~~ pile
+	end note
 }
 
-:Deal decks;
+partition "Stage: Play" {
 
-repeat
-    :[[turn-activity.puml {How is a turn played?} Players take their turns <$subactivity_rake>]];
-repeat while () not ([End condition satisfied])
+    :Deal decks;
 
-:Tally scores;
+    repeat
+        :[[turn-activity.puml {How is a turn played?} Players take their turns <$subactivity_rake>]];
+    repeat while () not ([End condition satisfied])
+}
 
-:Decide victor;
+partition "Stage: Scoring" {
+    :Tally scores;
+}
+
+partition "Stage: Finished" {
+    :Declare victor;
+}
 
 stop
 

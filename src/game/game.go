@@ -16,6 +16,8 @@ type Game struct {
 	Turn int
 
 	// The current stage.
+	//
+	// TODO: Evaluate necessity of explicit stages in a game.
 	Stage Stage
 
 	// The Players in the Game.
@@ -46,4 +48,5 @@ type Supply struct {
 // A Stage is a distinct state in the life cycle of a game.
 //
 // NOTE: Stub.
+// NOTE: It may not be necessary to categorize the game into stages here.
 type Stage interface{}
