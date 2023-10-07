@@ -2,8 +2,8 @@ package game
 
 import "github.com/qwwqe/demesne/src/card"
 
-// A Game of Demesne.
-type Game struct {
+// A game of Demesne.
+type game struct {
 	// Id uniquely identifies a Game.
 	Id string
 
@@ -50,3 +50,33 @@ type Supply struct {
 // NOTE: Stub.
 // NOTE: It may not be necessary to categorize the game into stages here.
 type Stage interface{}
+
+// Game builder.
+type Builder struct {
+	game game
+}
+
+// Add Player to configured game.
+func (b *Builder) WithPlayer(player Player) *Builder {
+	b.game.Players = append(b.game.Players, player)
+	return b
+}
+
+// Add Kingdom pile to configured game.
+func (b *Builder) WithKingdom(kingdom card.Pile) *Builder {
+	b.game.KingdomCards = append(b.game.KingdomCards, kingdom)
+	return b
+}
+
+// Add Base pile to configured game.
+func (b *Builder) WithBase(base card.Pile) *Builder {
+	b.game.BaseCards = append(b.game.BaseCards, base)
+	return b
+}
+
+// Return the configured game.
+//
+// TODO: Validate before returning.
+func (b *Builder) Build() (game, error) {
+	return b.game, nil
+}
