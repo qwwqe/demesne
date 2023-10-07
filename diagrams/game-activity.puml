@@ -14,11 +14,12 @@ partition {
 
 start
 
-floating note
-    It's not really clear that explicit stages are necessary here
+floating note right #55000033
+    Game setup as an activity in itself should probably be relegated
+    to the application layer, or a service of some kind
 end note
 
-partition "Stage: [[game-class.puml {Game} Game]] setup" {
+package "Application / Setup" {
 	fork
 
 	:Determine player count;
@@ -67,21 +68,31 @@ partition "Stage: [[game-class.puml {Game} Game]] setup" {
 	end note
 }
 
-partition "Stage: Play" {
+package "Game" {
+    floating note
+        This structure seems to entail that
+        //a Game cannot be partially setup//,
+        that is to say when a Game is created
+        it must be done with complete information
+        about the number of players and particular
+        components involved
+        ====
+        It's not really clear that explicit
+        stages are necessary here
+    end note
 
-    :Deal decks;
+    partition "Stage: Play" {
+        :Deal decks;
 
-    repeat
-        :[[turn-activity.puml {How is a turn played?} Players take their turns <$subactivity_rake>]];
-    repeat while () not ([End condition satisfied])
-}
+        repeat
+            :[[turn-activity.puml {How is a turn played?} Players take their turns <$subactivity_rake>]];
+        repeat while () not ([End condition satisfied])
+    }
 
-partition "Stage: Scoring" {
-    :Tally scores;
-}
-
-partition "Stage: Finished" {
-    :Declare victor;
+    partition "Stage: Finished" {
+        :Tally scores;
+        :Determine victor;
+    }
 }
 
 stop
