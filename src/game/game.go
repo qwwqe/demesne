@@ -1,6 +1,7 @@
 package game
 
 import (
+	"errors"
 	"fmt"
 
 	"github.com/qwwqe/demesne/src/card"
@@ -72,6 +73,8 @@ func (g game) Validate() error {
 		return e(ErrInvalidBaseCount)
 	}
 
+	// TODO: Check existence of required cards.
+
 	return nil
 }
 
@@ -118,9 +121,50 @@ func (b *Builder) WithBase(base card.Pile) *Builder {
 // Return the configured game, ready to play.
 //
 // TODO: Deal decks, initialize hands, set the turn counter, etc.
+//
+// TODO: Encapsulate initialization logic in something like a specification
+// that can be defined via interfaces and configured during setup. The following
+// code is currently a placeholder for such mechanism.
 func (b *Builder) Build() (*game, error) {
 	if err := b.game.Validate(); err != nil {
 		return nil, err
+	}
+
+	var copper *card.Pile
+	var estate *card.Pile
+
+	for i := 0; i < len(b.game.BaseCards) && (copper == nil || estate == nil); i++ {
+		top := b.game.BaseCards[i].Top()
+
+		if top == nil {
+			continue
+		}
+
+		if top.Name == "copper" {
+			copper = &b.game.BaseCards[i]
+		} else if top.Name == "estate" {
+			estate = &b.game.BaseCards[i]
+		}
+	}
+
+	if copper == nil || estate == nil {
+		return nil, errors.New("Missing decks required by the current setup")
+	}
+
+	for _, player := range b.game.Players {
+		if coppers := copper.Draw(7); coppers == nil {
+			return nil, errors.New("Insufficient coppers to populate a deck")
+		} else {
+			player.Deck.AddCards(coppers)
+		}
+
+		if estates := estate.Draw(3); estates == nil {
+			return nil, errors.New("Insufficient estates to populate a deck")
+		} else {
+			player.Deck.AddCards(estates)
+		}
+
+		player.Deck.Shuffle()
 	}
 
 	return &b.game, nil
