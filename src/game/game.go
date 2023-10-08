@@ -1,6 +1,10 @@
 package game
 
-import "github.com/qwwqe/demesne/src/card"
+import (
+	"fmt"
+
+	"github.com/qwwqe/demesne/src/card"
+)
 
 // A game of Demesne.
 type game struct {
@@ -32,6 +36,43 @@ type game struct {
 
 	// The Supply.
 	Supply
+}
+
+// Validate a game of Demesne.
+//
+// NOTE: Logic pertaining to game rules shouldn't really
+// just be hardcoded here... maybe use a specification pattern?
+// Furthermore, validation should probably also cover pile size of
+// base and victory cards with respect to player count (i.e. 8 for a two-player
+// game, 12 for a three-player game, and so on). It seems unreasonable
+// to include all such logic in a single validation function,
+// particularly when attempting to implement functionality added by
+// future expansions.
+//
+// TODO: Per above, implement this using a specification pattern
+// or something equivalent.
+func (g game) Validate() error {
+	e := func(err error) error {
+		return fmt.Errorf("Validate: %w", err)
+	}
+
+	if g.Id == "" {
+		return e(ErrMissingId)
+	}
+
+	if len(g.Players) < 2 || len(g.Players) > 6 {
+		return e(ErrInvalidPlayerCount)
+	}
+
+	if len(g.KingdomCards) != 10 {
+		return e(ErrInvalidKingdomCount)
+	}
+
+	if len(g.BaseCards) != 7 {
+		return e(ErrInvalidBaseCount)
+	}
+
+	return nil
 }
 
 // The Supply is the collection of all card Piles which can be
@@ -74,9 +115,13 @@ func (b *Builder) WithBase(base card.Pile) *Builder {
 	return b
 }
 
-// Return the configured game.
+// Return the configured game, ready to play.
 //
-// TODO: Validate before returning.
-func (b *Builder) Build() (game, error) {
-	return b.game, nil
+// TODO: Deal decks, initialize hands, set the turn counter, etc.
+func (b *Builder) Build() (*game, error) {
+	if err := b.game.Validate(); err != nil {
+		return nil, err
+	}
+
+	return &b.game, nil
 }
