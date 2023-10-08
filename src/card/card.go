@@ -1,5 +1,8 @@
 package card
 
+import "math/rand"
+import "time"
+
 // A Card simltaneously represents the definition of a Demesne card and
 // a particular, concrete instance of such definition.
 //
@@ -43,4 +46,47 @@ type Pile struct {
 
 	// Whether the cards in this Pile may be inspected at will by all players.
 	Browseable bool
+}
+
+// Stub.
+func (p Pile) Top() *Card {
+	if len(p.Cards) == 0 {
+		return nil
+	}
+
+	return &p.Cards[0]
+}
+
+// Stub.
+func (p *Pile) AddCard(c Card) *Pile {
+	p.Cards = append(p.Cards, c)
+	return p
+}
+
+// Stub.
+func (p *Pile) AddCards(cs []Card) *Pile {
+	p.Cards = append(p.Cards, cs...)
+	return p
+}
+
+// Stub.
+func (p *Pile) Shuffle() *Pile {
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
+
+	r.Shuffle(len(p.Cards), func(i, j int) {
+		p.Cards[i], p.Cards[j] = p.Cards[j], p.Cards[i]
+	})
+
+	return p
+}
+
+// Stub.
+func (p *Pile) Draw(n int) []Card {
+	if len(p.Cards) < n || n == 0 {
+		return nil
+	}
+
+	cs := p.Cards[0:n]
+	p.Cards = p.Cards[n:]
+	return cs
 }
