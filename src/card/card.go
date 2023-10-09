@@ -107,3 +107,7 @@ func (p *Pile) Drain() []Card {
 	p.Cards = p.Cards[:0]
 	return cs
 }
+
+func (p Pile) Size() int {
+	return len(p.Cards)
+}
