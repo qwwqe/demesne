@@ -10,6 +10,7 @@ import "github.com/qwwqe/demesne/src/card"
 // use properties of the CardSet itself to deermine this.
 type RuleSet struct {
 	SupplySet
+	EndConditions []func(game) bool
 }
 
 func (r RuleSet) SetupTable(g *game) {
@@ -52,6 +53,20 @@ func (r RuleSet) SetupTable(g *game) {
 	// TODO: Deal decks.
 }
 
+// Determine whether game end conditions have been met.
+//
+// TODO: Figure out a way to make this more flexible instead of
+// hard-coding the three-pile logic into the rule set struct receiver itself.
+func (r RuleSet) IsGameFinished(g game) bool {
+	for _, condition := range r.EndConditions {
+		if condition(g) {
+			return true
+		}
+	}
+
+	return false
+}
+
 type SupplySet struct {
 	BaseCardSets    []CardSet
 	KingdomCardSets []CardSet
@@ -60,4 +75,26 @@ type SupplySet struct {
 type CardSet interface {
 	Card() card.Card
 	Amount(players int) int
+	// IsGameFinished(game) bool
+}
+
+func BaseGameEndCondition(g game) bool {
+	supplyPilesExhausted := 0
+	for _, p := range g.Supply.BaseCards {
+		if p.Size() == 0 {
+			supplyPilesExhausted++
+		}
+	}
+
+	for _, p := range g.Supply.KingdomCards {
+		if p.Size() == 0 {
+			supplyPilesExhausted++
+		}
+	}
+
+	if len(g.Players) < 5 {
+		return supplyPilesExhausted >= 3
+	}
+
+	return supplyPilesExhausted >= 4
 }
