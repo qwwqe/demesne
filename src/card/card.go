@@ -101,3 +101,9 @@ func (p *Pile) Draw(n int) []Card {
 	p.Cards = p.Cards[n:]
 	return cs
 }
+
+func (p *Pile) Drain() []Card {
+	cs := p.Cards[:]
+	p.Cards = p.Cards[:0]
+	return cs
+}
