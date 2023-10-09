@@ -124,7 +124,7 @@ func (b *Builder) WithBase(base card.Pile) *Builder {
 //
 // TODO: Encapsulate initialization logic in something like a specification
 // that can be defined via interfaces and configured during setup. The following
-// code is currently a placeholder for such mechanism.
+// code is currently a placeholder for such a mechanism.
 func (b *Builder) Build() (*game, error) {
 	if err := b.game.Validate(); err != nil {
 		return nil, err
@@ -140,6 +140,7 @@ func (b *Builder) Build() (*game, error) {
 			continue
 		}
 
+		// TODO: These should be dynamically defined using a specification.
 		if top.Name == "copper" {
 			copper = &b.game.BaseCards[i]
 		} else if top.Name == "estate" {
@@ -152,6 +153,7 @@ func (b *Builder) Build() (*game, error) {
 	}
 
 	for _, player := range b.game.Players {
+		// TODO: Starting decks should be defined using a specification.
 		if coppers := copper.Draw(7); coppers == nil {
 			return nil, errors.New("Insufficient coppers to populate a deck")
 		} else {
