@@ -1,7 +1,11 @@
 package card
 
-import "math/rand"
-import "time"
+import (
+	"math/rand"
+	"time"
+
+	"github.com/google/uuid"
+)
 
 // A Card simltaneously represents the definition of a Demesne card and
 // a particular, concrete instance of such definition.
@@ -24,6 +28,13 @@ type Card struct {
 	// NOTE: As mentioned above, it may be a more flexible design to
 	// implement via separation of card definitions and insances.
 	Name string
+}
+
+// Return a deep copy of the given Card, with Id set to a random UUID.
+func (c Card) Clone() Card {
+	nc := c
+	nc.Id = uuid.NewString()
+	return nc
 }
 
 // A Pile is an ordered collection of Cards.
