@@ -2,8 +2,8 @@ package game
 
 import "github.com/qwwqe/demesne/src/card"
 
-// A RuleSet defines how a game of Demesne is set up
-// and how end game is determined, among other things.
+// A RuleSet defines the rules for creating the supply, dealing player decks,
+// and determining end of game.
 //
 // NOTE: Do Kingdom Sets and Base Sets really need to
 // be separated structurally? It might be simpler to just
@@ -41,7 +41,7 @@ func (r RuleSet) SetupTable(g *game) {
 		}
 
 		card := cardSet.Card()
-		amount := cardSet.Amount(len(g.Players))
+		amount := cardSet.PileSize(len(g.Players))
 		for i := 0; i < amount; i++ {
 			pile.AddCard(card.Clone())
 		}
@@ -79,7 +79,7 @@ type SupplySet struct {
 
 type CardSet interface {
 	Card() card.Card
-	Amount(players int) int
+	PileSize(players int) int
 	// IsGameFinished(game) bool
 }
 
