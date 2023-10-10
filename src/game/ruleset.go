@@ -9,7 +9,14 @@ import "github.com/qwwqe/demesne/src/card"
 // be separated structurally? It might be simpler to just
 // use properties of the CardSet itself to deermine this.
 type RuleSet struct {
+	// Card sets defined as being in the Supply.
 	SupplySet
+
+	// Predicates determining completion of the game.
+	//
+	// The set of end conditions are evaluated as a logical union,
+	// meaning that if any are true, the game as a whole is
+	// judged to be over.
 	EndConditions []func(game) bool
 }
 
@@ -53,10 +60,8 @@ func (r RuleSet) SetupTable(g *game) {
 	// TODO: Deal decks.
 }
 
-// Determine whether game end conditions have been met.
-//
-// TODO: Figure out a way to make this more flexible instead of
-// hard-coding the three-pile logic into the rule set struct receiver itself.
+// IsGameFinished returns a boolean value representing whether the
+// game has satisfied the end conditions described in the rule set.
 func (r RuleSet) IsGameFinished(g game) bool {
 	for _, condition := range r.EndConditions {
 		if condition(g) {
@@ -78,7 +83,11 @@ type CardSet interface {
 	// IsGameFinished(game) bool
 }
 
-func BaseGameEndCondition(g game) bool {
+// A simple end condition based on supply pile exhaustion.
+//
+// This is mostly intended for reference until a more comprehensive
+// framework for dynamic definition is established.
+func BasicSupplyEndCondition(g game) bool {
 	supplyPilesExhausted := 0
 	for _, p := range g.Supply.BaseCards {
 		if p.Size() == 0 {
