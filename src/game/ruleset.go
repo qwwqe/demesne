@@ -157,3 +157,49 @@ func BasicSupplyEndCondition(g game) bool {
 
 	return supplyPilesExhausted >= 4
 }
+
+type provinceCardSet struct{}
+
+func (cs provinceCardSet) Card() card.Card {
+	return card.Card{
+		Name: "province",
+	}
+}
+
+func (cs provinceCardSet) PileSize(players int) int {
+	switch players {
+	case 2:
+		return 8
+	case 3:
+		return 12
+	case 4:
+		return 12
+	case 5:
+		return 15
+	case 6:
+		return 18
+	default:
+		return 12
+	}
+}
+
+func (cs provinceCardSet) EndConditions() []EndCondition {
+	return []EndCondition{
+		// End condition for when the Province pile is emptied.
+		//
+		// TODO: Find a better way of mapping card sets to piles.
+		func(g game) bool {
+			found := false
+			for _, pile := range g.Supply.All() {
+				if pile.Size() > 0 && pile.Cards[0].Name == cs.Card().Name {
+					found = true
+					break
+				}
+			}
+
+			return found
+		},
+	}
+}
+
+var _ CardSet = provinceCardSet{}
