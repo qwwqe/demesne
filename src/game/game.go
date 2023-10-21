@@ -84,9 +84,25 @@ func (g game) Validate() error {
 // NOTE: It may be worth considering implementing the Supply
 // in a way that makes determining existence of a card in the Supply
 // easier and further expansion more convenient.
+//
+// NOTE: If deciding to keep the separation of Base and Kingdom,
+// remember to implement a unified iterator when 1.22 drops.
 type Supply struct {
 	BaseCards    []card.Pile
 	KingdomCards []card.Pile
+}
+
+// All is a convenience function for iterating over
+// piles in a supply.
+//
+// TODO: Make this an actual iterator when 1.22 lands.
+func (s Supply) All() []card.Pile {
+	piles := make([]card.Pile, 0, len(s.BaseCards)+len(s.KingdomCards))
+
+	piles = append(piles, s.BaseCards...)
+	piles = append(piles, s.KingdomCards...)
+
+	return piles
 }
 
 // A Stage is a distinct state in the life cycle of a game.
