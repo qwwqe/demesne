@@ -1,64 +1,85 @@
 package game
 
-import "github.com/qwwqe/demesne/src/card"
+import (
+	"github.com/google/uuid"
+	"github.com/qwwqe/demesne/src/card"
+)
+
+type EndCondition func(game) bool
 
 // A RuleSet defines the rules for creating the supply, dealing player decks,
 // and determining end of game.
 //
 // NOTE: Do Kingdom Sets and Base Sets really need to
 // be separated structurally? It might be simpler to just
-// use properties of the CardSet itself to deermine this.
+// use properties of the CardSet itself to determine this.
 type RuleSet struct {
 	// Card sets defined as being in the Supply.
 	SupplySet
 
 	// Predicates determining completion of the game.
+	// Game end conditions may also be specified by individual CardSets.
 	//
 	// The set of end conditions are evaluated as a logical union,
 	// meaning that if any are true, the game as a whole is
 	// judged to be over.
-	EndConditions []func(game) bool
+	EndConditions []EndCondition
 }
 
-func (r RuleSet) SetupTable(g *game) {
-	// NOTE: It's not clear whether table setup should really
-	// be handling this kind of cleanup
-	g.BaseCards = g.BaseCards[:0]
-	g.KingdomCards = g.KingdomCards[:0]
-	for _, p := range g.Players {
-		p.Hand = p.Hand[:0]
-		p.PlayArea = p.PlayArea[:0]
-		p.Deck.Drain()
-		p.Discard.Drain()
+func (r RuleSet) buildSupplyPile(cardSet CardSet) card.Pile {
+	// NOTE: Maybe these properties should be specified in the RuleSet?
+	pile := card.Pile{
+		Countable:  true,
+		Faceup:     true,
+		Browseable: false,
 	}
 
-	buildSupplyPile := func(cardSet CardSet) card.Pile {
-		// NOTE: Maybe these properties should be specified in the RuleSet?
-		pile := card.Pile{
-			Countable:  true,
-			Faceup:     true,
-			Browseable: false,
-		}
-
-		card := cardSet.Card()
-		amount := cardSet.PileSize(len(g.Players))
-		for i := 0; i < amount; i++ {
-			pile.AddCard(card.Clone())
-		}
-
-		return pile
+	card := cardSet.Card()
+	amount := cardSet.PileSize(len(g.Players))
+	for i := 0; i < amount; i++ {
+		pile.AddCard(card.Clone())
 	}
+
+	return pile
+}
+
+func (r RuleSet) BuildGame(players int) game {
+	g := game{}
+
+	g.Players = make([]Player, players)
+	for _, player := range g.Players {
+		player.Id = uuid.NewString()
+	}
+
+	setToPileMap := map[string]*card.Pile{}
 
 	for _, bs := range r.BaseCardSets {
-		g.BaseCards = append(g.BaseCards, buildSupplyPile(bs))
+		g.BaseCards = append(g.BaseCards, r.buildSupplyPile(bs))
+		setToPileMap[bs.Card().Name] = &g.BaseCards[len(g.BaseCards)-1]
 	}
 
 	for _, ks := range r.KingdomCardSets {
-		g.KingdomCards = append(g.KingdomCards, buildSupplyPile(ks))
+		g.KingdomCards = append(g.KingdomCards, r.buildSupplyPile(ks))
+		setToPileMap[ks.Card().Name] = &g.KingdomCards[len(g.KingdomCards)-1]
 	}
 
-	// TODO: Deal decks.
+	for _, cardSet := range r.SupplySet.All() {
+		for _, player := range g.Players {
+			amount, deductFromPile := cardSet.DealAmount()
+			for i := 0; i < amount; i++ {
+				player.Deck.AddCard(cardSet.Card())
+				if deductFromPile {
+					// setToPileMap
+					// TODO: deal with pile adjustments.
+				}
+			}
+		}
+	}
+
+	return g
 }
+
+// func (r RuleSet)
 
 // IsGameFinished returns a boolean value representing whether the
 // game has satisfied the end conditions described in the rule set.
@@ -66,6 +87,14 @@ func (r RuleSet) IsGameFinished(g game) bool {
 	for _, condition := range r.EndConditions {
 		if condition(g) {
 			return true
+		}
+	}
+
+	for _, cardSet := range r.SupplySet.All() {
+		for _, condition := range cardSet.EndConditions() {
+			if condition(g) {
+				return true
+			}
 		}
 	}
 
@@ -77,11 +106,32 @@ type SupplySet struct {
 	KingdomCardSets []CardSet
 }
 
+// All is a convenience function for iterating over
+// card sets in a supply set.
+//
+// TODO: Make this an actual iterator when 1.22 lands.
+func (s SupplySet) All() []CardSet {
+	sets := make([]CardSet, 0, len(s.BaseCardSets)+len(s.KingdomCardSets))
+
+	sets = append(sets, s.BaseCardSets...)
+	sets = append(sets, s.KingdomCardSets...)
+
+	return sets
+}
+
 type CardSet interface {
 	Card() card.Card
 	PileSize(players int) int
-	// IsGameFinished(game) bool
+	DealAmount() (amount int, deductFromPile bool)
+	EndConditions() []EndCondition
 }
+
+/**
+ * Reference material below.
+ *
+ * TODO: Turn these into test cases or something.
+ *
+ */
 
 // A simple end condition based on supply pile exhaustion.
 //
