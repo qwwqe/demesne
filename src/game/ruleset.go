@@ -1,6 +1,8 @@
 package game
 
 import (
+	"errors"
+
 	"github.com/google/uuid"
 	"github.com/qwwqe/demesne/src/card"
 )
@@ -43,7 +45,7 @@ func (r RuleSet) buildSupplyPile(cardSet CardSet) card.Pile {
 	return pile
 }
 
-func (r RuleSet) BuildGame(players int) game {
+func (r RuleSet) BuildGame(players int) (*game, error) {
 	g := game{}
 
 	g.Players = make([]Player, players)
@@ -53,6 +55,7 @@ func (r RuleSet) BuildGame(players int) game {
 
 	setToPileMap := map[string]*card.Pile{}
 
+	// gnarly
 	for _, bs := range r.BaseCardSets {
 		g.BaseCards = append(g.BaseCards, r.buildSupplyPile(bs))
 		setToPileMap[bs.Card().Name] = &g.BaseCards[len(g.BaseCards)-1]
@@ -64,19 +67,35 @@ func (r RuleSet) BuildGame(players int) game {
 	}
 
 	for _, cardSet := range r.SupplySet.All() {
-		for _, player := range g.Players {
-			amount, deductFromPile := cardSet.DealAmount()
-			for i := 0; i < amount; i++ {
-				player.Deck.AddCard(cardSet.Card())
-				if deductFromPile {
-					// setToPileMap
-					// TODO: deal with pile adjustments.
+		amount, deductFromPile := cardSet.DealAmount()
+		pile, ok := setToPileMap[cardSet.Card().Name]
+
+		if !ok {
+			// TODO: Return real error structure instead of text..
+			return nil, errors.New("Pile not found: " + cardSet.Card().Name)
+		}
+
+		if deductFromPile && amount*len(g.Players) > pile.Size() {
+			// TODO: return real error structure instead of text
+			return nil, errors.New("Insufficient pile size to deal starting hands: " + cardSet.Card().Name)
+		}
+
+		materializeCards := func(n int) []card.Card { return pile.Draw(n) }
+		if !deductFromPile {
+			materializeCards = func(n int) (cards []card.Card) {
+				for i := 0; i < n; i++ {
+					cards = append(cards, cardSet.Card())
 				}
+				return
 			}
+		}
+
+		for _, player := range g.Players {
+			player.Deck.AddCards(materializeCards(amount))
 		}
 	}
 
-	return g
+	return &g, nil
 }
 
 // func (r RuleSet)
