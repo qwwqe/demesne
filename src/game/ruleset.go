@@ -28,46 +28,27 @@ type RuleSet struct {
 	EndConditions []EndCondition
 }
 
-func (r RuleSet) buildSupplyPile(cardSet CardSet, players int) card.Pile {
-	// NOTE: Maybe these properties should be specified in the RuleSet?
-	pile := card.Pile{
-		Countable:  true,
-		Faceup:     true,
-		Browseable: false,
-	}
-
-	card := cardSet.Card()
-	amount := cardSet.PileSize(players)
-	for i := 0; i < amount; i++ {
-		pile.AddCard(card.Clone())
-	}
-
-	return pile
-}
-
-func (r RuleSet) BuildGame(players int) (*game, error) {
+func (r RuleSet) BuildGame(numPlayers int) (*game, error) {
 	g := game{}
 
-	g.Players = make([]Player, players)
+	g.Players = make([]Player, numPlayers)
 	for _, player := range g.Players {
 		player.Id = uuid.NewString()
 	}
 
 	setToPileMap := map[string]*card.Pile{}
 
-	// gnarly
 	for _, bs := range r.BaseCardSets {
-		g.BaseCards = append(g.BaseCards, r.buildSupplyPile(bs, players))
-		setToPileMap[bs.Card().Name] = &g.BaseCards[len(g.BaseCards)-1]
+		g.BaseCards = append(g.BaseCards, bs.BuildPile(numPlayers))
+		setToPileMap[bs.Card().Name] = &g.BaseCards[len(g.KingdomCards)-1]
 	}
 
 	for _, ks := range r.KingdomCardSets {
-		g.KingdomCards = append(g.KingdomCards, r.buildSupplyPile(ks, players))
+		g.KingdomCards = append(g.KingdomCards, ks.BuildPile(numPlayers))
 		setToPileMap[ks.Card().Name] = &g.KingdomCards[len(g.KingdomCards)-1]
 	}
 
 	for _, cardSet := range r.SupplySet.All() {
-		amount, deductFromPile := cardSet.DealAmount()
 		pile, ok := setToPileMap[cardSet.Card().Name]
 
 		if !ok {
@@ -75,23 +56,8 @@ func (r RuleSet) BuildGame(players int) (*game, error) {
 			return nil, errors.New("Pile not found: " + cardSet.Card().Name)
 		}
 
-		if deductFromPile && amount*len(g.Players) > pile.Size() {
-			// TODO: return real error structure instead of text
-			return nil, errors.New("Insufficient pile size to deal starting hands: " + cardSet.Card().Name)
-		}
-
-		materializeCards := func(n int) []card.Card { return pile.Draw(n) }
-		if !deductFromPile {
-			materializeCards = func(n int) (cards []card.Card) {
-				for i := 0; i < n; i++ {
-					cards = append(cards, cardSet.Card())
-				}
-				return
-			}
-		}
-
 		for _, player := range g.Players {
-			player.Deck.AddCards(materializeCards(amount))
+			player.Deck.AddCards(cardSet.Deal(pile))
 		}
 	}
 
@@ -145,8 +111,10 @@ type CardSet interface {
 	// method, there isn't really any reason to expose a Card method as well.
 	// It also ceases being useful when split piles are introduced.
 	Card() card.Card
-	PileSize(players int) int
-	DealAmount() (amount int, deductFromPile bool)
+	BuildPile(numPlayers int) card.Pile
+	Deal(pile *card.Pile) []card.Card
+	// PileSize(players int) int
+	// DealAmount() (amount int, deductFromPile bool)
 	EndConditions() []EndCondition
 }
 
