@@ -28,7 +28,7 @@ type RuleSet struct {
 	EndConditions []EndCondition
 }
 
-func (r RuleSet) buildSupplyPile(cardSet CardSet) card.Pile {
+func (r RuleSet) buildSupplyPile(cardSet CardSet, players int) card.Pile {
 	// NOTE: Maybe these properties should be specified in the RuleSet?
 	pile := card.Pile{
 		Countable:  true,
@@ -37,7 +37,7 @@ func (r RuleSet) buildSupplyPile(cardSet CardSet) card.Pile {
 	}
 
 	card := cardSet.Card()
-	amount := cardSet.PileSize(len(g.Players))
+	amount := cardSet.PileSize(players)
 	for i := 0; i < amount; i++ {
 		pile.AddCard(card.Clone())
 	}
@@ -57,12 +57,12 @@ func (r RuleSet) BuildGame(players int) (*game, error) {
 
 	// gnarly
 	for _, bs := range r.BaseCardSets {
-		g.BaseCards = append(g.BaseCards, r.buildSupplyPile(bs))
+		g.BaseCards = append(g.BaseCards, r.buildSupplyPile(bs, players))
 		setToPileMap[bs.Card().Name] = &g.BaseCards[len(g.BaseCards)-1]
 	}
 
 	for _, ks := range r.KingdomCardSets {
-		g.KingdomCards = append(g.KingdomCards, r.buildSupplyPile(ks))
+		g.KingdomCards = append(g.KingdomCards, r.buildSupplyPile(ks, players))
 		setToPileMap[ks.Card().Name] = &g.KingdomCards[len(g.KingdomCards)-1]
 	}
 
@@ -97,8 +97,6 @@ func (r RuleSet) BuildGame(players int) (*game, error) {
 
 	return &g, nil
 }
-
-// func (r RuleSet)
 
 // IsGameFinished returns a boolean value representing whether the
 // game has satisfied the end conditions described in the rule set.
@@ -138,7 +136,14 @@ func (s SupplySet) All() []CardSet {
 	return sets
 }
 
+// NOTE: Use a withPlayers() instead of passing the number of players
+// to every method? A little less clean in terms of function application,
+// but it would provide better guarantees about consistency between
+// behaviour that depends on a fixed player count (like building piles and dealing).
 type CardSet interface {
+	// NOTE: Realistically, if the CardSet exposes both a BuildPile and DealCards
+	// method, there isn't really any reason to expose a Card method as well.
+	// It also ceases being useful when split piles are introduced.
 	Card() card.Card
 	PileSize(players int) int
 	DealAmount() (amount int, deductFromPile bool)
@@ -221,4 +226,45 @@ func (cs provinceCardSet) EndConditions() []EndCondition {
 	}
 }
 
+func (cs provinceCardSet) DealAmount() (int, bool) {
+	return 0, false
+}
+
 var _ CardSet = provinceCardSet{}
+
+type estateCardSet struct{}
+
+func (cs estateCardSet) Card() card.Card {
+	return card.Card{
+		Name: "estate",
+	}
+}
+
+func (cs estateCardSet) BuildPile(numPlayers int) card.Pile {
+	pileSize := 8
+	if numPlayers != 2 {
+		pileSize = 12
+	}
+
+	amountPerPlayer := 3
+	pileSize += amountPerPlayer * numPlayers
+
+	pile := card.Pile{
+		Countable:  true,
+		Faceup:     true,
+		Browseable: false,
+	}
+
+	// NOTE: See note for CardSet.Card()
+	card := cs.Card()
+	for i := 0; i < pileSize; i++ {
+		pile.AddCard(card.Clone())
+	}
+
+	return pile
+}
+
+func (cs estateCardSet) Deal(pile *card.Pile) []card.Card {
+	amountPerPlayer := 3
+	return pile.Draw(amountPerPlayer)
+}
