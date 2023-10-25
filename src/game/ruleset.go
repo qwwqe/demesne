@@ -1,8 +1,6 @@
 package game
 
 import (
-	"errors"
-
 	"github.com/google/uuid"
 	"github.com/qwwqe/demesne/src/card"
 )
@@ -28,7 +26,7 @@ type RuleSet struct {
 	EndConditions []EndCondition
 }
 
-func (r RuleSet) BuildGame(numPlayers int) (*game, error) {
+func (r RuleSet) BuildGame(numPlayers int) game {
 	g := game{}
 
 	g.Players = make([]Player, numPlayers)
@@ -36,32 +34,23 @@ func (r RuleSet) BuildGame(numPlayers int) (*game, error) {
 		player.Id = uuid.NewString()
 	}
 
-	setToPileMap := map[string]*card.Pile{}
-
+	// TODO: Combine BaseCard and KingdomCard so the following doesn't need
+	// to be repeated twice whenever we want to iterate over all the cards in the supply.
 	for _, bs := range r.BaseCardSets {
 		g.BaseCards = append(g.BaseCards, bs.BuildPile(numPlayers))
-		setToPileMap[bs.Card().Name] = &g.BaseCards[len(g.KingdomCards)-1]
+		for _, player := range g.Players {
+			player.Deck.AddCards(bs.Deal(&g.BaseCards[len(g.BaseCards)-1]))
+		}
 	}
 
 	for _, ks := range r.KingdomCardSets {
 		g.KingdomCards = append(g.KingdomCards, ks.BuildPile(numPlayers))
-		setToPileMap[ks.Card().Name] = &g.KingdomCards[len(g.KingdomCards)-1]
-	}
-
-	for _, cardSet := range r.SupplySet.All() {
-		pile, ok := setToPileMap[cardSet.Card().Name]
-
-		if !ok {
-			// TODO: Return real error structure instead of text..
-			return nil, errors.New("Pile not found: " + cardSet.Card().Name)
-		}
-
 		for _, player := range g.Players {
-			player.Deck.AddCards(cardSet.Deal(pile))
+			player.Deck.AddCards(ks.Deal(&g.KingdomCards[len(g.KingdomCards)-1]))
 		}
 	}
 
-	return &g, nil
+	return g
 }
 
 // IsGameFinished returns a boolean value representing whether the
@@ -236,3 +225,5 @@ func (cs estateCardSet) Deal(pile *card.Pile) []card.Card {
 	amountPerPlayer := 3
 	return pile.Draw(amountPerPlayer)
 }
+
+var _ CardSet = estateCardSet{}
