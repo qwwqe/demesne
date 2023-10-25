@@ -147,21 +147,29 @@ func (cs provinceCardSet) Card() card.Card {
 	}
 }
 
-func (cs provinceCardSet) PileSize(players int) int {
-	switch players {
-	case 2:
-		return 8
-	case 3:
-		return 12
-	case 4:
-		return 12
-	case 5:
-		return 15
-	case 6:
-		return 18
-	default:
-		return 12
+func (cs provinceCardSet) BuildPile(numPlayers int) card.Pile {
+	pileSize := 12
+	if numPlayers == 2 {
+		pileSize = 8
+	} else if numPlayers == 5 {
+		pileSize = 15
+	} else if numPlayers == 6 {
+		pileSize = 18
 	}
+
+	pile := card.Pile{
+		Countable:  true,
+		Faceup:     true,
+		Browseable: false,
+	}
+
+	// NOTE: See note for CardSet.Card()
+	card := cs.Card()
+	for i := 0; i < pileSize; i++ {
+		pile.AddCard(card.Clone())
+	}
+
+	return pile
 }
 
 func (cs provinceCardSet) EndConditions() []EndCondition {
@@ -183,8 +191,8 @@ func (cs provinceCardSet) EndConditions() []EndCondition {
 	}
 }
 
-func (cs provinceCardSet) DealAmount() (int, bool) {
-	return 0, false
+func (cs provinceCardSet) Deal(*card.Pile) []card.Card {
+	return nil
 }
 
 var _ CardSet = provinceCardSet{}
@@ -224,6 +232,10 @@ func (cs estateCardSet) BuildPile(numPlayers int) card.Pile {
 func (cs estateCardSet) Deal(pile *card.Pile) []card.Card {
 	amountPerPlayer := 3
 	return pile.Draw(amountPerPlayer)
+}
+
+func (cs estateCardSet) EndConditions() []EndCondition {
+	return []EndCondition{}
 }
 
 var _ CardSet = estateCardSet{}
