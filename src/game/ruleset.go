@@ -108,3 +108,11 @@ type CardSet interface {
 	// DealAmount() (amount int, deductFromPile bool)
 	EndConditions() []EndCondition
 }
+
+// PileSpec defines how a pile is created, how it contributes to the initial deal,
+// and how it influences the end of game conditions.
+type PileSpec interface {
+	Build(numPlayers int) card.Pile
+	Deal(pile *card.Pile) []card.Card
+	EndConditions() []EndCondition
+}
