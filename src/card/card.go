@@ -41,6 +41,9 @@ func (c Card) Clone() Card {
 //
 // NOTE: Does a Pile need an Id?
 type Pile struct {
+	// Id uniquely identifies a specific and concrete Pile.
+	Id string
+
 	// The cards that constitute this Pile.
 	Cards []Card
 
