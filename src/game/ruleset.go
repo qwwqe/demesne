@@ -5,8 +5,6 @@ import (
 	"github.com/qwwqe/demesne/src/card"
 )
 
-type endCondition func(game) bool
-
 // A RuleSet defines the rules for creating the supply, dealing player decks,
 // and determining end of game.
 //
@@ -23,8 +21,12 @@ type RuleSet struct {
 	// The set of end conditions are evaluated as a logical union,
 	// meaning that if any are true, the game as a whole is
 	// judged to be over.
-	EndConditions []endCondition
+	EndConditions []EndCondition
 }
+
+// func (ec EndCondition) evaluate() bool {
+// return false
+// }
 
 func (r RuleSet) BuildGame(numPlayers int) game {
 	g := game{}
@@ -104,5 +106,5 @@ type CardSet interface {
 	Deal(pile *card.Pile) []card.Card
 	// PileSize(players int) int
 	// DealAmount() (amount int, deductFromPile bool)
-	EndConditions() []endCondition
+	EndConditions() []EndCondition
 }
