@@ -34,6 +34,18 @@ type game struct {
 
 	// The Supply.
 	Supply
+
+	endConditions []endCondition
+}
+
+func (g game) IsFinished() bool {
+	for _, condition := range g.endConditions {
+		if condition(g) {
+			return true
+		}
+	}
+
+	return false
 }
 
 // The Supply is the collection of all card Piles which can be
