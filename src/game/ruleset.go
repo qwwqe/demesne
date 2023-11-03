@@ -111,6 +111,10 @@ type CardSet interface {
 
 // PileSpec defines how a pile is created, how it contributes to the initial deal,
 // and how it influences the end of game conditions.
+//
+// NOTE: Does this really need to be an interface?
+//
+// NOTE: Can Deal() and EndConditions() be offloaded onto Pile instead?
 type PileSpec interface {
 	Build(numPlayers int) card.Pile
 	Deal(pile *card.Pile) []card.Card

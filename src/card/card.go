@@ -39,7 +39,9 @@ func (c Card) Clone() Card {
 
 // A Pile is an ordered collection of Cards.
 //
-// NOTE: Does a Pile need an Id?
+// NOTE: Should a Pile contain information about dealing and end of game conditions?
+// That is to say, should it actually expose the Deal() and EndCondition()
+// methods defined in PileSpec?
 type Pile struct {
 	// Id uniquely identifies a specific and concrete Pile.
 	Id string
