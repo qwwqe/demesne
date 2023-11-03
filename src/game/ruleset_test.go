@@ -29,15 +29,19 @@ func basicSupplyEndCondition(g game) bool {
 	return supplyPilesExhausted >= 4
 }
 
-type provinceCardSet struct{}
+type provincePileSpec struct{}
 
-func (cs provinceCardSet) Card() card.Card {
+func (ps provincePileSpec) newCard() card.Card {
 	return card.Card{
 		Name: "province",
 	}
 }
 
-func (cs provinceCardSet) BuildPile(numPlayers int) card.Pile {
+func (ps provincePileSpec) id() string {
+	return "province"
+}
+
+func (ps provincePileSpec) Build(numPlayers int) card.Pile {
 	pileSize := 12
 	if numPlayers == 2 {
 		pileSize = 8
@@ -54,7 +58,7 @@ func (cs provinceCardSet) BuildPile(numPlayers int) card.Pile {
 	}
 
 	// NOTE: See note for CardSet.Card()
-	card := cs.Card()
+	card := ps.newCard()
 	for i := 0; i < pileSize; i++ {
 		pile.AddCard(card.Clone())
 	}
@@ -62,40 +66,31 @@ func (cs provinceCardSet) BuildPile(numPlayers int) card.Pile {
 	return pile
 }
 
-func (cs provinceCardSet) EndConditions() []endCondition {
-	return []endCondition{
-		// End condition for when the Province pile is emptied.
-		//
-		// TODO: Find a better way of mapping card sets to piles.
-		func(g game) bool {
-			found := false
-			for _, pile := range g.Supply.All() {
-				if pile.Size() > 0 && pile.Cards[0].Name == cs.Card().Name {
-					found = true
-					break
-				}
-			}
-
-			return found
-		},
+func (cs provincePileSpec) EndConditions() []EndCondition {
+	return []EndCondition{
+		EmptyPileEndCondition{cs.id()},
 	}
 }
 
-func (cs provinceCardSet) Deal(*card.Pile) []card.Card {
+func (cs provincePileSpec) Deal(*card.Pile) []card.Card {
 	return nil
 }
 
-var _ CardSet = provinceCardSet{}
+var _ PileSpec = provincePileSpec{}
 
-type estateCardSet struct{}
+type estatePileSpec struct{}
 
-func (cs estateCardSet) Card() card.Card {
+func (ps estatePileSpec) id() string {
+	return "estate"
+}
+
+func (ps estatePileSpec) newCard() card.Card {
 	return card.Card{
 		Name: "estate",
 	}
 }
 
-func (cs estateCardSet) BuildPile(numPlayers int) card.Pile {
+func (ps estatePileSpec) Build(numPlayers int) card.Pile {
 	pileSize := 8
 	if numPlayers != 2 {
 		pileSize = 12
@@ -111,7 +106,7 @@ func (cs estateCardSet) BuildPile(numPlayers int) card.Pile {
 	}
 
 	// NOTE: See note for CardSet.Card()
-	card := cs.Card()
+	card := ps.newCard()
 	for i := 0; i < pileSize; i++ {
 		pile.AddCard(card.Clone())
 	}
@@ -119,13 +114,13 @@ func (cs estateCardSet) BuildPile(numPlayers int) card.Pile {
 	return pile
 }
 
-func (cs estateCardSet) Deal(pile *card.Pile) []card.Card {
+func (cs estatePileSpec) Deal(pile *card.Pile) []card.Card {
 	amountPerPlayer := 3
 	return pile.Draw(amountPerPlayer)
 }
 
-func (cs estateCardSet) EndConditions() []endCondition {
-	return []endCondition{}
+func (cs estatePileSpec) EndConditions() []EndCondition {
+	return []EndCondition{}
 }
 
-var _ CardSet = estateCardSet{}
+var _ PileSpec = estatePileSpec{}
