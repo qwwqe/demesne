@@ -12,8 +12,8 @@ import (
 // be separated structurally? It might be simpler to just
 // use properties of the CardSet itself to determine this.
 type RuleSet struct {
-	// Card sets defined as being in the Supply.
-	SupplySet
+	// Piles defined as being in the Supply.
+	SupplySpec
 
 	// Predicates determining completion of the game.
 	// Game end conditions may also be specified by individual CardSets.
@@ -23,10 +23,6 @@ type RuleSet struct {
 	// judged to be over.
 	EndConditions []EndCondition
 }
-
-// func (ec EndCondition) evaluate() bool {
-// return false
-// }
 
 func (r RuleSet) BuildGame(numPlayers int) game {
 	g := game{}
@@ -38,17 +34,17 @@ func (r RuleSet) BuildGame(numPlayers int) game {
 
 	// TODO: Combine BaseCard and KingdomCard so the following doesn't need
 	// to be repeated twice whenever we want to iterate over all the cards in the supply.
-	for _, bs := range r.BaseCardSets {
-		g.BaseCards = append(g.BaseCards, bs.BuildPile(numPlayers))
+	for _, basePile := range r.BasePileSpecs {
+		g.BaseCards = append(g.BaseCards, basePile.Build(numPlayers))
 		for _, player := range g.Players {
-			player.Deck.AddCards(bs.Deal(&g.BaseCards[len(g.BaseCards)-1]))
+			player.Deck.AddCards(basePile.Deal(&g.BaseCards[len(g.BaseCards)-1]))
 		}
 	}
 
-	for _, ks := range r.KingdomCardSets {
-		g.KingdomCards = append(g.KingdomCards, ks.BuildPile(numPlayers))
+	for _, kingdomPile := range r.KingdomPileSpecs {
+		g.KingdomCards = append(g.KingdomCards, kingdomPile.Build(numPlayers))
 		for _, player := range g.Players {
-			player.Deck.AddCards(ks.Deal(&g.KingdomCards[len(g.KingdomCards)-1]))
+			player.Deck.AddCards(kingdomPile.Deal(&g.KingdomCards[len(g.KingdomCards)-1]))
 		}
 	}
 
@@ -59,14 +55,14 @@ func (r RuleSet) BuildGame(numPlayers int) game {
 // game has satisfied the end conditions described in the rule set.
 func (r RuleSet) IsGameFinished(g game) bool {
 	for _, condition := range r.EndConditions {
-		if condition(g) {
+		if condition.Evaluate(g) {
 			return true
 		}
 	}
 
-	for _, cardSet := range r.SupplySet.All() {
+	for _, cardSet := range r.SupplySpec.All() {
 		for _, condition := range cardSet.EndConditions() {
-			if condition(g) {
+			if condition.Evaluate(g) {
 				return true
 			}
 		}
@@ -75,38 +71,22 @@ func (r RuleSet) IsGameFinished(g game) bool {
 	return false
 }
 
-type SupplySet struct {
-	BaseCardSets    []CardSet
-	KingdomCardSets []CardSet
+type SupplySpec struct {
+	BasePileSpecs    []PileSpec
+	KingdomPileSpecs []PileSpec
 }
 
 // All is a convenience function for iterating over
 // card sets in a supply set.
 //
 // TODO: Make this an actual iterator when 1.22 lands.
-func (s SupplySet) All() []CardSet {
-	sets := make([]CardSet, 0, len(s.BaseCardSets)+len(s.KingdomCardSets))
+func (s SupplySpec) All() []PileSpec {
+	specs := make([]PileSpec, 0, len(s.BasePileSpecs)+len(s.KingdomPileSpecs))
 
-	sets = append(sets, s.BaseCardSets...)
-	sets = append(sets, s.KingdomCardSets...)
+	specs = append(specs, s.BasePileSpecs...)
+	specs = append(specs, s.KingdomPileSpecs...)
 
-	return sets
-}
-
-// NOTE: Use a withPlayers() instead of passing the number of players
-// to every method? A little less clean in terms of function application,
-// but it would provide better guarantees about consistency between
-// behaviour that depends on a fixed player count (like building piles and dealing).
-type CardSet interface {
-	// NOTE: Realistically, if the CardSet exposes both a BuildPile and DealCards
-	// method, there isn't really any reason to expose a Card method as well.
-	// It also ceases being useful when split piles are introduced.
-	Card() card.Card
-	BuildPile(numPlayers int) card.Pile
-	Deal(pile *card.Pile) []card.Card
-	// PileSize(players int) int
-	// DealAmount() (amount int, deductFromPile bool)
-	EndConditions() []EndCondition
+	return specs
 }
 
 // PileSpec defines how a pile is created, how it contributes to the initial deal,
