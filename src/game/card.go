@@ -1,4 +1,4 @@
-package card
+package game
 
 import (
 	"math/rand"
@@ -126,4 +126,21 @@ func (p *Pile) Drain() []Card {
 
 func (p Pile) Size() int {
 	return len(p.Cards)
+}
+
+// A SupplyPile is a Pile which also contains information about
+// dealing cards and game end conditions.
+//
+// NOTE: Does this really need to be separate from Pile?
+// Is this going to cause headaches down the road?
+type SupplyPile struct {
+	Pile
+
+	EndConditions []EndCondition
+
+	Dealer Dealer
+}
+
+func (sp *SupplyPile) Deal() []Card {
+	return sp.Dealer.Deal(&sp.Pile)
 }
