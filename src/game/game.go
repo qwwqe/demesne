@@ -33,7 +33,7 @@ type game struct {
 	Trash card.Pile
 
 	// The Supply.
-	Supply
+	Supply []SupplyPile
 
 	endConditions []endCondition
 }
