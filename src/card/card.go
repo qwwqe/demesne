@@ -72,6 +72,7 @@ type PileKind string
 const (
 	KingdomPile PileKind = "kingdom"
 	BasePile    PileKind = "base"
+	GenericPile PileKind = "generic"
 )
 
 // Stub.
