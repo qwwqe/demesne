@@ -46,6 +46,9 @@ type Pile struct {
 	// Id uniquely identifies a specific and concrete Pile.
 	Id string
 
+	// Kind describes what role a Pile takes on during a game.
+	Kind PileKind
+
 	// The cards that constitute this Pile.
 	Cards []Card
 
@@ -63,6 +66,13 @@ type Pile struct {
 	// Whether the cards in this Pile may be inspected at will by all players.
 	Browseable bool
 }
+
+type PileKind string
+
+const (
+	KingdomPile PileKind = "kingdom"
+	BasePile    PileKind = "base"
+)
 
 // Stub.
 func (p Pile) Top() *Card {
