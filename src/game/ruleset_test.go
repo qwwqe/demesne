@@ -10,13 +10,8 @@ import (
 // framework for dynamic definition is established.
 func basicSupplyEndCondition(g game) bool {
 	supplyPilesExhausted := 0
-	for _, p := range g.Supply.BaseCards {
-		if p.Size() == 0 {
-			supplyPilesExhausted++
-		}
-	}
 
-	for _, p := range g.Supply.KingdomCards {
+	for _, p := range g.Supply {
 		if p.Size() == 0 {
 			supplyPilesExhausted++
 		}
