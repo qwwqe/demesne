@@ -35,6 +35,8 @@ type game struct {
 	EndConditions []EndCondition
 }
 
+// IsGameFinished returns a boolean value representing whether the
+// game has satisfied the end conditions described in the rule set.
 func (g game) IsFinished() bool {
 	for _, condition := range g.EndConditions {
 		if condition.Evaluate(g) {
