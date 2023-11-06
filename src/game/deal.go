@@ -33,6 +33,7 @@ func (d NonDestructiveDealer) Deal(p *Pile) []Card {
 	for i := 0; i < len(cs); i++ {
 		cs[i] = card.Clone()
 	}
+
 	return cs
 }
 
