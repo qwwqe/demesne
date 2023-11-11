@@ -19,15 +19,15 @@ type GameSpec struct {
 	EndConditions []EndCondition
 }
 
-func (r GameSpec) Build(numPlayers int) game {
-	g := game{}
+func (r GameSpec) Build(numPlayers int) Game {
+	g := Game{}
 
 	g.Players = make([]Player, numPlayers)
 	for _, player := range g.Players {
 		player.Id = uuid.NewString()
 	}
 
-	g.Supply = make([]SupplyPile, len(r.SupplySpec))
+	g.Supply = make([]Pile, len(r.SupplySpec))
 	for i, pileSpec := range r.SupplySpec {
 		g.Supply[i] = pileSpec.Build(numPlayers)
 		for _, player := range g.Players {
@@ -38,12 +38,11 @@ func (r GameSpec) Build(numPlayers int) game {
 	return g
 }
 
-// PileSpec defines how a pile is created, how it contributes to the initial deal,
+// SupplyPileSpec defines how a supply pile is created,
+// how it contributes to the initial deal,
 // and how it influences the end of game conditions.
-//
-// NOTE: Does this really need to be an interface?
-//
-// NOTE: Can Deal() and EndConditions() be offloaded onto Pile instead?
-type SupplyPileSpec interface {
-	Build(numPlayers int) SupplyPile
+type SupplyPileSpec struct {
+	EndConditions []EndCondition
+	DealRules     []DealRule
+	PileSpec      []PileSpec
 }

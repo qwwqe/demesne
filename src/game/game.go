@@ -1,8 +1,8 @@
 package game
 
 // A game of Demesne.
-type game struct {
-	// Id uniquely identifies a Game.
+type Game struct {
+	// Id uniquely identifies a game.
 	Id string
 
 	// The current turn.
@@ -18,7 +18,7 @@ type game struct {
 	// TODO: Evaluate necessity of explicit stages in a game.
 	Stage Stage
 
-	// The Players in the Game.
+	// The Players in the game.
 	//
 	// The order of this array determines turn playing order.
 	// In other words, the current player is given by the following relation:
@@ -30,14 +30,18 @@ type game struct {
 
 	// The Supply is the collection of all card Piles which can be
 	// directly purchased from in a given game of Demesne.
-	Supply []SupplyPile
+	Supply []Pile
 
+	// EndConditions define the end conditions for the game.
 	EndConditions []EndCondition
+
+	// DealRules define how cards are dealt.
+	DealRules []DealRule
 }
 
-// IsGameFinished returns a boolean value representing whether the
+// IsFinished returns a boolean value representing whether the
 // game has satisfied the end conditions described in the rule set.
-func (g game) IsFinished() bool {
+func (g Game) IsFinished() bool {
 	for _, condition := range g.EndConditions {
 		if condition.Evaluate(g) {
 			return true
