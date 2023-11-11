@@ -7,13 +7,7 @@ import (
 	"github.com/google/uuid"
 )
 
-// A Card simltaneously represents the definition of a Demesne card and
-// a particular, concrete instance of such definition.
-//
-// NOTE: When implementing functionality involving properties of concrete
-// cards (such as tokens, counters or even other cards being placed on top of
-// them), it may be more ergonomic to separate the definition and instance
-// of a card.
+// A Card represents a particular, concrete instance of a Demesne card.
 type Card struct {
 	// Id identifies a specific and concrete Card, such as one being held by a
 	// particular Player or one currently in a Player's play area.
@@ -23,10 +17,7 @@ type Card struct {
 
 	// Name identifies the abstract definition of a Card.
 	// Any Card instances possessing the same Name should also possess
-	// properties except for Id.
-	//
-	// NOTE: As mentioned above, it may be a more flexible design to
-	// implement via separation of card definitions and insances.
+	// identical properties, not including Id.
 	Name string
 }
 
@@ -37,6 +28,12 @@ func (c Card) Clone() Card {
 	return nc
 }
 
+// A CardSpec defines a Card.
+type CardSpec struct {
+	// Name identifies a CardSpec.
+	Name string
+}
+
 // A Pile is an ordered collection of Cards.
 //
 // NOTE: Should a Pile contain information about dealing and end of game conditions?
@@ -45,6 +42,9 @@ func (c Card) Clone() Card {
 type Pile struct {
 	// Id uniquely identifies a specific and concrete Pile.
 	Id string
+
+	// Name identifies the abstract definition of a Pile.
+	Name string
 
 	// Kind describes what role a Pile takes on during a game.
 	Kind PileKind
@@ -126,6 +126,17 @@ func (p *Pile) Drain() []Card {
 
 func (p Pile) Size() int {
 	return len(p.Cards)
+}
+
+// PileSpec defines how a pile is created.
+type PileSpec struct {
+	CardSpec CardSpec
+
+	PileSizeSpec PileSizeSpec
+}
+
+type PileSizeSpec struct {
+	// By player count...
 }
 
 // A SupplyPile is a Pile which also contains information about
