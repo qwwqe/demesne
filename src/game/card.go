@@ -133,6 +133,13 @@ func (p Pile) Size() int {
 //
 // NOTE: Does this really need to be separate from Pile?
 // Is this going to cause headaches down the road?
+//
+// NOTE: Can Dealer be moved into the Game model instead?
+// Then responsibilities for dealing cards wouldn't be awkwardly
+// offloaded onto piles in the supply.
+//
+// NOTE: Can EndConditions be moved into the Game model as well?
+// Maybe encapsulated in some kind of Arbiter model?
 type SupplyPile struct {
 	Pile
 

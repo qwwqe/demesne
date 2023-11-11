@@ -1,7 +1,5 @@
 package game
 
-import "github.com/qwwqe/demesne/src/card"
-
 // A Player represents a participant in a game of Demesne.
 // It does not attempt to implement any functionality related to the identity of
 // or communication between the actual humans or programs controlling such participation.
@@ -15,14 +13,14 @@ type Player struct {
 	Id string
 
 	// The Player's current hand.
-	Hand []card.Card
+	Hand []Card
 
 	// The Player's current discard pile.
-	Discard card.Pile
+	Discard Pile
 
 	// The Player's deck.
-	Deck card.Pile
+	Deck Pile
 
 	// What the Player currently has in play.
-	PlayArea []card.Card
+	PlayArea []Card
 }

@@ -2,18 +2,13 @@ package game
 
 import (
 	"github.com/google/uuid"
-	"github.com/qwwqe/demesne/src/card"
 )
 
-// A RuleSet defines the rules for creating the supply, dealing player decks,
+// A GameSpec defines the rules for creating the supply, dealing player decks,
 // and determining end of game.
-//
-// NOTE: Do Kingdom Sets and Base Sets really need to
-// be separated structurally? It might be simpler to just
-// use properties of the CardSet itself to determine this.
-type RuleSet struct {
+type GameSpec struct {
 	// Piles defined as being in the Supply.
-	SupplySpec []PileSpec
+	SupplySpec []SupplyPileSpec
 
 	// Predicates determining completion of the game.
 	// Game end conditions may also be specified by individual CardSets.
@@ -24,7 +19,7 @@ type RuleSet struct {
 	EndConditions []EndCondition
 }
 
-func (r RuleSet) BuildGame(numPlayers int) game {
+func (r GameSpec) Build(numPlayers int) game {
 	g := game{}
 
 	g.Players = make([]Player, numPlayers)
@@ -49,8 +44,6 @@ func (r RuleSet) BuildGame(numPlayers int) game {
 // NOTE: Does this really need to be an interface?
 //
 // NOTE: Can Deal() and EndConditions() be offloaded onto Pile instead?
-type PileSpec interface {
-	Build(numPlayers int) card.Pile
-	Deal(pile *card.Pile) []card.Card
-	EndConditions() []EndCondition
+type SupplyPileSpec interface {
+	Build(numPlayers int) SupplyPile
 }
