@@ -1,14 +1,10 @@
 package game
 
-import (
-	"github.com/qwwqe/demesne/src/card"
-)
-
 // A simple end condition based on supply pile exhaustion.
 //
 // This is mostly intended for reference until a more comprehensive
 // framework for dynamic definition is established.
-func basicSupplyEndCondition(g game) bool {
+func basicSupplyEndCondition(g Game) bool {
 	supplyPilesExhausted := 0
 
 	for _, p := range g.Supply {
@@ -26,8 +22,8 @@ func basicSupplyEndCondition(g game) bool {
 
 type provincePileSpec struct{}
 
-func (ps provincePileSpec) newCard() card.Card {
-	return card.Card{
+func (ps provincePileSpec) newCard() Card {
+	return Card{
 		Name: "province",
 	}
 }
@@ -36,7 +32,7 @@ func (ps provincePileSpec) id() string {
 	return "province"
 }
 
-func (ps provincePileSpec) Build(numPlayers int) card.Pile {
+func (ps provincePileSpec) Build(numPlayers int) Pile {
 	pileSize := 12
 	if numPlayers == 2 {
 		pileSize = 8
@@ -46,7 +42,7 @@ func (ps provincePileSpec) Build(numPlayers int) card.Pile {
 		pileSize = 18
 	}
 
-	pile := card.Pile{
+	pile := Pile{
 		Countable:  true,
 		Faceup:     true,
 		Browseable: false,
@@ -67,11 +63,11 @@ func (cs provincePileSpec) EndConditions() []EndCondition {
 	}
 }
 
-func (cs provincePileSpec) Deal(*card.Pile) []card.Card {
+func (cs provincePileSpec) Deal(*Pile) []Card {
 	return nil
 }
 
-var _ PileSpec = provincePileSpec{}
+var _ SupplyPileSpec = provincePileSpec{}
 
 type estatePileSpec struct{}
 
@@ -79,13 +75,13 @@ func (ps estatePileSpec) id() string {
 	return "estate"
 }
 
-func (ps estatePileSpec) newCard() card.Card {
-	return card.Card{
+func (ps estatePileSpec) newCard() Card {
+	return Card{
 		Name: "estate",
 	}
 }
 
-func (ps estatePileSpec) Build(numPlayers int) card.Pile {
+func (ps estatePileSpec) Build(numPlayers int) Pile {
 	pileSize := 8
 	if numPlayers != 2 {
 		pileSize = 12
@@ -94,7 +90,7 @@ func (ps estatePileSpec) Build(numPlayers int) card.Pile {
 	amountPerPlayer := 3
 	pileSize += amountPerPlayer * numPlayers
 
-	pile := card.Pile{
+	pile := Pile{
 		Countable:  true,
 		Faceup:     true,
 		Browseable: false,
@@ -109,7 +105,7 @@ func (ps estatePileSpec) Build(numPlayers int) card.Pile {
 	return pile
 }
 
-func (cs estatePileSpec) Deal(pile *card.Pile) []card.Card {
+func (cs estatePileSpec) Deal(pile *Pile) []Card {
 	amountPerPlayer := 3
 	return pile.Draw(amountPerPlayer)
 }
@@ -118,4 +114,4 @@ func (cs estatePileSpec) EndConditions() []EndCondition {
 	return []EndCondition{}
 }
 
-var _ PileSpec = estatePileSpec{}
+var _ SupplyPileSpec = estatePileSpec{}
