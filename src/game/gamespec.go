@@ -1,6 +1,8 @@
 package game
 
 import (
+	"time"
+
 	"github.com/google/uuid"
 )
 
@@ -8,7 +10,7 @@ import (
 // and determining end of game.
 type GameSpec struct {
 	// Piles defined as being in the Supply.
-	SupplySpec []SupplyPileSpec
+	SupplyPileSpecs []SupplyPileSpec
 
 	// Predicates determining completion of the game.
 	// Game end conditions may also be specified by individual CardSets.
@@ -16,24 +18,47 @@ type GameSpec struct {
 	// The set of end conditions are evaluated as a logical union,
 	// meaning that if any are true, the game as a whole is
 	// judged to be over.
-	EndConditions []EndCondition
+	EndConditionSpecs []EndConditionSpec
 }
 
-func (r GameSpec) Build(numPlayers int) Game {
+func (gs GameSpec) Validate() bool {
+	return true
+}
+
+func (gs GameSpec) Build(numPlayers int) Game {
+	// TODO: Validate first?
+
 	g := Game{}
+
+	g.Id = uuid.NewString()
+
+	g.RandomSeed = time.Now().UnixNano()
 
 	g.Players = make([]Player, numPlayers)
 	for _, player := range g.Players {
 		player.Id = uuid.NewString()
+		player.Deck.randomSeed = g.RandomSeed
 	}
 
-	g.Supply = make([]Pile, len(r.SupplySpec))
-	for i, pileSpec := range r.SupplySpec {
-		g.Supply[i] = pileSpec.Build(numPlayers)
-		for _, player := range g.Players {
-			player.Deck.AddCards(g.Supply[i].Deal())
+	g.Supply = make([]Pile, 0, len(gs.SupplyPileSpecs))
+	for _, supplyPileSpec := range gs.SupplyPileSpecs {
+		g.Supply = append(g.Supply, supplyPileSpec.PileSpec.Build(numPlayers))
+
+		for _, dealRuleSpec := range supplyPileSpec.DealRuleSpecs {
+			g.DealRules = append(g.DealRules, dealRuleSpec.Build())
+		}
+
+		for _, endConditionSpec := range supplyPileSpec.EndConditionSpecs {
+			g.EndConditions = append(g.EndConditions, endConditionSpec.Build())
 		}
 	}
+
+	for _, endConditionSpec := range gs.EndConditionSpecs {
+		g.EndConditions = append(g.EndConditions, endConditionSpec)
+	}
+
+	// TODO: Move dealing logic from Game to here.
+	g.Deal()
 
 	return g
 }
@@ -42,7 +67,11 @@ func (r GameSpec) Build(numPlayers int) Game {
 // how it contributes to the initial deal,
 // and how it influences the end of game conditions.
 type SupplyPileSpec struct {
-	EndConditions []EndCondition
-	DealRules     []DealRule
-	PileSpec      []PileSpec
+	EndConditionSpecs []EndConditionSpec
+	DealRuleSpecs     []DealRuleSpec
+	PileSpec          PileSpec
 }
+
+// func (s SupplyPileSpec) Build(numPlayers int) ([]EndCondition, []DealRule, Pile) {
+
+// }

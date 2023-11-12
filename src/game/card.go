@@ -34,6 +34,13 @@ type CardSpec struct {
 	Name string
 }
 
+func (s CardSpec) Build() Card {
+	return Card{
+		Id:   uuid.NewString(),
+		Name: s.Name,
+	}
+}
+
 // A Pile is an ordered collection of Cards.
 //
 // NOTE: Should a Pile contain information about dealing and end of game conditions?
@@ -65,6 +72,13 @@ type Pile struct {
 
 	// Whether the cards in this Pile may be inspected at will by all players.
 	Browseable bool
+
+	// Random seed used for things like shuffling.
+	// If this is equal to the zero, the current time will instead be used.
+	//
+	// TODO: Make this be a thread-safe source instead of generating
+	// the source every time.
+	randomSeed int64
 }
 
 type PileKind string
@@ -98,7 +112,11 @@ func (p *Pile) AddCards(cs []Card) *Pile {
 
 // Stub.
 func (p *Pile) Shuffle() *Pile {
-	r := rand.New(rand.NewSource(time.Now().UnixNano()))
+	seed := p.randomSeed
+	if seed == 0 {
+		seed = time.Now().UnixNano()
+	}
+	r := rand.New(rand.NewSource(seed))
 
 	r.Shuffle(len(p.Cards), func(i, j int) {
 		p.Cards[i], p.Cards[j] = p.Cards[j], p.Cards[i]
@@ -135,6 +153,24 @@ type PileSpec struct {
 	PileSizeSpec PileSizeSpec
 }
 
+func (ps PileSpec) Build(numPlayers int) Pile {
+	pileSize := ps.PileSizeSpec.Build(numPlayers)
+
+	pile := Pile{
+		Countable:  true,
+		Faceup:     true,
+		Browseable: false,
+	}
+
+	// NOTE: See note for CardSet.Card()
+	card := ps.CardSpec.Build()
+	for i := 0; i < pileSize; i++ {
+		pile.AddCard(card.Clone())
+	}
+
+	return pile
+}
+
 // PileSpecSpec describes how the size of a pile is determined.
 //
 // NOTE: This struct will probably need to be re-visited when new
@@ -148,6 +184,31 @@ type PileSizeSpec struct {
 	//
 	// TODO: Revisit the naming for this...
 	PlayerCountPileSizeSpecs []PlayerCountPileSizeSpec
+}
+
+func (s PileSizeSpec) Build(numPlayers int) int {
+	size := s.DefaultPileSize
+
+	// NOTE: Should all FooSpec structs expost a Build() method?
+	// In other words, if something is being referred to as a FooSpec,
+	// should it not be providing the means to build a Foo?
+	// If that's the case, this should actually be something like:
+	//
+	// pSize := p.Build(numPlayers)
+	// if pSize > -1 {
+	//   size = pSize
+	// }
+	//
+	// Rigidly enforcing this would mean parent specs need not be required
+	// to understand the structure of the specs they compose. It would make
+	// other things a little awkward though.
+	for _, p := range s.PlayerCountPileSizeSpecs {
+		if p.PlayerCount == numPlayers {
+			size = p.PileSize
+		}
+	}
+
+	return size
 }
 
 // PlayerCountPileSizeSpec describes how the size of a pile relates

@@ -36,7 +36,12 @@ type Game struct {
 	EndConditions []EndCondition
 
 	// DealRules define how cards are dealt.
+	//
+	// TODO: Move this to GameSpec.
 	DealRules []DealRule
+
+	// RandomSeed is the seed used for all randomness in the game.
+	RandomSeed int64
 }
 
 // IsFinished returns a boolean value representing whether the
@@ -48,15 +53,37 @@ func (g Game) IsFinished() bool {
 		}
 	}
 
-	for _, pile := range g.Supply {
-		for _, condition := range pile.EndConditions {
-			if condition.Evaluate(g) {
-				return true
-			}
+	return false
+}
+
+// Deal deals starting hands to players in the game.
+//
+// Calling this twice will deal starting hands twice.
+//
+// TODO: Move this logic into GameSpec.Build()? Realistically
+// once a game is created it doesn't need to deal again,
+// nor does it need to know how the cards were dealt.
+func (g *Game) Deal() {
+	// TODO: Store this cache logic as a private member of the Game
+	// struct itself? Remembering of course to make it thread safe...
+	supplyPileLookup := map[string]*Pile{}
+	for i := range g.Supply {
+		supplyPileLookup[g.Supply[i].Name] = &g.Supply[i]
+	}
+
+	for _, dealRule := range g.DealRules {
+		// TODO: Deal with missing piles or incorrect deal rules
+		// (though dealing logic into the GameSpec should make such
+		// a problem much simpler to deal with).
+		pile := supplyPileLookup[dealRule.PileName]
+		for _, player := range g.Players {
+			player.Deck.AddCards(dealRule.Deal(pile))
 		}
 	}
 
-	return false
+	for _, player := range g.Players {
+		player.Deck.Shuffle()
+	}
 }
 
 // A Stage is a distinct state in the life cycle of a game.

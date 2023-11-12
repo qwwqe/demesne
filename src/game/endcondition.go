@@ -9,6 +9,14 @@ type EndCondition interface {
 	Evaluate(Game) bool
 }
 
+type EndConditionSpec struct {
+	EndCondition
+}
+
+func (s EndConditionSpec) Build() EndCondition {
+	return s
+}
+
 // EmptySupplyEndCondition is an end condition that looks at the
 // number of empty piles in the supply.
 //
