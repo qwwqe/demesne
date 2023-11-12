@@ -135,8 +135,26 @@ type PileSpec struct {
 	PileSizeSpec PileSizeSpec
 }
 
+// PileSpecSpec describes how the size of a pile is determined.
+//
+// NOTE: This struct will probably need to be re-visited when new
+// constraints for defining pile size are introduced.
 type PileSizeSpec struct {
-	// By player count...
+	// DefaultPileSize defines the default pile size.
+	DefaultPileSize int
+
+	// PlayerCountPileSizeSpecs describes pile size specifications
+	// based on player count.
+	//
+	// TODO: Revisit the naming for this...
+	PlayerCountPileSizeSpecs []PlayerCountPileSizeSpec
+}
+
+// PlayerCountPileSizeSpec describes how the size of a pile relates
+// to player count.
+type PlayerCountPileSizeSpec struct {
+	PlayerCount int
+	PileSize    int
 }
 
 // A SupplyPile is a Pile which also contains information about
