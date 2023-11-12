@@ -156,27 +156,3 @@ type PlayerCountPileSizeSpec struct {
 	PlayerCount int
 	PileSize    int
 }
-
-// A SupplyPile is a Pile which also contains information about
-// dealing cards and game end conditions.
-//
-// NOTE: Does this really need to be separate from Pile?
-// Is this going to cause headaches down the road?
-//
-// NOTE: Can Dealer be moved into the Game model instead?
-// Then responsibilities for dealing cards wouldn't be awkwardly
-// offloaded onto piles in the supply.
-//
-// NOTE: Can EndConditions be moved into the Game model as well?
-// Maybe encapsulated in some kind of Arbiter model?
-type SupplyPile struct {
-	Pile
-
-	EndConditions []EndCondition
-
-	Dealer Dealer
-}
-
-func (sp *SupplyPile) Deal() []Card {
-	return sp.Dealer.Deal(&sp.Pile)
-}
