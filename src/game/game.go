@@ -35,11 +35,6 @@ type Game struct {
 	// EndConditions define the end conditions for the game.
 	EndConditions []EndCondition
 
-	// DealRules define how cards are dealt.
-	//
-	// TODO: Move this to GameSpec.
-	DealRules []DealRule
-
 	// RandomSeed is the seed used for all randomness in the game.
 	RandomSeed int64
 }
