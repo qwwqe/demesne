@@ -42,11 +42,11 @@ func (gs GameSpec) Build(numPlayers int) Game {
 
 	g.Supply = make([]Pile, 0, len(gs.SupplyPileSpecs))
 	for _, supplyPileSpec := range gs.SupplyPileSpecs {
-		// Build pile
+		// Build pile.
 		g.Supply = append(g.Supply, supplyPileSpec.PileSpec.Build(numPlayers))
 		pile := &g.Supply[len(g.Supply)-1]
 
-		// Deal from pile
+		// Deal from pile.
 		for _, dealRuleSpec := range supplyPileSpec.DealRuleSpecs {
 			dealRule := dealRuleSpec.Build()
 			for _, player := range g.Players {
@@ -54,7 +54,7 @@ func (gs GameSpec) Build(numPlayers int) Game {
 			}
 		}
 
-		// Register pile-stipulated end conditions
+		// Register pile-stipulated end conditions.
 		for _, endConditionSpec := range supplyPileSpec.EndConditionSpecs {
 			g.EndConditions = append(g.EndConditions, endConditionSpec.Build())
 		}
@@ -64,7 +64,7 @@ func (gs GameSpec) Build(numPlayers int) Game {
 		player.Deck.Shuffle()
 	}
 
-	// Register general end conditions
+	// Register general end conditions.
 	for _, endConditionSpec := range gs.EndConditionSpecs {
 		g.EndConditions = append(g.EndConditions, endConditionSpec)
 	}

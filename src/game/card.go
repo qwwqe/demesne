@@ -19,6 +19,9 @@ type Card struct {
 	// Any Card instances possessing the same Name should also possess
 	// identical properties, not including Id.
 	Name string
+
+	// Cost is the set of requirements that must be met to purchase this card.
+	Cost Cost
 }
 
 // Return a deep copy of the given Card, with Id set to a random UUID.
@@ -39,6 +42,11 @@ func (s CardSpec) Build() Card {
 		Id:   uuid.NewString(),
 		Name: s.Name,
 	}
+}
+
+// Cost represents the set of requirements that must be met to purchase a card.
+type Cost struct {
+	Treasure FixedAmount
 }
 
 // A Pile is an ordered collection of Cards.
