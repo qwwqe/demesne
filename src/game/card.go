@@ -22,6 +22,9 @@ type Card struct {
 
 	// Cost is the set of requirements that must be met to purchase this card.
 	Cost Cost
+
+	// Types.
+	Types []CardType
 }
 
 // Return a deep copy of the given Card, with Id set to a random UUID.
@@ -46,6 +49,7 @@ func (s CardSpec) Build() Card {
 
 // Cost represents the set of requirements that must be met to purchase a card.
 type Cost struct {
+	// The fixed treasure cost for this card.
 	Treasure FixedAmount
 }
 
