@@ -22,6 +22,9 @@ type Card struct {
 
 	// Types.
 	Types []CardType
+
+	// Effects.
+	Effects []Effect
 }
 
 // Return a deep copy of the given Card, with Id set to a random UUID.
