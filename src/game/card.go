@@ -31,10 +31,27 @@ func (c Card) Clone() Card {
 	return nc
 }
 
+type CardType string
+
+const (
+	CardTypeAction   CardType = "action"
+	CardTypeReaction CardType = "reaction"
+	CardTypeTreasure CardType = "treasure"
+	CardTypeAttack   CardType = "attack"
+	CardTypeVictory  CardType = "victory"
+	CardTypeCurse    CardType = "curse"
+)
+
 // A CardSpec defines a Card.
 type CardSpec struct {
 	// Name identifies a CardSpec.
-	Name string
+	Name string `yaml:"name"`
+
+	// Cost defines the requirements needed to purchase the card specified.
+	Cost CostSpec `yaml:"cost"`
+
+	// Types defines the types of the card specified.
+	Types []CardTypeSpec `yaml:"types"`
 }
 
 func (s CardSpec) Build() Card {
@@ -44,10 +61,20 @@ func (s CardSpec) Build() Card {
 	}
 }
 
+type CardTypeSpec CardType
+
 // Cost represents the set of requirements that must be met to purchase a card.
 type Cost struct {
 	// The fixed treasure cost for this card.
 	Treasure FixedAmount
 }
 
-type CardType string
+type CostSpec struct {
+	Treasure FixedAmount `yaml:"treasure"`
+}
+
+func (s CostSpec) Build() Cost {
+	return Cost{
+		Treasure: s.Treasure,
+	}
+}
