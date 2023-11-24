@@ -107,10 +107,16 @@ func (p Pile) Size() int {
 }
 
 // PileSpec defines how a pile is created.
+//
+// NOTE: Specifications should be considered part of the
+// domain and therefore not include struct tags related
+// to yaml parsing.
+//
+// TODO: Following on the above, move yaml parsing somewhere else.
 type PileSpec struct {
-	CardSpec CardSpec
+	CardSpec CardSpec `yaml:"card"`
 
-	PileSizeSpec PileSizeSpec
+	PileSizeSpec PileSizeSpec `yaml:"size"`
 }
 
 func (ps PileSpec) Build(numPlayers int) Pile {
@@ -136,13 +142,13 @@ func (ps PileSpec) Build(numPlayers int) Pile {
 // constraints for defining pile size are introduced.
 type PileSizeSpec struct {
 	// DefaultPileSize defines the default pile size.
-	DefaultPileSize int
+	DefaultPileSize int `yaml:"default"`
 
 	// PlayerCountPileSizeSpecs describes pile size specifications
 	// based on player count.
 	//
 	// TODO: Revisit the naming for this...
-	PlayerCountPileSizeSpecs []PlayerCountPileSizeSpec
+	PlayerCountPileSizeSpecs []PlayerCountPileSizeSpec `yaml:"playerCount"`
 }
 
 func (s PileSizeSpec) Build(numPlayers int) int {
@@ -173,6 +179,6 @@ func (s PileSizeSpec) Build(numPlayers int) int {
 // PlayerCountPileSizeSpec describes how the size of a pile relates
 // to player count.
 type PlayerCountPileSizeSpec struct {
-	PlayerCount int
-	PileSize    int
+	PlayerCount int `yaml:"players"`
+	PileSize    int `yaml:"pileSize"`
 }
