@@ -53,11 +53,9 @@ type Cost struct {
 	Treasure FixedAmount
 }
 
+type CardType string
+
 // A Pile is an ordered collection of Cards.
-//
-// NOTE: Should a Pile contain information about dealing and end of game conditions?
-// That is to say, should it actually expose the Deal() and EndCondition()
-// methods defined in PileSpec?
 type Pile struct {
 	// Id uniquely identifies a specific and concrete Pile.
 	Id string
@@ -174,7 +172,6 @@ func (ps PileSpec) Build(numPlayers int) Pile {
 		Browseable: false,
 	}
 
-	// NOTE: See note for CardSet.Card()
 	card := ps.CardSpec.Build()
 	for i := 0; i < pileSize; i++ {
 		pile.AddCard(card.Clone())
