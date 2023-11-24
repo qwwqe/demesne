@@ -8,6 +8,7 @@ oneOf:
   - $ref: "#/$defs/treasure"
   - $ref: "#/$defs/attack"
   - $ref: "#/$defs/victory"
+  - $ref: "#/$defs/curse"
 $defs:
   action:
     description: An Action card type.
@@ -24,3 +25,6 @@ $defs:
   victory:
     description: A Victory card type.
     const: victory
+  curse:
+    description: A Curse card type.
+    const: curse
