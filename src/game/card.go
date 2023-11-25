@@ -69,11 +69,11 @@ type CardTypeSpec CardType
 // Cost represents the set of requirements that must be met to purchase a card.
 type Cost struct {
 	// The fixed treasure cost for this card.
-	Treasure FixedAmount
+	Treasure AmountFixed
 }
 
 type CostSpec struct {
-	Treasure FixedAmount `yaml:"treasure"`
+	Treasure AmountFixed `yaml:"treasure"`
 }
 
 func (s CostSpec) Build() Cost {

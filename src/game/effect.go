@@ -15,20 +15,28 @@ type Effect struct {
 }
 
 type EffectGainAction struct {
-	Amount uint
+	Amount Amount
 }
 
 type EffectGainTreasure struct {
-	Amount uint
+	Amount Amount
 }
 
-type EffectGainCard struct{}
+type EffectGainCard struct {
+	Amount Amount
+}
 
-type EffectGainVictory struct{}
+type EffectGainVictory struct {
+	Amount Amount
+}
 
-type EffectDiscard struct{}
+type EffectDiscard struct {
+	Amount Amount
+}
 
-type EffectDraw struct{}
+type EffectDraw struct {
+	Amount Amount
+}
 
 type EffectTrash struct{}
 
