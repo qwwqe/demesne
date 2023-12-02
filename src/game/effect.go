@@ -23,20 +23,15 @@ type EffectGainTreasure struct {
 }
 
 type EffectGainCard struct {
-	Amount Amount
+	Cost *Amount
+	Name *string
 }
 
-type EffectGainVictory struct {
-	Amount Amount
-}
+type EffectGainVictory struct{}
 
-type EffectDiscard struct {
-	Amount Amount
-}
+type EffectDiscard struct{}
 
-type EffectDraw struct {
-	Amount Amount
-}
+type EffectDraw struct{}
 
 type EffectTrash struct{}
 
