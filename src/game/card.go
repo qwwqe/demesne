@@ -58,13 +58,25 @@ type CardSpec struct {
 }
 
 func (s CardSpec) Build() Card {
+	// Still no slice map? ...?
+	types := []CardType{}
+	for _, t := range s.Types {
+		types = append(types, t.Build())
+	}
+
 	return Card{
-		Id:   uuid.NewString(),
-		Name: s.Name,
+		Id:    uuid.NewString(),
+		Name:  s.Name,
+		Cost:  s.Cost.Build(),
+		Types: types,
 	}
 }
 
 type CardTypeSpec CardType
+
+func (s CardTypeSpec) Build() CardType {
+	return CardType(s)
+}
 
 // Cost represents the set of requirements that must be met to purchase a card.
 type Cost struct {
