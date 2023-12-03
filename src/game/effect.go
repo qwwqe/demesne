@@ -4,7 +4,6 @@ type Effect struct {
 	GainAction   *EffectGainAction
 	GainTreasure *EffectGainTreasure
 	GainCard     *EffectGainCard
-	GainVictory  *EffectGainVictory
 	Discard      *EffectDiscard
 	Draw         *EffectDraw
 	Trash        *EffectTrash
@@ -15,19 +14,17 @@ type Effect struct {
 }
 
 type EffectGainAction struct {
-	Amount Amount
+	Amount AmountFixed
 }
 
 type EffectGainTreasure struct {
-	Amount Amount
+	Amount AmountFixed
 }
 
 type EffectGainCard struct {
 	Cost *Amount
 	Name *string
 }
-
-type EffectGainVictory struct{}
 
 type EffectDiscard struct{}
 
