@@ -55,6 +55,9 @@ type CardSpec struct {
 
 	// Types defines the types of the card specified.
 	Types []CardTypeSpec `yaml:"types"`
+
+	// Effects define what a card does.
+	Effects []EffectSpec `yaml:"effects"`
 }
 
 func (s CardSpec) Build() Card {

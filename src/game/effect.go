@@ -13,22 +13,38 @@ type Effect struct {
 	Reveal       *EffectReveal
 }
 
+type EffectType string
+
 type EffectGainAction struct {
 	Amount AmountFixed
 }
 
+const EffectTypeGainAction EffectType = "gainAction"
+
 type EffectGainTreasure struct {
 	Amount AmountFixed
 }
+
+const EffectTypeGainTreasure EffectType = "gainTreasure"
 
 type EffectGainCard struct {
 	Cost *Amount
 	Name *string
 }
 
-type EffectDiscard struct{}
+const EffectTypeGainCard EffectType = "gainCard"
 
-type EffectDraw struct{}
+type EffectDiscard struct {
+	Amount Amount
+}
+
+const EffectTypeDiscard EffectType = "discard"
+
+type EffectDraw struct {
+	Amount Amount
+}
+
+const EffectTypeDraw EffectType = "draw"
 
 type EffectTrash struct{}
 
@@ -39,3 +55,9 @@ type EffectPlay struct{}
 type EffectAttack struct{}
 
 type EffectReveal struct{}
+
+type EffectSpec Effect
+
+func (s EffectSpec) Build() Effect {
+	return Effect(s)
+}

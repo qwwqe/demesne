@@ -3,8 +3,8 @@ package game
 type AmountFixed uint
 
 type AmountRange struct {
-	Min int
-	Max int
+	Min *int
+	Max *int
 }
 
 type AmountAll bool
@@ -19,6 +19,7 @@ type Amount struct {
 	Range    *AmountRange
 	All      *AmountAll
 	Relative *AmountRelative
+	Result   *AmountResult
 }
 
 type TargetCard struct {
@@ -26,4 +27,7 @@ type TargetCard struct {
 	Type *CardType
 }
 
-// type AnyAmount
+// So dirty.
+type AmountResult struct {
+	Effect EffectType
+}
