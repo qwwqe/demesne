@@ -46,7 +46,11 @@ type EffectDraw struct {
 
 const EffectTypeDraw EffectType = "draw"
 
-type EffectTrash struct{}
+type EffectTrash struct {
+	Amount Amount
+}
+
+const EffectTypeTrash EffectType = "trash"
 
 type EffectIgnore struct{}
 

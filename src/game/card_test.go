@@ -33,4 +33,21 @@ func TestCardEffects(t *testing.T) {
 	}
 
 	cellar.Build()
+
+	chapel := CardSpec{
+		Name:  "chapel",
+		Cost:  CostSpec{Treasure: 2},
+		Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
+		Effects: []EffectSpec{
+			EffectSpec{
+				Trash: &Amount{
+					Range: &AmountRange{
+						Max: IntPtr(4),
+					},
+				},
+			},
+		},
+	}
+
+	chapel.Build()
 }
