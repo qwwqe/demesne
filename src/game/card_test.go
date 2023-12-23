@@ -9,45 +9,79 @@ func IntPtr(i int) *int {
 }
 
 func TestCardEffects(t *testing.T) {
-	cellar := CardSpec{
-		Name:  "cellar",
-		Cost:  CostSpec{Treasure: 2},
-		Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
-		Effects: []EffectSpec{
-			EffectSpec{GainAction: &EffectGainAction{1}},
-			EffectSpec{
-				Discard: &EffectDiscard{
-					Amount: Amount{
-						Range: &AmountRange{Min: IntPtr(0)},
+	t.Run("cellar", func(t *testing.T) {
+		cellar := CardSpec{
+			Name:  "cellar",
+			Cost:  CostSpec{Treasure: 2},
+			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
+			Effects: []EffectSpec{
+				EffectSpec{GainAction: &EffectGainAction{1}},
+				EffectSpec{
+					Discard: &EffectDiscard{
+						Amount: Amount{
+							Range: &AmountRange{Min: IntPtr(0)},
+						},
+					},
+				},
+				EffectSpec{
+					Draw: &EffectDraw{
+						Amount: Amount{
+							Result: &AmountResult{EffectTypeDiscard},
+						},
 					},
 				},
 			},
-			EffectSpec{
-				Draw: &EffectDraw{
-					Amount: Amount{
-						Result: &AmountResult{EffectTypeDiscard},
+		}
+
+		cellar.Build()
+	})
+
+	t.Run("chapel", func(t *testing.T) {
+		chapel := CardSpec{
+			Name:  "chapel",
+			Cost:  CostSpec{Treasure: 2},
+			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
+			Effects: []EffectSpec{
+				EffectSpec{
+					Trash: &EffectTrash{
+						Amount{
+							Range: &AmountRange{
+								Max: IntPtr(4),
+							},
+						},
 					},
 				},
 			},
-		},
-	}
+		}
 
-	cellar.Build()
+		chapel.Build()
+	})
 
-	chapel := CardSpec{
-		Name:  "chapel",
-		Cost:  CostSpec{Treasure: 2},
-		Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
-		Effects: []EffectSpec{
-			EffectSpec{
-				Trash: &Amount{
-					Range: &AmountRange{
-						Max: IntPtr(4),
-					},
-				},
+	t.Run("moat", func(t *testing.T) {
+		moat := CardSpec{
+			Name: "moat",
+			Cost: CostSpec{Treasure: 2},
+			Types: []CardTypeSpec{
+				CardTypeSpec(CardTypeAction),
+				CardTypeSpec(CardTypeReaction),
 			},
-		},
-	}
+			Effects: []EffectSpec{
+				EffectSpec{},
+			},
+		}
 
-	chapel.Build()
+		moat.Build()
+	})
+
+	t.Run("harbinger", func(t *testing.T) {
+		harbinger := CardSpec{}
+
+		harbinger.Build()
+	})
+
+	t.Run("merchant", func(t *testing.T) {
+		merchant := CardSpec{}
+
+		merchant.Build()
+	})
 }
