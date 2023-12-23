@@ -67,11 +67,17 @@ func (s CardSpec) Build() Card {
 		types = append(types, t.Build())
 	}
 
+	effects := []Effect{}
+	for _, e := range s.Effects {
+		effects = append(effects, e.Build())
+	}
+
 	return Card{
-		Id:    uuid.NewString(),
-		Name:  s.Name,
-		Cost:  s.Cost.Build(),
-		Types: types,
+		Id:      uuid.NewString(),
+		Name:    s.Name,
+		Cost:    s.Cost.Build(),
+		Types:   types,
+		Effects: effects,
 	}
 }
 
