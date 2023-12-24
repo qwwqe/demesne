@@ -23,8 +23,13 @@ type Card struct {
 	// Types.
 	Types []CardType
 
-	// Effects.
-	Effects []Effect
+	ActionEffects []Effect
+
+	ReactionEffects []Reaction
+
+	TreasureEffects []Effect
+
+	ScoringEffects []Effect
 }
 
 // Return a deep copy of the given Card, with Id set to a random UUID.
@@ -56,8 +61,11 @@ type CardSpec struct {
 	// Types defines the types of the card specified.
 	Types []CardTypeSpec `yaml:"types"`
 
-	// Effects define what a card does.
-	Effects []EffectSpec `yaml:"effects"`
+	// ActionEffects define what a card does when played as an action.
+	ActionEffects []EffectSpec `yaml:"actionEffects"`
+
+	// ReactionEffects define what a card does when played as a reaction.
+	ReactionEffects []ReactionSpec `yaml:"reactionEffects"`
 }
 
 func (s CardSpec) Build() Card {
@@ -67,17 +75,23 @@ func (s CardSpec) Build() Card {
 		types = append(types, t.Build())
 	}
 
-	effects := []Effect{}
-	for _, e := range s.Effects {
-		effects = append(effects, e.Build())
+	actionEffects := []Effect{}
+	for _, e := range s.ActionEffects {
+		actionEffects = append(actionEffects, e.Build())
+	}
+
+	reactionEffects := []Reaction{}
+	for _, r := range s.ReactionEffects {
+		reactionEffects = append(reactionEffects, r.Build())
 	}
 
 	return Card{
-		Id:      uuid.NewString(),
-		Name:    s.Name,
-		Cost:    s.Cost.Build(),
-		Types:   types,
-		Effects: effects,
+		Id:              uuid.NewString(),
+		Name:            s.Name,
+		Cost:            s.Cost.Build(),
+		Types:           types,
+		ActionEffects:   actionEffects,
+		ReactionEffects: reactionEffects,
 	}
 }
 

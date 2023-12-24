@@ -65,3 +65,22 @@ type EffectSpec Effect
 func (s EffectSpec) Build() Effect {
 	return Effect(s)
 }
+
+type ReactionTargetRole string
+
+const (
+	ReactionTargetSelf  ReactionTargetRole = "self"
+	ReactionTargetOther ReactionTargetRole = "other"
+)
+
+type Reaction struct {
+	TargetRole     ReactionTargetRole
+	TargetEffect   Effect
+	ReactionEffect Effect
+}
+
+type ReactionSpec Reaction
+
+func (s ReactionSpec) Build() Reaction {
+	return Reaction(s)
+}
