@@ -8,13 +8,17 @@ func IntPtr(i int) *int {
 	return &i
 }
 
+func UintPtr(u uint) *uint {
+	return &u
+}
+
 func TestCardEffects(t *testing.T) {
 	t.Run("cellar", func(t *testing.T) {
 		cellar := CardSpec{
 			Name:  "cellar",
 			Cost:  CostSpec{Treasure: 2},
 			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
-			Effects: []EffectSpec{
+			ActionEffects: []EffectSpec{
 				EffectSpec{GainAction: &EffectGainAction{1}},
 				EffectSpec{
 					Discard: &EffectDiscard{
@@ -41,7 +45,7 @@ func TestCardEffects(t *testing.T) {
 			Name:  "chapel",
 			Cost:  CostSpec{Treasure: 2},
 			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
-			Effects: []EffectSpec{
+			ActionEffects: []EffectSpec{
 				EffectSpec{
 					Trash: &EffectTrash{
 						Amount{
@@ -65,8 +69,14 @@ func TestCardEffects(t *testing.T) {
 				CardTypeSpec(CardTypeAction),
 				CardTypeSpec(CardTypeReaction),
 			},
-			Effects: []EffectSpec{
-				EffectSpec{},
+			ActionEffects: []EffectSpec{
+				{
+					Draw: &EffectDraw{
+						Amount{
+							Fixed: (*AmountFixed)(UintPtr(2)),
+						},
+					},
+				},
 			},
 		}
 
