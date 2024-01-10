@@ -23,15 +23,15 @@ func TestCardEffects(t *testing.T) {
 			Cost:  CostSpec{Treasure: 2},
 			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
 			ActionEffects: []EffectSpec{
-				EffectSpec{GainAction: &EffectGainAction{1}},
-				EffectSpec{
+				{GainAction: &EffectGainAction{1}},
+				{
 					Discard: &EffectDiscard{
 						Amount: Amount{
 							Range: &AmountRange{Min: IntPtr(0)},
 						},
 					},
 				},
-				EffectSpec{
+				{
 					Draw: &EffectDraw{
 						Amount: Amount{
 							Result: &AmountResult{EffectTypeDiscard},
@@ -50,7 +50,7 @@ func TestCardEffects(t *testing.T) {
 			Cost:  CostSpec{Treasure: 2},
 			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
 			ActionEffects: []EffectSpec{
-				EffectSpec{
+				{
 					Trash: &EffectTrash{
 						Amount{
 							Range: &AmountRange{
@@ -83,7 +83,7 @@ func TestCardEffects(t *testing.T) {
 				},
 			},
 			ReactionEffects: []ReactionSpec{
-				ReactionSpec{
+				{
 					TargetRole: ReactionTargetOther,
 					TargetEffect: Effect{
 						Play: &EffectPlay{
