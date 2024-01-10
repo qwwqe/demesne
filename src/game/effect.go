@@ -11,6 +11,9 @@ type Effect struct {
 	Play         *EffectPlay
 	Attack       *EffectAttack
 	Reveal       *EffectReveal
+
+	Optional *Effect
+	Sequence []Effect
 }
 
 type EffectType string
@@ -52,9 +55,12 @@ type EffectTrash struct {
 
 const EffectTypeTrash EffectType = "trash"
 
-type EffectIgnore struct{}
+type EffectIgnore struct {
+}
 
-type EffectPlay struct{}
+type EffectPlay struct {
+	Type *CardType
+}
 
 type EffectAttack struct{}
 
@@ -74,9 +80,10 @@ const (
 )
 
 type Reaction struct {
-	TargetRole     ReactionTargetRole
-	TargetEffect   Effect
-	ReactionEffect Effect
+	TargetRole ReactionTargetRole
+	// TODO: this should be an Event, not an Effect
+	TargetEffect    Effect
+	ReactionEffects []Effect
 }
 
 type ReactionSpec Reaction

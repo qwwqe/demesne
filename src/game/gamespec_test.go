@@ -67,8 +67,6 @@ func (cs provincePileSpec) Deal(*Pile) []Card {
 	return nil
 }
 
-var _ SupplyPileSpec = provincePileSpec{}
-
 type estatePileSpec struct{}
 
 func (ps estatePileSpec) id() string {
@@ -113,5 +111,3 @@ func (cs estatePileSpec) Deal(pile *Pile) []Card {
 func (cs estatePileSpec) EndConditions() []EndCondition {
 	return []EndCondition{}
 }
-
-var _ SupplyPileSpec = estatePileSpec{}

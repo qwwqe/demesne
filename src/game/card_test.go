@@ -12,6 +12,10 @@ func UintPtr(u uint) *uint {
 	return &u
 }
 
+func StrPtr(s string) *string {
+	return &s
+}
+
 func TestCardEffects(t *testing.T) {
 	t.Run("cellar", func(t *testing.T) {
 		cellar := CardSpec{
@@ -74,6 +78,25 @@ func TestCardEffects(t *testing.T) {
 					Draw: &EffectDraw{
 						Amount{
 							Fixed: (*AmountFixed)(UintPtr(2)),
+						},
+					},
+				},
+			},
+			ReactionEffects: []ReactionSpec{
+				ReactionSpec{
+					TargetRole: ReactionTargetOther,
+					TargetEffect: Effect{
+						Play: &EffectPlay{
+							Type: (*CardType)(StrPtr(string(CardTypeAttack))),
+						},
+					},
+					ReactionEffects: []Effect{
+						{
+							Optional: &Effect{
+								Sequence: []Effect{
+									{Ignore: &EffectIgnore{}},
+								},
+							},
 						},
 					},
 				},
