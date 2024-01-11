@@ -71,13 +71,7 @@ func TestCardEffects(t *testing.T) {
 			},
 			ActionEffects: []EffectSpec{
 				{
-					Draw: &EffectDraw{
-						From: *EffectLocationDeckTop(),
-						To:   *EffectLocationHandAny(),
-						Amount: Amount{
-							Fixed: Ptr(AmountFixed(2)),
-						},
-					},
+					Draw: EffectStandardDraw(2),
 				},
 			},
 			ReactionEffects: []ReactionSpec{
@@ -112,13 +106,7 @@ func TestCardEffects(t *testing.T) {
 			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
 			ActionEffects: []EffectSpec{
 				{
-					Draw: &EffectDraw{
-						From: *EffectLocationDeckTop(),
-						To:   *EffectLocationHandAny(),
-						Amount: Amount{
-							Fixed: Ptr(AmountFixed(1)),
-						},
-					},
+					Draw: EffectStandardDraw(1),
 				},
 				{
 					GainAction: &EffectGainAction{1},
@@ -150,13 +138,7 @@ func TestCardEffects(t *testing.T) {
 			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
 			ActionEffects: []EffectSpec{
 				{
-					Draw: &EffectDraw{
-						From: *EffectLocationDeckTop(),
-						To:   *EffectLocationHandAny(),
-						Amount: Amount{
-							Fixed: Ptr(AmountFixed(1)),
-						},
-					},
+					Draw: EffectStandardDraw(1),
 				},
 				{
 					GainAction: &EffectGainAction{1},
