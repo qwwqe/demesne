@@ -1,6 +1,6 @@
 demesne: 0.0.1
 kind: card/kingdom
-name: harginger
+name: harbinger
 definition:
   cost: 3
   types:
@@ -11,8 +11,12 @@ definition:
           amount: 1
       - draw:
           amount: 1
-      - draw:
-          from: discard
-          to: deck
-          amount:
-            maximum: 1
+      - view:
+          target: discard
+      - optional:
+          - take:
+              from: discard
+              to:
+                identifier: deck
+                specifier: top
+                amount: 1

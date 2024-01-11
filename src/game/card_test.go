@@ -106,7 +106,39 @@ func TestCardEffects(t *testing.T) {
 	})
 
 	t.Run("harbinger", func(t *testing.T) {
-		harbinger := CardSpec{}
+		harbinger := CardSpec{
+			Name:  "harbinger",
+			Cost:  CostSpec{Treasure: 3},
+			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
+			ActionEffects: []EffectSpec{
+				{
+					Draw: &EffectDraw{
+						From: *EffectLocationDeckTop(),
+						To:   *EffectLocationHandAny(),
+						Amount: Amount{
+							Fixed: Ptr(AmountFixed(1)),
+						},
+					},
+				},
+				{
+					GainAction: &EffectGainAction{1},
+				},
+				{
+					View: &EffectView{
+						Target: *EffectLocationDiscardAny(),
+					},
+				},
+				{
+					Optional: []Effect{{Take: &EffectTake{
+						From: *EffectLocationDiscardAny(),
+						To:   *EffectLocationDeckTop(),
+						Amount: Amount{
+							Fixed: Ptr(AmountFixed(1)),
+						},
+					}}},
+				},
+			},
+		}
 
 		harbinger.Build()
 	})

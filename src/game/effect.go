@@ -11,6 +11,8 @@ type Effect struct {
 	Play         *EffectPlay
 	Attack       *EffectAttack
 	Reveal       *EffectReveal
+	View         *EffectView
+	Take         *EffectTake
 
 	Reaction *Reaction
 	Optional []Effect
@@ -94,14 +96,20 @@ type EffectGainCard struct {
 
 const EffectTypeGainCard EffectType = "gainCard"
 
-type EffectDiscard struct {
-	Amount Amount
-}
+type EffectDiscard EffectTake
 
 const EffectTypeDiscard EffectType = "discard"
 
-type EffectDraw struct {
-	Amount Amount
+type EffectDraw EffectTake
+
+func EffectStandardDraw(amount AmountFixed) *EffectDraw {
+	return &EffectDraw{
+		From: *EffectLocationDeckTop(),
+		To:   *EffectLocationHandAny(),
+		Amount: Amount{
+			Fixed: &amount,
+		},
+	}
 }
 
 const EffectTypeDraw EffectType = "draw"
@@ -113,15 +121,16 @@ type EffectTrash struct {
 
 const EffectTypeTrash EffectType = "trash"
 
-type EffectIgnore struct {
-}
 type EffectIgnore struct{}
 
 const EffectTypeIgnore EffectType = "ignore"
 
 type EffectPlay struct {
-	Type *CardType
+	Types []CardType
+	Names []string
 }
+
+const EffectTypePlay EffectType = "play"
 
 type EffectAttack struct{}
 
@@ -133,6 +142,18 @@ type EffectReveal struct {
 }
 
 const EffectTypeReveal EffectType = "reveal"
+
+type EffectView struct {
+	Target EffectLocation
+}
+
+const EffectTypeView EffectType = "view"
+
+type EffectTake struct {
+	Amount Amount
+	From   EffectLocation
+	To     EffectLocation
+}
 
 type EffectSpec Effect
 
