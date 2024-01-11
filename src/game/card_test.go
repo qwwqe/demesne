@@ -18,6 +18,7 @@ func TestCardEffects(t *testing.T) {
 				{GainAction: &EffectGainAction{1}},
 				{
 					Discard: &EffectDiscard{
+						From: *EffectLocationHandAny(),
 						Amount: Amount{
 							Range: &AmountRange{Min: Ptr(0)},
 						},
@@ -25,6 +26,8 @@ func TestCardEffects(t *testing.T) {
 				},
 				{
 					Draw: &EffectDraw{
+						From: *EffectLocationDeckTop(),
+						To:   *EffectLocationHandAny(),
 						Amount: Amount{
 							Result: &AmountResult{EffectTypeDiscard},
 						},
@@ -44,7 +47,8 @@ func TestCardEffects(t *testing.T) {
 			ActionEffects: []EffectSpec{
 				{
 					Trash: &EffectTrash{
-						Amount{
+						From: *EffectLocationHandAny(),
+						Amount: Amount{
 							Range: &AmountRange{
 								Max: Ptr(4),
 							},
@@ -68,7 +72,9 @@ func TestCardEffects(t *testing.T) {
 			ActionEffects: []EffectSpec{
 				{
 					Draw: &EffectDraw{
-						Amount{
+						From: *EffectLocationDeckTop(),
+						To:   *EffectLocationHandAny(),
+						Amount: Amount{
 							Fixed: Ptr(AmountFixed(2)),
 						},
 					},

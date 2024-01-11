@@ -18,6 +18,62 @@ type Effect struct {
 
 type EffectType string
 
+type EffectLocation struct {
+	Identifier EffectLocationIdentifier
+	Specifier  EffectLocationSpecifier
+}
+
+type EffectLocationIdentifier string
+
+const (
+	EffectLocationIdentifierHand    EffectLocationIdentifier = "hand"
+	EffectLocationIdentifierDiscard EffectLocationIdentifier = "discard"
+	EffectLocationIdentifierDeck    EffectLocationIdentifier = "deck"
+)
+
+type EffectLocationSpecifier string
+
+const (
+	EffectLocationSpecifierTop    EffectLocationSpecifier = "top"
+	EffectLocationSpecifierBottom EffectLocationSpecifier = "bottom"
+	EffectLocationSpecifierAny    EffectLocationSpecifier = "any"
+)
+
+func NewEffectLocation(identifier EffectLocationIdentifier, specifier EffectLocationSpecifier) *EffectLocation {
+	return &EffectLocation{
+		Identifier: identifier,
+		Specifier:  specifier,
+	}
+}
+
+func EffectLocationDeckTop() *EffectLocation {
+	return NewEffectLocation(
+		EffectLocationIdentifierDeck,
+		EffectLocationSpecifierTop,
+	)
+}
+
+func EffectLocationDiscardAny() *EffectLocation {
+	return NewEffectLocation(
+		EffectLocationIdentifierDiscard,
+		EffectLocationSpecifierAny,
+	)
+}
+
+func EffectLocationDiscardTop() *EffectLocation {
+	return NewEffectLocation(
+		EffectLocationIdentifierDiscard,
+		EffectLocationSpecifierTop,
+	)
+}
+
+func EffectLocationHandAny() *EffectLocation {
+	return NewEffectLocation(
+		EffectLocationIdentifierHand,
+		EffectLocationSpecifierAny,
+	)
+}
+
 type EffectGainAction struct {
 	Amount AmountFixed
 }
@@ -50,6 +106,7 @@ type EffectDraw struct {
 const EffectTypeDraw EffectType = "draw"
 
 type EffectTrash struct {
+	From   EffectLocation
 	Amount Amount
 }
 
