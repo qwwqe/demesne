@@ -82,18 +82,19 @@ func TestCardEffects(t *testing.T) {
 			},
 			ReactionEffects: []ReactionSpec{
 				{
-					TargetRole: ReactionTargetOther,
-					TargetEffect: Effect{
-						Play: &EffectPlay{
-							Type: (*CardType)(StrPtr(string(CardTypeAttack))),
+					Target: ReactionTarget{
+						Role: ReactionTargetOther,
+						Effect: Effect{
+							Play: &EffectPlay{
+								Types: []CardType{CardTypeAttack},
+							},
 						},
 					},
-					ReactionEffects: []Effect{
+					Effects: []Effect{
 						{
-							Optional: &Effect{
-								Sequence: []Effect{
-									{Ignore: &EffectIgnore{}},
-								},
+							Optional: []Effect{
+								{Reveal: &EffectReveal{This: Ptr(true)}},
+								{Ignore: &EffectIgnore{}},
 							},
 						},
 					},

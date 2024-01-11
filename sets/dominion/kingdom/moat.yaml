@@ -11,12 +11,14 @@ definition:
       - draw:
           amount: 2
     reaction:
-      trigger:
-        play:
-          # TODO: express target in another way
-          target: other
-          types:
-            - attack
-      effects:
-        - ignore:
-            card: $trigger
+      - target:
+          role: other
+          effect:
+            play:
+              types:
+                - attack
+        effects:
+          - optional:
+              - reveal:
+                  this: true
+              - ignore
