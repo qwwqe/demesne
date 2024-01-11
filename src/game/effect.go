@@ -104,11 +104,9 @@ type EffectDraw EffectTake
 
 func EffectStandardDraw(amount AmountFixed) *EffectDraw {
 	return &EffectDraw{
-		From: *EffectLocationDeckTop(),
-		To:   *EffectLocationHandAny(),
-		Amount: Amount{
-			Fixed: &amount,
-		},
+		From:   *EffectLocationDeckTop(),
+		To:     *EffectLocationHandAny(),
+		Amount: *BasicAmount(amount),
 	}
 }
 

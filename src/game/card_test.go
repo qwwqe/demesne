@@ -118,11 +118,9 @@ func TestCardEffects(t *testing.T) {
 				},
 				{
 					Optional: []Effect{{Take: &EffectTake{
-						From: *EffectLocationDiscardAny(),
-						To:   *EffectLocationDeckTop(),
-						Amount: Amount{
-							Fixed: Ptr(AmountFixed(1)),
-						},
+						From:   *EffectLocationDiscardAny(),
+						To:     *EffectLocationDeckTop(),
+						Amount: *BasicAmount(1),
 					}}},
 				},
 			},

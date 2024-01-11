@@ -22,6 +22,12 @@ type Amount struct {
 	Result   *AmountResult
 }
 
+func BasicAmount(amount AmountFixed) *Amount {
+	return &Amount{
+		Fixed: &amount,
+	}
+}
+
 type TargetCard struct {
 	Name *string
 	Type *CardType
