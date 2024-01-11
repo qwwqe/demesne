@@ -12,11 +12,13 @@ definition:
       - draw:
           amount: 1
       - reaction:
-          trigger:
-            play:
-              names:
-                - silver
+          target:
+            role: self
+            effect:
+              play:
+                names:
+                  - silver
+            limit: 1
           effects:
             - treasure:
                 amount: 1
-          limit: 1

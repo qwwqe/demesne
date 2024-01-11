@@ -144,7 +144,43 @@ func TestCardEffects(t *testing.T) {
 	})
 
 	t.Run("merchant", func(t *testing.T) {
-		merchant := CardSpec{}
+		merchant := CardSpec{
+			Name:  "merchant",
+			Cost:  CostSpec{Treasure: 3},
+			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
+			ActionEffects: []EffectSpec{
+				{
+					Draw: &EffectDraw{
+						From: *EffectLocationDeckTop(),
+						To:   *EffectLocationHandAny(),
+						Amount: Amount{
+							Fixed: Ptr(AmountFixed(1)),
+						},
+					},
+				},
+				{
+					GainAction: &EffectGainAction{1},
+				},
+				{
+					Reaction: &Reaction{
+						Target: ReactionTarget{
+							Role: ReactionTargetSelf,
+							Effect: Effect{
+								Play: &EffectPlay{
+									Names: []string{"silver"},
+								},
+							},
+							Limit: 1,
+						},
+						Effects: []Effect{{
+							GainTreasure: &EffectGainTreasure{
+								Amount: 1,
+							},
+						}},
+					},
+				},
+			},
+		}
 
 		merchant.Build()
 	})
