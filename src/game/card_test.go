@@ -4,16 +4,8 @@ import (
 	"testing"
 )
 
-func IntPtr(i int) *int {
-	return &i
-}
-
-func UintPtr(u uint) *uint {
-	return &u
-}
-
-func StrPtr(s string) *string {
-	return &s
+func Ptr[T any](v T) *T {
+	return &v
 }
 
 func TestCardEffects(t *testing.T) {
@@ -27,7 +19,7 @@ func TestCardEffects(t *testing.T) {
 				{
 					Discard: &EffectDiscard{
 						Amount: Amount{
-							Range: &AmountRange{Min: IntPtr(0)},
+							Range: &AmountRange{Min: Ptr(0)},
 						},
 					},
 				},
@@ -54,7 +46,7 @@ func TestCardEffects(t *testing.T) {
 					Trash: &EffectTrash{
 						Amount{
 							Range: &AmountRange{
-								Max: IntPtr(4),
+								Max: Ptr(4),
 							},
 						},
 					},
@@ -77,7 +69,7 @@ func TestCardEffects(t *testing.T) {
 				{
 					Draw: &EffectDraw{
 						Amount{
-							Fixed: (*AmountFixed)(UintPtr(2)),
+							Fixed: Ptr(AmountFixed(2)),
 						},
 					},
 				},
