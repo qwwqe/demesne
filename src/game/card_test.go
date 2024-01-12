@@ -203,4 +203,18 @@ func TestCardEffects(t *testing.T) {
 
 		vassal.Build()
 	})
+
+	t.Run("village", func(t *testing.T) {
+		village := CardSpec{
+			Name:  "village",
+			Cost:  CostSpec{Treasure: 3},
+			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
+			ActionEffects: []EffectSpec{
+				{Draw: EffectStandardDraw(1)},
+				{GainAction: &EffectGainAction{2}},
+			},
+		}
+
+		village.Build()
+	})
 }
