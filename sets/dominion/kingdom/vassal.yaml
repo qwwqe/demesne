@@ -12,10 +12,15 @@ definition:
       - discard:
           from: deck
           amount: 1
-        conditional:
-          if:
-            types:
-              - action
-          then:
+      - condition:
+          target:
+            result:
+              effect: $discard
+        criteria:
+          types:
+            - action
+        effect:
+          optional:
             - play:
-                card: $discard
+                result:
+                  effect: $discard

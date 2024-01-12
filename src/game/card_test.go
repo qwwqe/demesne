@@ -180,7 +180,7 @@ func TestCardEffects(t *testing.T) {
 				{
 					CardCondition: &EffectCardCondition{
 						Target: EffectCardConditionTarget{
-							Result: &EffectCardConditionTargetResult{
+							Result: &EffectResult{
 								Effect: Ptr(EffectTypeDiscard),
 							},
 						},
@@ -190,7 +190,9 @@ func TestCardEffects(t *testing.T) {
 						Effect: Effect{
 							Optional: []Effect{{
 								Play: &EffectPlay{
-									// TODO: specify the above card
+									Result: &EffectResult{
+										Effect: Ptr(EffectTypeDiscard),
+									},
 								},
 							}},
 						},

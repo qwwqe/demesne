@@ -78,6 +78,10 @@ func EffectLocationHandAny() *EffectLocation {
 	)
 }
 
+type EffectResult struct {
+	Effect *EffectType
+}
+
 type EffectGainAction struct {
 	Amount AmountFixed
 }
@@ -125,8 +129,9 @@ type EffectIgnore struct{}
 const EffectTypeIgnore EffectType = "ignore"
 
 type EffectPlay struct {
-	Types []CardType
-	Names []string
+	Types  []CardType
+	Names  []string
+	Result *EffectResult
 }
 
 const EffectTypePlay EffectType = "play"
@@ -165,11 +170,7 @@ type EffectCardCondition struct {
 }
 
 type EffectCardConditionTarget struct {
-	Result *EffectCardConditionTargetResult
-}
-
-type EffectCardConditionTargetResult struct {
-	Effect *EffectType
+	Result *EffectResult
 }
 
 type EffectCardConditionCriteria struct {
