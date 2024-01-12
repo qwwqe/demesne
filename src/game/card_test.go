@@ -164,4 +164,23 @@ func TestCardEffects(t *testing.T) {
 
 		merchant.Build()
 	})
+
+	t.Run("vassal", func(t *testing.T) {
+		vassal := CardSpec{
+			Name:  "vassal",
+			Cost:  CostSpec{Treasure: 3},
+			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
+			ActionEffects: []EffectSpec{
+				{GainTreasure: &EffectGainTreasure{Amount: 2}},
+				{Discard: &EffectDiscard{
+					From:   *EffectLocationDeckTop(),
+					To:     *EffectLocationDiscardTop(),
+					Amount: *BasicAmount(1),
+				}},
+				// {Conditional}
+			},
+		}
+
+		vassal.Build()
+	})
 }

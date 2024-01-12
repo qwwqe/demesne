@@ -14,9 +14,10 @@ type Effect struct {
 	View         *EffectView
 	Take         *EffectTake
 
-	Reaction *Reaction
-	Optional []Effect
-	Sequence []Effect
+	Reaction  *Reaction
+	Condition *EffectCondition
+	Optional  []Effect
+	Sequence  []Effect
 }
 
 type EffectType string
@@ -152,6 +153,15 @@ type EffectTake struct {
 	From   EffectLocation
 	To     EffectLocation
 }
+
+const EffectTypeTake EffectType = "take"
+
+// TODO: Merge "filter" or "query" structures (such as the one for Play)
+// together into a general purpose matching formulation
+type EffectCondition struct {
+}
+
+const EffectTypeCondition EffectType = "condition"
 
 type EffectSpec Effect
 
