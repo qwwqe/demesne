@@ -14,10 +14,10 @@ type Effect struct {
 	View         *EffectView
 	Take         *EffectTake
 
-	Reaction  *Reaction
-	Condition *EffectCondition
-	Optional  []Effect
-	Sequence  []Effect
+	Reaction      *Reaction
+	CardCondition *EffectCardCondition
+	Optional      []Effect
+	Sequence      []Effect
 }
 
 type EffectType string
@@ -158,7 +158,23 @@ const EffectTypeTake EffectType = "take"
 
 // TODO: Merge "filter" or "query" structures (such as the one for Play)
 // together into a general purpose matching formulation
-type EffectCondition struct {
+type EffectCardCondition struct {
+	Target   EffectCardConditionTarget
+	Criteria EffectCardConditionCriteria
+	Effect   Effect
+}
+
+type EffectCardConditionTarget struct {
+	Result *EffectCardConditionTargetResult
+}
+
+type EffectCardConditionTargetResult struct {
+	Effect *EffectType
+}
+
+type EffectCardConditionCriteria struct {
+	Types []CardType
+	Names []string
 }
 
 const EffectTypeCondition EffectType = "condition"

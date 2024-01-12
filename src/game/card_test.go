@@ -177,7 +177,25 @@ func TestCardEffects(t *testing.T) {
 					To:     *EffectLocationDiscardTop(),
 					Amount: *BasicAmount(1),
 				}},
-				// {Conditional}
+				{
+					CardCondition: &EffectCardCondition{
+						Target: EffectCardConditionTarget{
+							Result: &EffectCardConditionTargetResult{
+								Effect: Ptr(EffectTypeDiscard),
+							},
+						},
+						Criteria: EffectCardConditionCriteria{
+							Types: []CardType{CardTypeAction},
+						},
+						Effect: Effect{
+							Optional: []Effect{{
+								Play: &EffectPlay{
+									// TODO: specify the above card
+								},
+							}},
+						},
+					},
+				},
 			},
 		}
 
