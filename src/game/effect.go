@@ -82,6 +82,10 @@ type EffectResult struct {
 	Effect *EffectType
 }
 
+type EffectCardCost struct {
+	Treasure *Amount
+}
+
 type EffectGainAction struct {
 	Amount AmountFixed
 }
@@ -95,8 +99,9 @@ type EffectGainTreasure struct {
 const EffectTypeGainTreasure EffectType = "gainTreasure"
 
 type EffectGainCard struct {
-	Cost *Amount
-	Name *string
+	Cost   *EffectCardCost
+	Name   *string
+	Amount AmountFixed
 }
 
 const EffectTypeGainCard EffectType = "gainCard"

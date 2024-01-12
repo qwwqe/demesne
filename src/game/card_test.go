@@ -217,4 +217,28 @@ func TestCardEffects(t *testing.T) {
 
 		village.Build()
 	})
+
+	t.Run("workshop", func(t *testing.T) {
+		workshop := CardSpec{
+			Name:  "workshop",
+			Cost:  CostSpec{Treasure: 3},
+			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
+			ActionEffects: []EffectSpec{
+				{
+					GainCard: &EffectGainCard{
+						Amount: 1,
+						Cost: &EffectCardCost{
+							Treasure: &Amount{
+								Range: &AmountRange{
+									Max: Ptr(4),
+								},
+							},
+						},
+					},
+				},
+			},
+		}
+
+		workshop.Build()
+	})
 }
