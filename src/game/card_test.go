@@ -245,4 +245,25 @@ func TestCardEffects(t *testing.T) {
 
 		workshop.Build()
 	})
+
+	t.Run("bureaucrat", func(t *testing.T) {
+		bureaucrat := CardSpec{
+			Name:  "bureaucrat",
+			Cost:  CostSpec{Treasure: 4},
+			Types: []CardTypeSpec{CardTypeSpec(CardTypeAttack), CardTypeSpec(CardTypeAction)},
+			ActionEffects: []EffectSpec{
+				{
+					GainCard: &EffectGainCard{
+						To:     *EffectLocationDeckTop(),
+						Amount: Amount{Fixed: Ptr(AmountFixed(1))},
+						Criteria: &EffectCardConditionCriteria{
+							Names: []string{"silver"},
+						},
+					},
+				},
+			},
+		}
+
+		bureaucrat.Build()
+	})
 }
