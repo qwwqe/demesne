@@ -228,11 +228,13 @@ func TestCardEffects(t *testing.T) {
 					GainCard: &EffectGainCard{
 						From:   *EffectLocationSupplyTop(),
 						To:     *EffectLocationDiscardTop(),
-						Amount: 1,
-						Cost: &EffectCardCost{
-							Treasure: &Amount{
-								Range: &AmountRange{
-									Max: Ptr(4),
+						Amount: Amount{Fixed: Ptr(AmountFixed(1))},
+						Criteria: &EffectCardConditionCriteria{
+							Cost: &EffectCardCost{
+								Treasure: &Amount{
+									Range: &AmountRange{
+										Max: Ptr(4),
+									},
 								},
 							},
 						},

@@ -106,14 +106,7 @@ type EffectGainTreasure struct {
 
 const EffectTypeGainTreasure EffectType = "gainTreasure"
 
-type EffectGainCard struct {
-	From EffectLocation
-	To   EffectLocation
-
-	Cost   *EffectCardCost
-	Name   *string
-	Amount AmountFixed
-}
+type EffectGainCard EffectTake
 
 const EffectTypeGainCard EffectType = "gainCard"
 
@@ -170,14 +163,15 @@ type EffectView struct {
 const EffectTypeView EffectType = "view"
 
 type EffectTake struct {
-	Amount Amount
-	From   EffectLocation
-	To     EffectLocation
+	From     EffectLocation
+	To       EffectLocation
+	Amount   Amount
+	Criteria *EffectCardConditionCriteria
 }
 
 const EffectTypeTake EffectType = "take"
 
-// TODO: Merge "filter" or "query" structures (such as the one for Play)
+// TODO: Merge "filter" or "query" structures (such as the one for Play, Gain, etc)
 // together into a general purpose matching formulation
 type EffectCardCondition struct {
 	Target   EffectCardConditionTarget
@@ -192,6 +186,7 @@ type EffectCardConditionTarget struct {
 type EffectCardConditionCriteria struct {
 	Types []CardType
 	Names []string
+	Cost  *EffectCardCost
 }
 
 const EffectTypeCondition EffectType = "condition"
