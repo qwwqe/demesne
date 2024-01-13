@@ -186,7 +186,7 @@ const EffectTypeTake EffectType = "take"
 type EffectCardCondition struct {
 	Target   EffectCardConditionTarget
 	Criteria EffectCardConditionCriteria
-	Effect   Effect
+	Effects  []Effect
 }
 
 type EffectCardConditionTarget struct {

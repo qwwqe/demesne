@@ -187,7 +187,7 @@ func TestCardEffects(t *testing.T) {
 						Criteria: EffectCardConditionCriteria{
 							Types: []CardType{CardTypeAction},
 						},
-						Effect: Effect{
+						Effects: []Effect{{
 							Optional: []Effect{{
 								Play: &EffectPlay{
 									Result: &EffectResult{
@@ -195,7 +195,7 @@ func TestCardEffects(t *testing.T) {
 									},
 								},
 							}},
-						},
+						}},
 					},
 				},
 			},
@@ -287,11 +287,11 @@ func TestCardEffects(t *testing.T) {
 											Fixed: Ptr(AmountFixed(0)),
 										},
 									},
-									Effect: Effect{
+									Effects: []Effect{{
 										Reveal: &EffectReveal{
 											Hand: Ptr(true),
 										},
-									},
+									}},
 								},
 							},
 						},

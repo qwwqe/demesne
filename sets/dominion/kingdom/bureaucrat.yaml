@@ -9,9 +9,11 @@ definition:
   effects:
     action:
       - gain:
-          name: silver
           amount: 1
           to: deck
+          criteria:
+            names:
+              - silver
       - attack:
           target: other
           effects:
@@ -19,14 +21,17 @@ definition:
                 types:
                   - victory
                 amount: 1
-              conditional:
-                if:
-                  amount: 1
-                then:
-                  - discard:
-                      card: $reveal
-                      to: deck
-                else:
+            - discard:
+                target:
+                  result:
+                    effect: $reveal
+                to: deck
+            - condition:
+                target:
+                  result:
+                    effect: $discard
+                criteria:
+                  amount: 0
+                effects:
                   - reveal:
-                      from: hand
-                      amount: all
+                      hand: true

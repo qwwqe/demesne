@@ -19,7 +19,7 @@ definition:
         criteria:
           types:
             - action
-        effect:
+        effects:
           optional:
             - play:
                 result:
