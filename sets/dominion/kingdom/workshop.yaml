@@ -9,7 +9,8 @@ definition:
     action:
       - gain:
           amount: 1
-          cost:
-            treasure:
-              amount:
-                maximum: 4
+          criteria:
+            cost:
+              treasure:
+                amount:
+                  maximum: 4
