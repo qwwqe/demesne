@@ -226,6 +226,8 @@ func TestCardEffects(t *testing.T) {
 			ActionEffects: []EffectSpec{
 				{
 					GainCard: &EffectGainCard{
+						From:   *EffectLocationSupplyTop(),
+						To:     *EffectLocationDiscardTop(),
 						Amount: 1,
 						Cost: &EffectCardCost{
 							Treasure: &Amount{

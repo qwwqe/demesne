@@ -33,6 +33,7 @@ const (
 	EffectLocationIdentifierHand    EffectLocationIdentifier = "hand"
 	EffectLocationIdentifierDiscard EffectLocationIdentifier = "discard"
 	EffectLocationIdentifierDeck    EffectLocationIdentifier = "deck"
+	EffectLocationIdentifierSupply  EffectLocationIdentifier = "supply"
 )
 
 type EffectLocationSpecifier string
@@ -78,6 +79,13 @@ func EffectLocationHandAny() *EffectLocation {
 	)
 }
 
+func EffectLocationSupplyTop() *EffectLocation {
+	return NewEffectLocation(
+		EffectLocationIdentifierSupply,
+		EffectLocationSpecifierTop,
+	)
+}
+
 type EffectResult struct {
 	Effect *EffectType
 }
@@ -99,6 +107,9 @@ type EffectGainTreasure struct {
 const EffectTypeGainTreasure EffectType = "gainTreasure"
 
 type EffectGainCard struct {
+	From EffectLocation
+	To   EffectLocation
+
 	Cost   *EffectCardCost
 	Name   *string
 	Amount AmountFixed
