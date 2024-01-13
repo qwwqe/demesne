@@ -260,6 +260,42 @@ func TestCardEffects(t *testing.T) {
 							Names: []string{"silver"},
 						},
 					},
+					Attack: &EffectAttack{
+						Target: EffectAttackTarget{Other: Ptr(true)},
+						Effects: []Effect{
+							{
+								Reveal: &EffectReveal{
+									Types:  []CardType{CardTypeVictory},
+									Amount: Amount{Fixed: Ptr(AmountFixed(1))},
+								},
+								Discard: &EffectDiscard{
+									To: *EffectLocationDeckTop(),
+									Target: &EffectCardConditionTarget{
+										Result: &EffectResult{
+											Effect: Ptr(EffectTypeReveal),
+										},
+									},
+								},
+								CardCondition: &EffectCardCondition{
+									Target: EffectCardConditionTarget{
+										Result: &EffectResult{
+											Effect: Ptr(EffectTypeDiscard),
+										},
+									},
+									Criteria: EffectCardConditionCriteria{
+										Amount: &Amount{
+											Fixed: Ptr(AmountFixed(0)),
+										},
+									},
+									Effect: Effect{
+										Reveal: &EffectReveal{
+											Hand: Ptr(true),
+										},
+									},
+								},
+							},
+						},
+					},
 				},
 			},
 		}

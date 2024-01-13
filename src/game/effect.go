@@ -145,13 +145,22 @@ type EffectPlay struct {
 
 const EffectTypePlay EffectType = "play"
 
-type EffectAttack struct{}
+type EffectAttackTarget struct {
+	Other *bool
+}
+
+type EffectAttack struct {
+	Target  EffectAttackTarget
+	Effects []Effect
+}
 
 const EffectTypeAttack EffectType = "attack"
 
 type EffectReveal struct {
-	Types []CardType
-	This  *bool
+	Types  []CardType
+	This   *bool
+	Hand   *bool
+	Amount Amount
 }
 
 const EffectTypeReveal EffectType = "reveal"
@@ -166,6 +175,7 @@ type EffectTake struct {
 	From     EffectLocation
 	To       EffectLocation
 	Amount   Amount
+	Target   *EffectCardConditionTarget
 	Criteria *EffectCardConditionCriteria
 }
 
@@ -184,9 +194,10 @@ type EffectCardConditionTarget struct {
 }
 
 type EffectCardConditionCriteria struct {
-	Types []CardType
-	Names []string
-	Cost  *EffectCardCost
+	Types  []CardType
+	Names  []string
+	Cost   *EffectCardCost
+	Amount *Amount
 }
 
 const EffectTypeCondition EffectType = "condition"
