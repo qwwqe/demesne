@@ -15,8 +15,11 @@ type AmountRelativeTarget struct {
 }
 
 type AmountRelative struct {
-	Target     AmountRelativeTarget
-	Range      *AmountRange
+	Target AmountRelativeTarget
+	Range  *AmountRange
+
+	// TODO: These names are not intuitive nor reflective of what
+	// the card text usually suggests
 	Multiplier *int
 	Divider    *int
 }

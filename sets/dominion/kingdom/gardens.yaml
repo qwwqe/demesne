@@ -6,10 +6,11 @@ definition:
   types:
     - victory
   effects:
-    victory:
+    scoring:
       - victory:
           amount:
-            per: 10
-            target:
-              cards:
-                owner: self
+            relative:
+              target:
+                locationIdentifier: possession
+              divider:
+                10
