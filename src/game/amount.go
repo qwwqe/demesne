@@ -9,9 +9,16 @@ type AmountRange struct {
 
 type AmountAll bool
 
+type AmountRelativeTarget struct {
+	Card               *TargetCard
+	LocationIdentifier *EffectLocationIdentifier
+}
+
 type AmountRelative struct {
-	TargetCard TargetCard
-	Range      AmountRange
+	Target     AmountRelativeTarget
+	Range      *AmountRange
+	Multiplier *int
+	Divider    *int
 }
 
 type Amount struct {

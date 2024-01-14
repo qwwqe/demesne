@@ -4,6 +4,7 @@ type Effect struct {
 	GainAction   *EffectGainAction
 	GainTreasure *EffectGainTreasure
 	GainCard     *EffectGainCard
+	GainVictory  *EffectGainVictory
 	Discard      *EffectDiscard
 	Draw         *EffectDraw
 	Trash        *EffectTrash
@@ -30,10 +31,11 @@ type EffectLocation struct {
 type EffectLocationIdentifier string
 
 const (
-	EffectLocationIdentifierHand    EffectLocationIdentifier = "hand"
-	EffectLocationIdentifierDiscard EffectLocationIdentifier = "discard"
-	EffectLocationIdentifierDeck    EffectLocationIdentifier = "deck"
-	EffectLocationIdentifierSupply  EffectLocationIdentifier = "supply"
+	EffectLocationIdentifierHand       EffectLocationIdentifier = "hand"
+	EffectLocationIdentifierDiscard    EffectLocationIdentifier = "discard"
+	EffectLocationIdentifierDeck       EffectLocationIdentifier = "deck"
+	EffectLocationIdentifierPossession EffectLocationIdentifier = "possession"
+	EffectLocationIdentifierSupply     EffectLocationIdentifier = "supply"
 )
 
 type EffectLocationSpecifier string
@@ -96,6 +98,10 @@ type EffectCardCost struct {
 
 type EffectGainAction struct {
 	Amount AmountFixed
+}
+
+type EffectGainVictory struct {
+	Amount Amount
 }
 
 const EffectTypeGainAction EffectType = "gainAction"

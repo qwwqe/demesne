@@ -66,6 +66,9 @@ type CardSpec struct {
 
 	// ReactionEffects define what a card does when played as a reaction.
 	ReactionEffects []ReactionSpec `yaml:"reactionEffects"`
+
+	// ScoringEffects define what a card does when evluated during end-game scoring.
+	ScoringEffects []EffectSpec `yaml:"scoringEffects"`
 }
 
 func (s CardSpec) Build() Card {
@@ -85,6 +88,11 @@ func (s CardSpec) Build() Card {
 		reactionEffects = append(reactionEffects, r.Build())
 	}
 
+	scoringEffects := []Effect{}
+	for _, s := range s.ScoringEffects {
+		scoringEffects = append(scoringEffects, s.Build())
+	}
+
 	return Card{
 		Id:              uuid.NewString(),
 		Name:            s.Name,
@@ -92,6 +100,7 @@ func (s CardSpec) Build() Card {
 		Types:           types,
 		ActionEffects:   actionEffects,
 		ReactionEffects: reactionEffects,
+		ScoringEffects:  scoringEffects,
 	}
 }
 

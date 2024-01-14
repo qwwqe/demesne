@@ -302,4 +302,27 @@ func TestCardEffects(t *testing.T) {
 
 		bureaucrat.Build()
 	})
+
+	t.Run("gardens", func(t *testing.T) {
+		gardens := CardSpec{
+			Name:  "gardens",
+			Cost:  CostSpec{Treasure: 4},
+			Types: []CardTypeSpec{CardTypeSpec(CardTypeVictory)},
+			ScoringEffects: []EffectSpec{{
+				GainVictory: &EffectGainVictory{
+					Amount: Amount{
+						Relative: &AmountRelative{
+							Target: AmountRelativeTarget{
+								LocationIdentifier: Ptr(EffectLocationIdentifierPossession),
+							},
+							Divider: Ptr(10),
+						},
+					},
+				}},
+			},
+		}
+
+		gardens.Build()
+	})
+
 }
