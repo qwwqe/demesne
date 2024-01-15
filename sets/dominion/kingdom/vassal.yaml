@@ -16,11 +16,11 @@ definition:
           target:
             result:
               effect: $discard
-        criteria:
-          types:
-            - action
-        effects:
-          optional:
-            - play:
-                result:
-                  effect: $discard
+          criteria:
+            types:
+              - action
+          effects:
+            optional:
+              - play:
+                  result:
+                    effect: $discard
