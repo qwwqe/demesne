@@ -1,0 +1,24 @@
+demesne: 0.0.1
+kind: card/kingdom
+name: moneylender
+definition:
+  cost: 4
+  types:
+    - action
+  effects:
+    action:
+      - optional:
+          - trash:
+              from: hand
+              criteria:
+                names:
+                  - copper
+          - condition:
+              target:
+                result:
+                  effect: $trash
+              criteria:
+                amount: 1
+              effects:
+                - treasure:
+                    amount: 3

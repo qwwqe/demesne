@@ -132,10 +132,7 @@ func EffectStandardDraw(amount AmountFixed) *EffectDraw {
 
 const EffectTypeDraw EffectType = "draw"
 
-type EffectTrash struct {
-	From   EffectLocation
-	Amount Amount
-}
+type EffectTrash EffectTake
 
 const EffectTypeTrash EffectType = "trash"
 

@@ -345,4 +345,44 @@ func TestCardEffects(t *testing.T) {
 		militia.Build()
 	})
 
+	t.Run("moneylender", func(t *testing.T) {
+		moneylender := CardSpec{
+			Name:  "moneylender",
+			Cost:  CostSpec{Treasure: 4},
+			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
+			ActionEffects: []EffectSpec{
+				{
+					Optional: []Effect{
+						{
+							Trash: &EffectTrash{
+								From: *EffectLocationHandAny(),
+								Criteria: &EffectCardConditionCriteria{
+									Names: []string{"copper"},
+								},
+							},
+						},
+						{
+							CardCondition: &EffectCardCondition{
+								Target: EffectCardConditionTarget{
+									Result: &EffectResult{
+										Effect: Ptr(EffectTypeTrash),
+									},
+								},
+								Criteria: EffectCardConditionCriteria{
+									Amount: &Amount{
+										Fixed: Ptr(AmountFixed(1)),
+									},
+								},
+								Effects: []Effect{{
+									GainTreasure: &EffectGainTreasure{Amount: 3},
+								}},
+							},
+						},
+					},
+				},
+			},
+		}
+
+		moneylender.Build()
+	})
 }
