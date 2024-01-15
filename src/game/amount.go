@@ -30,6 +30,7 @@ type Amount struct {
 	All      *AmountAll
 	Relative *AmountRelative
 	Result   *AmountResult
+	Until    *AmountUntil
 }
 
 func BasicAmount(amount AmountFixed) *Amount {
@@ -41,6 +42,11 @@ func BasicAmount(amount AmountFixed) *Amount {
 type TargetCard struct {
 	Name *string
 	Type *CardType
+}
+
+type AmountUntil struct {
+	LocationIdentifier EffectLocationIdentifier
+	Amount             Amount
 }
 
 // So dirty.

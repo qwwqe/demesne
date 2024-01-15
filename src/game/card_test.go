@@ -260,6 +260,8 @@ func TestCardEffects(t *testing.T) {
 							Names: []string{"silver"},
 						},
 					},
+				},
+				{
 					Attack: &EffectAttack{
 						Target: EffectAttackTarget{Other: Ptr(true)},
 						Effects: []Effect{
@@ -268,6 +270,8 @@ func TestCardEffects(t *testing.T) {
 									Types:  []CardType{CardTypeVictory},
 									Amount: Amount{Fixed: Ptr(AmountFixed(1))},
 								},
+							},
+							{
 								Discard: &EffectDiscard{
 									To: *EffectLocationDeckTop(),
 									Target: &EffectCardConditionTarget{
@@ -276,6 +280,8 @@ func TestCardEffects(t *testing.T) {
 										},
 									},
 								},
+							},
+							{
 								CardCondition: &EffectCardCondition{
 									Target: EffectCardConditionTarget{
 										Result: &EffectResult{
@@ -323,6 +329,20 @@ func TestCardEffects(t *testing.T) {
 		}
 
 		gardens.Build()
+	})
+
+	t.Run("militia", func(t *testing.T) {
+		militia := CardSpec{
+			Name:  "militia",
+			Cost:  CostSpec{Treasure: 4},
+			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction), CardTypeSpec(CardTypeAttack)},
+			ActionEffects: []EffectSpec{
+				{GainTreasure: &EffectGainTreasure{Amount: 1}},
+				{Attack: &EffectAttack{}},
+			},
+		}
+
+		militia.Build()
 	})
 
 }

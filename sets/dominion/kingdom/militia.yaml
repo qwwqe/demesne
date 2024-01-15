@@ -1,0 +1,21 @@
+demesne: 0.0.1
+kind: card/kingdom
+name: miiltia
+definition:
+  cost: 4
+  types:
+    - action
+    - attack
+  effects:
+    action:
+      - treasure:
+          amount: 2
+      - attack:
+          target: other
+          effects:
+            - discard:
+                amount:
+                  until:
+                    locationIdentifier: hand
+                    amount:
+                      maximum: 3
