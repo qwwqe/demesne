@@ -400,4 +400,36 @@ func TestCardEffects(t *testing.T) {
 
 		moneylender.Build()
 	})
+
+	t.Run("poacher", func(t *testing.T) {
+		poacher := CardSpec{
+			Name:  "poacher",
+			Cost:  CostSpec{Treasure: 4},
+			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
+			ActionEffects: []EffectSpec{
+				{Draw: EffectStandardDraw(1)},
+				{GainAction: &EffectGainAction{1}},
+				{GainTreasure: &EffectGainTreasure{1}},
+				{
+					Discard: &EffectDiscard{
+						From: *EffectLocationHandAny(),
+						Amount: Amount{
+							Relative: &AmountRelative{
+								Target: AmountRelativeTarget{
+									LocationIdentifier: Ptr(EffectLocationIdentifierSupply),
+								},
+								Condition: &EffectCardConditionCriteria{
+									Amount: &Amount{
+										Fixed: Ptr(AmountFixed(0)),
+									},
+								},
+							},
+						},
+					},
+				},
+			},
+		}
+
+		poacher.Build()
+	})
 }
