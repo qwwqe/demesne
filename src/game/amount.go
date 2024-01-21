@@ -15,8 +15,9 @@ type AmountRelativeTarget struct {
 }
 
 type AmountRelative struct {
-	Target AmountRelativeTarget
-	Range  *AmountRange
+	Target    AmountRelativeTarget
+	Range     *AmountRange
+	Condition *EffectCardConditionCriteria
 
 	// TODO: These names are not intuitive nor reflective of what
 	// the card text usually suggests
