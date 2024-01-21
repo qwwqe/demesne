@@ -338,7 +338,22 @@ func TestCardEffects(t *testing.T) {
 			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction), CardTypeSpec(CardTypeAttack)},
 			ActionEffects: []EffectSpec{
 				{GainTreasure: &EffectGainTreasure{Amount: 1}},
-				{Attack: &EffectAttack{}},
+				{Attack: &EffectAttack{
+					Target: EffectAttackTarget{Ptr(true)},
+					Effects: []Effect{{
+						Discard: &EffectDiscard{
+							From: *EffectLocationHandAny(),
+							Amount: Amount{
+								Until: &AmountUntil{
+									LocationIdentifier: EffectLocationIdentifierHand,
+									Amount: Amount{
+										Fixed: Ptr(AmountFixed(3)),
+									},
+								},
+							},
+						},
+					}},
+				}},
 			},
 		}
 
