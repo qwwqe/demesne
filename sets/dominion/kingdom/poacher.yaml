@@ -1,0 +1,23 @@
+demesne: 0.0.1
+kind: card/kingdom
+name: poacher
+definition:
+  cost: 4
+  types:
+    - action
+  effects:
+    action:
+      - draw:
+          amount: 1
+      - action:
+          amount: 1
+      - treasure:
+          amount: 1
+      - discard:
+          amount:
+            relative:
+              target:
+                locationIdentifier: supply
+              unit: pile
+              condition:
+                amount: 0
