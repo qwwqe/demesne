@@ -14,8 +14,17 @@ type AmountRelativeTarget struct {
 	LocationIdentifier *EffectLocationIdentifier
 }
 
+type AmountRelativeUnit string
+
+const (
+	AmountRelativeUnitCard AmountRelativeUnit = "card"
+	AmountRelativeUnitPile AmountRelativeUnit = "pile"
+)
+
 type AmountRelative struct {
-	Target    AmountRelativeTarget
+	Target AmountRelativeTarget
+	Unit   AmountRelativeUnit
+
 	Range     *AmountRange
 	Condition *EffectCardConditionCriteria
 
