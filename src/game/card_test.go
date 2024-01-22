@@ -485,4 +485,17 @@ func TestCardEffects(t *testing.T) {
 
 		remodel.Build()
 	})
+
+	t.Run("smithy", func(t *testing.T) {
+		smithy := CardSpec{
+			Name:  "smithy",
+			Cost:  CostSpec{Treasure: 4},
+			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
+			ActionEffects: []EffectSpec{
+				{Draw: EffectStandardDraw(3)},
+			},
+		}
+
+		smithy.Build()
+	})
 }

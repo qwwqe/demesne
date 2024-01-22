@@ -1,0 +1,11 @@
+demesne: 0.0.1
+kind: card/kingdom
+name: smithy
+definition:
+  cost: 4
+  types:
+    - action
+  effects:
+    action:
+      - draw:
+          amount: 3
