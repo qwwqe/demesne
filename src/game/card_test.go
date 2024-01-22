@@ -418,6 +418,7 @@ func TestCardEffects(t *testing.T) {
 								Target: AmountRelativeTarget{
 									LocationIdentifier: Ptr(EffectLocationIdentifierSupply),
 								},
+								Unit: AmountRelativeUnitPile,
 								Condition: &EffectCardConditionCriteria{
 									Amount: &Amount{
 										Fixed: Ptr(AmountFixed(0)),
