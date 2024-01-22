@@ -1,0 +1,29 @@
+demesne: 0.0.1
+kind: card/kingdom
+name: remodel
+definition:
+  cost: 4
+  types:
+    - action
+  effects:
+    action:
+      - trash:
+          from: hand
+      - condition:
+          target:
+            result:
+              effect: $trash
+          criteria:
+            amount: 1
+          effects:
+            - gain:
+                amount: 1
+                criteria:
+                  cost:
+                    treasure:
+                      relative:
+                        target:
+                          result:
+                            effect: $trash
+                          range:
+                            maximum: 2
