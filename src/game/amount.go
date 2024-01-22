@@ -10,6 +10,7 @@ type AmountRange struct {
 type AmountAll bool
 
 type AmountRelativeTarget struct {
+	Result             *EffectResult
 	Card               *TargetCard
 	LocationIdentifier *EffectLocationIdentifier
 }
