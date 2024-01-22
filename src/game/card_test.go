@@ -433,4 +433,56 @@ func TestCardEffects(t *testing.T) {
 
 		poacher.Build()
 	})
+
+	t.Run("remodel", func(t *testing.T) {
+		remodel := CardSpec{
+			Name:  "remodel",
+			Cost:  CostSpec{Treasure: 4},
+			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
+			ActionEffects: []EffectSpec{
+				{
+					Trash: &EffectTrash{
+						From: *EffectLocationHandAny(),
+					},
+				},
+				{
+					CardCondition: &EffectCardCondition{
+						Target: EffectCardConditionTarget{
+							Result: &EffectResult{
+								Effect: Ptr(EffectTypeTrash),
+							},
+						},
+						Criteria: EffectCardConditionCriteria{
+							Amount: &Amount{
+								Fixed: Ptr(AmountFixed(1)),
+							},
+						},
+						Effects: []Effect{{
+							GainCard: &EffectGainCard{
+								Amount: *BasicAmount(1),
+								Criteria: &EffectCardConditionCriteria{
+									Cost: &EffectCardCost{
+										Treasure: &Amount{
+											Relative: &AmountRelative{
+												Target: AmountRelativeTarget{
+													Result: &EffectResult{
+														Effect: Ptr(EffectTypeTrash),
+													},
+												},
+												Range: &AmountRange{
+													Max: Ptr(2),
+												},
+											},
+										},
+									},
+								},
+							},
+						}},
+					},
+				},
+			},
+		}
+
+		remodel.Build()
+	})
 }
