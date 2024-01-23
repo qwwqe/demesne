@@ -141,9 +141,11 @@ type EffectIgnore struct{}
 const EffectTypeIgnore EffectType = "ignore"
 
 type EffectPlay struct {
+	From   *EffectLocation
 	Types  []CardType
 	Names  []string
 	Result *EffectResult
+	Times  *Amount
 }
 
 const EffectTypePlay EffectType = "play"
