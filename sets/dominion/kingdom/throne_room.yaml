@@ -1,0 +1,13 @@
+demesne: 0.0.1
+kind: card/kingdom
+name: throne room
+definition:
+  cost: 4
+  types:
+    - action
+  effects:
+    action:
+      - play:
+          types:
+            - action
+          times: 2
