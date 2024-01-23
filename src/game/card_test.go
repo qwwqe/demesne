@@ -498,4 +498,20 @@ func TestCardEffects(t *testing.T) {
 
 		smithy.Build()
 	})
+
+	t.Run("throne room", func(t *testing.T) {
+		throneRoom := CardSpec{
+			Name:  "thone room",
+			Cost:  CostSpec{Treasure: 4},
+			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
+			ActionEffects: []EffectSpec{{
+				Play: &EffectPlay{
+					Types: []CardType{CardTypeAction},
+					Times: BasicAmount(1),
+				},
+			}},
+		}
+
+		throneRoom.Build()
+	})
 }
