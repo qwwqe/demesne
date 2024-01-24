@@ -1,0 +1,35 @@
+demesne: 0.0.1
+kind: card/kingdom
+name: bandit
+definition:
+  cost: 5
+  types:
+    - action
+    - attack
+  effects:
+    action:
+      - gain:
+          amount: 1
+          criteria:
+            names:
+              - gold
+      - attack:
+          target: other
+          effects:
+            - reveal:
+                from: deck
+                amount: 2
+            - trash:
+                target:
+                  result: $reveal
+                criteria:
+                  not:
+                    names:
+                      - copper
+            - discard:
+                target:
+                  result:
+                    effect: $reveal
+                criteria:
+                  not:
+                    result: $trash
