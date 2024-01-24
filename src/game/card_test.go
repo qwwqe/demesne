@@ -514,4 +514,58 @@ func TestCardEffects(t *testing.T) {
 
 		throneRoom.Build()
 	})
+
+	t.Run("bandit", func(t *testing.T) {
+		bandit := CardSpec{
+			Name:  "bandit",
+			Cost:  CostSpec{Treasure: 5},
+			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction), CardTypeSpec(CardTypeAttack)},
+			ActionEffects: []EffectSpec{
+				{
+					GainCard: &EffectGainCard{
+						Criteria: &EffectCardConditionCriteria{
+							Names: []string{"gold"},
+						},
+					},
+					Attack: &EffectAttack{
+						Target: EffectAttackTarget{Other: Ptr(true)},
+						Effects: []Effect{
+							{
+								Reveal: &EffectReveal{
+									From:   EffectLocationDeckTop(),
+									Amount: *BasicAmount(2),
+								},
+							},
+							{
+								Trash: &EffectTrash{
+									Target: &EffectCardConditionTarget{
+										Result: &EffectResult{Effect: Ptr(EffectTypeReveal)},
+									},
+									Criteria: &EffectCardConditionCriteria{
+										Not: &EffectCardConditionCriteria{
+											Names: []string{"copper"},
+										},
+									},
+								},
+							},
+							{
+								Discard: &EffectDiscard{
+									Target: &EffectCardConditionTarget{
+										Result: &EffectResult{Effect: Ptr(EffectTypeReveal)},
+									},
+									Criteria: &EffectCardConditionCriteria{
+										Not: &EffectCardConditionCriteria{
+											Result: &EffectResult{Effect: Ptr(EffectTypeTrash)},
+										},
+									},
+								},
+							},
+						},
+					},
+				},
+			},
+		}
+
+		bandit.Build()
+	})
 }
