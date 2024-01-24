@@ -166,6 +166,7 @@ type EffectReveal struct {
 	This   *bool
 	Hand   *bool
 	Amount Amount
+	From   *EffectLocation
 }
 
 const EffectTypeReveal EffectType = "reveal"
@@ -203,6 +204,8 @@ type EffectCardConditionCriteria struct {
 	Names  []string
 	Cost   *EffectCardCost
 	Amount *Amount
+	Not    *EffectCardConditionCriteria
+	Result *EffectResult
 }
 
 const EffectTypeCondition EffectType = "condition"
