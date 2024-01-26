@@ -584,6 +584,9 @@ func TestCardEffects(t *testing.T) {
 				}, {
 					Interaction: &EffectInteraction{
 						Target: *EffectAttackTargetOther(),
+						Effects: []Effect{{
+							Draw: EffectStandardDraw(1),
+						}},
 					},
 				},
 			},
