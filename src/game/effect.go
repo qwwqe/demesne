@@ -2,6 +2,7 @@ package game
 
 type Effect struct {
 	GainAction   *EffectGainAction
+	GainBuy      *EffectGainBuy
 	GainTreasure *EffectGainTreasure
 	GainCard     *EffectGainCard
 	GainVictory  *EffectGainVictory
@@ -97,6 +98,10 @@ type EffectCardCost struct {
 }
 
 type EffectGainAction struct {
+	Amount AmountFixed
+}
+
+type EffectGainBuy struct {
 	Amount AmountFixed
 }
 
