@@ -101,15 +101,19 @@ type EffectGainAction struct {
 	Amount AmountFixed
 }
 
+const EffectTypeGainAction EffectType = "gainAction"
+
 type EffectGainBuy struct {
 	Amount AmountFixed
 }
+
+const EffectTypeGainBuy EffectType = "gainBuy"
 
 type EffectGainVictory struct {
 	Amount Amount
 }
 
-const EffectTypeGainAction EffectType = "gainAction"
+const EffectTypeGainVictory EffectType = "gainVictory"
 
 type EffectGainTreasure struct {
 	Amount AmountFixed
