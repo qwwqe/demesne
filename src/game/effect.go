@@ -12,6 +12,7 @@ type Effect struct {
 	Ignore       *EffectIgnore
 	Play         *EffectPlay
 	Attack       *EffectAttack
+	Interaction  *EffectInteraction
 	Reveal       *EffectReveal
 	View         *EffectView
 	Take         *EffectTake
@@ -163,12 +164,21 @@ type EffectAttackTarget struct {
 	Other *bool
 }
 
+func EffectAttackTargetOther() *EffectAttackTarget {
+	t := true
+	return &EffectAttackTarget{&t}
+}
+
 type EffectAttack struct {
 	Target  EffectAttackTarget
 	Effects []Effect
 }
 
 const EffectTypeAttack EffectType = "attack"
+
+type EffectInteraction EffectAttack
+
+const EffectTypeInteraction EffectType = "interaction"
 
 type EffectReveal struct {
 	Types  []CardType
