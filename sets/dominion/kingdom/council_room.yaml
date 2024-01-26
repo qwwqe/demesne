@@ -1,0 +1,18 @@
+demesne: 0.0.1
+kind: card/kingdom
+name: council room
+definition:
+  cost: 5
+  types:
+    - action
+  effects:
+    action:
+      - draw:
+          amount: 4
+      - buy:
+          amount: 1
+      - interaction:
+          target: other
+          effects:
+            - draw:
+                amount: 1
