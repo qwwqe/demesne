@@ -263,7 +263,7 @@ func TestCardEffects(t *testing.T) {
 				},
 				{
 					Attack: &EffectAttack{
-						Target: EffectAttackTarget{Other: Ptr(true)},
+						Target: *EffectAttackTargetOther(),
 						Effects: []Effect{
 							{
 								Reveal: &EffectReveal{
@@ -339,7 +339,7 @@ func TestCardEffects(t *testing.T) {
 			ActionEffects: []EffectSpec{
 				{GainTreasure: &EffectGainTreasure{Amount: 1}},
 				{Attack: &EffectAttack{
-					Target: EffectAttackTarget{Ptr(true)},
+					Target: *EffectAttackTargetOther(),
 					Effects: []Effect{{
 						Discard: &EffectDiscard{
 							From: *EffectLocationHandAny(),
@@ -528,7 +528,7 @@ func TestCardEffects(t *testing.T) {
 						},
 					},
 					Attack: &EffectAttack{
-						Target: EffectAttackTarget{Other: Ptr(true)},
+						Target: *EffectAttackTargetOther(),
 						Effects: []Effect{
 							{
 								Reveal: &EffectReveal{
@@ -567,5 +567,28 @@ func TestCardEffects(t *testing.T) {
 		}
 
 		bandit.Build()
+	})
+
+	t.Run("council room", func(t *testing.T) {
+		councilRoom := CardSpec{
+			Name:  "council room",
+			Cost:  CostSpec{Treasure: 5},
+			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
+			ActionEffects: []EffectSpec{
+				{
+					Draw: EffectStandardDraw(4),
+				}, {
+					GainBuy: &EffectGainBuy{
+						Amount: AmountFixed(1),
+					},
+				}, {
+					Interaction: &EffectInteraction{
+						Target: *EffectAttackTargetOther(),
+					},
+				},
+			},
+		}
+
+		councilRoom.Build()
 	})
 }
