@@ -603,7 +603,7 @@ func TestCardEffects(t *testing.T) {
 			ActionEffects: []EffectSpec{
 				{GainAction: &EffectGainAction{2}},
 				{GainBuy: &EffectGainBuy{1}},
-				{GainTreasure: &EffectGainTreasure{1}},
+				{GainTreasure: &EffectGainTreasure{2}},
 			},
 		}
 

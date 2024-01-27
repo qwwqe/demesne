@@ -1,0 +1,15 @@
+demesne: 0.0.1
+kind: card/kingdom
+name: festival
+definition:
+  cost: 5
+  types:
+    - action
+  effects:
+    action:
+      - action:
+          amount: 2
+      - buy:
+          amount: 1
+      - treasure:
+          amount: 2
