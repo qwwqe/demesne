@@ -594,4 +594,19 @@ func TestCardEffects(t *testing.T) {
 
 		councilRoom.Build()
 	})
+
+	t.Run("festival", func(t *testing.T) {
+		festival := CardSpec{
+			Name:  "festival",
+			Cost:  CostSpec{Treasure: 5},
+			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
+			ActionEffects: []EffectSpec{
+				{GainAction: &EffectGainAction{2}},
+				{GainBuy: &EffectGainBuy{1}},
+				{GainTreasure: &EffectGainTreasure{1}},
+			},
+		}
+
+		festival.Build()
+	})
 }
