@@ -609,4 +609,18 @@ func TestCardEffects(t *testing.T) {
 
 		festival.Build()
 	})
+
+	t.Run("laboratory", func(t *testing.T) {
+		laboratory := CardSpec{
+			Name:  "laboratory",
+			Cost:  CostSpec{Treasure: 5},
+			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
+			ActionEffects: []EffectSpec{
+				{Draw: EffectStandardDraw(2)},
+				{GainAction: &EffectGainAction{1}},
+			},
+		}
+
+		laboratory.Build()
+	})
 }
