@@ -1,0 +1,13 @@
+demesne: 0.0.1
+kind: card/kingdom
+name: laboratory
+definition:
+  cost: 5
+  types:
+    - action
+  effects:
+    action:
+      - draw:
+          amount: 2
+      - action:
+          amount: 1
