@@ -16,6 +16,7 @@ type Effect struct {
 	Reveal       *EffectReveal
 	View         *EffectView
 	Take         *EffectTake
+	SetAside     *EffectSetAside
 
 	Reaction      *Reaction
 	CardCondition *EffectCardCondition
@@ -38,6 +39,7 @@ const (
 	EffectLocationIdentifierDeck       EffectLocationIdentifier = "deck"
 	EffectLocationIdentifierPossession EffectLocationIdentifier = "possession"
 	EffectLocationIdentifierSupply     EffectLocationIdentifier = "supply"
+	EffectLocationIdentifierAside      EffectLocationIdentifier = "aside"
 )
 
 type EffectLocationSpecifier string
@@ -90,8 +92,16 @@ func EffectLocationSupplyTop() *EffectLocation {
 	)
 }
 
+func EffectLocationAsideAny() *EffectLocation {
+	return NewEffectLocation(
+		EffectLocationIdentifierAside,
+		EffectLocationSpecifierAny,
+	)
+}
+
 type EffectResult struct {
 	Effect *EffectType
+	This   *bool
 }
 
 type EffectCardCost struct {
@@ -196,12 +206,17 @@ type EffectView struct {
 
 const EffectTypeView EffectType = "view"
 
+type EffectSetAside EffectTake
+
+const EffectTypeSetAside EffectType = "setAside"
+
 type EffectTake struct {
 	From     EffectLocation
 	To       EffectLocation
 	Amount   Amount
 	Target   *EffectCardConditionTarget
 	Criteria *EffectCardConditionCriteria
+	PerCard  *Effect // TODO: Name this better.
 }
 
 const EffectTypeTake EffectType = "take"
