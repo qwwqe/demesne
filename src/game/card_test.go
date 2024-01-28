@@ -623,4 +623,62 @@ func TestCardEffects(t *testing.T) {
 
 		laboratory.Build()
 	})
+
+	t.Run("library", func(t *testing.T) {
+		library := CardSpec{
+			Name:  "library",
+			Cost:  CostSpec{Treasure: 5},
+			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
+			ActionEffects: []EffectSpec{
+				{
+					Draw: &EffectDraw{
+						Amount: Amount{
+							Until: &AmountUntil{
+								LocationIdentifier: EffectLocationIdentifierHand,
+								Amount: Amount{
+									Fixed: Ptr(AmountFixed(7)),
+								},
+							},
+						},
+						PerCard: &Effect{
+							CardCondition: &EffectCardCondition{
+								Target: EffectCardConditionTarget{
+									Result: &EffectResult{
+										This: Ptr(true),
+									},
+								},
+								Criteria: EffectCardConditionCriteria{
+									Types: []CardType{CardTypeAction},
+								},
+								Effects: []Effect{{
+									Optional: []Effect{{
+										SetAside: &EffectSetAside{
+											Target: &EffectCardConditionTarget{
+												Result: &EffectResult{
+													This: Ptr(true),
+												},
+											},
+											To: *EffectLocationAsideAny(),
+										},
+									},
+									},
+								}},
+							},
+						},
+					},
+				},
+				{
+					Discard: &EffectDiscard{
+						Target: &EffectCardConditionTarget{
+							Result: &EffectResult{
+								Effect: Ptr(EffectTypeSetAside),
+							},
+						},
+					},
+				},
+			},
+		}
+
+		library.Build()
+	})
 }
