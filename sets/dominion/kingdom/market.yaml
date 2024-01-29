@@ -1,0 +1,17 @@
+demesne: 0.0.1
+kind: card/kingdom
+name: market
+definition:
+  cost: 5
+  types:
+    - action
+  effects:
+    action:
+      - draw:
+          amount: 1
+      - action:
+          amount: 1
+      - buy:
+          amount: 1
+      - treasure:
+          amount: 1
