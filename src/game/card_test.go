@@ -681,4 +681,20 @@ func TestCardEffects(t *testing.T) {
 
 		library.Build()
 	})
+
+	t.Run("market", func(t *testing.T) {
+		market := CardSpec{
+			Name:  "market",
+			Cost:  CostSpec{Treasure: 5},
+			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
+			ActionEffects: []EffectSpec{
+				{Draw: EffectStandardDraw(1)},
+				{GainAction: &EffectGainAction{1}},
+				{GainBuy: &EffectGainBuy{1}},
+				{GainTreasure: &EffectGainTreasure{1}},
+			},
+		}
+
+		market.Build()
+	})
 }
