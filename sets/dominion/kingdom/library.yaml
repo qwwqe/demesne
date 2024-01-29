@@ -1,0 +1,29 @@
+demesne: 0.0.1
+kind: card/kingdom
+name: library
+definition:
+  cost: 5
+  types:
+    - action
+  effects:
+    action:
+      - draw:
+          amount:
+            until:
+              locationIdentifier: hand
+              amount: 7
+          perCard:
+            condition:
+              target: this
+              criteria:
+                types:
+                  - action
+              effects:
+                - optional:
+                    - setAside:
+                        target: this
+                        to: aside
+      - discard:
+          target:
+            result:
+              effect: $setAside
