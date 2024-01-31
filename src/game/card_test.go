@@ -697,4 +697,61 @@ func TestCardEffects(t *testing.T) {
 
 		market.Build()
 	})
+
+	t.Run("mine", func(t *testing.T) {
+		mine := CardSpec{
+			Name:  "mine",
+			Cost:  CostSpec{Treasure: 5},
+			Types: []CardTypeSpec{CardTypeSpec(CardTypeAction)},
+			ActionEffects: []EffectSpec{
+				{
+					Optional: []Effect{
+						{
+							Trash: &EffectTrash{
+								From: *EffectLocationHandAny(),
+							},
+						},
+						{
+							CardCondition: &EffectCardCondition{
+								Target: EffectCardConditionTarget{
+									Result: &EffectResult{
+										Effect: Ptr(EffectTypeTrash),
+									},
+								},
+								Criteria: EffectCardConditionCriteria{
+									Amount: &Amount{
+										Fixed: Ptr(AmountFixed(1)),
+									},
+								},
+								Effects: []Effect{{
+									GainCard: &EffectGainCard{
+										Amount: *BasicAmount(1),
+										Criteria: &EffectCardConditionCriteria{
+											Types: []CardType{CardTypeTreasure},
+											Cost: &EffectCardCost{
+												Treasure: &Amount{
+													Relative: &AmountRelative{
+														Target: AmountRelativeTarget{
+															Result: &EffectResult{
+																Effect: Ptr(EffectTypeTrash),
+															},
+														},
+														Range: &AmountRange{
+															Max: Ptr(3),
+														},
+													},
+												},
+											},
+										},
+									},
+								}},
+							},
+						},
+					},
+				},
+			},
+		}
+
+		mine.Build()
+	})
 }
