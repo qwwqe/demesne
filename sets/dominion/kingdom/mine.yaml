@@ -1,0 +1,32 @@
+demesne: 0.0.1
+kind: card/kingdom
+name: mine
+definition:
+  cost: 5
+  types:
+    - action
+  effects:
+    action:
+      - optional:
+        - trash:
+            from: hand
+        - condition:
+            target:
+              result:
+                effect: $trash
+            criteria:
+              amount: 1
+            effects:
+              - gain:
+                  amount: 1
+                  criteria:
+                    types:
+                      - treasure
+                    cost:
+                      treasure:
+                        relative:
+                          target:
+                            result:
+                              effect: $trash
+                            range:
+                              maximum: 3
